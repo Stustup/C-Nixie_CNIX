@@ -28,3 +28,10 @@ Time is set manually with the push buttons on top.
 The PSU is heavily inspired by (this site)[link_placeholder].  
 
 ![Control board 3d view](./Docs/CNIX%20V2%20control%20board%20front.png)
+
+## TODO
+
+- Change to new MCU. STM32H5 or ESP32. ESP32 for Wifi stuff like syncing time, Homeassistant integration etc. Could be done as module for the pinheader. STM32H5 for USBC pd
+- (DONE) lower value caps for the LSE
+- USB-PD (only with STM32H5)
+- DHT22 Temp and relative humidity sensor
