@@ -491,7 +491,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(ht_EN_GPIO_Port, ht_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(ht_EN_GPIO_Port, ht_EN_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, co1_3_Pin|co1_2_Pin|co1_1_Pin|co1_0_Pin
