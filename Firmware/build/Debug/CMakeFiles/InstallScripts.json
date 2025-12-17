@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/nielscron/Dokumente/DIY/Projects New/C-Audio Nixie Clock (CNIX)/C-Nixie/Firmware/build/Debug/cmake_install.cmake",
-		"/home/nielscron/Dokumente/DIY/Projects New/C-Audio Nixie Clock (CNIX)/C-Nixie/Firmware/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
