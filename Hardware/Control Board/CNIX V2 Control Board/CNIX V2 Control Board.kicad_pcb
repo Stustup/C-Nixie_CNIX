@@ -224,7 +224,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -276,9 +276,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6d880edb-2b75-4300-82ba-8d3c6b5c6ea5")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "01bc7480-c4c0-4010-8ec7-fa6044e1fb68")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/c91001f9-3618-47b4-913f-51dff2da5db1")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -354,7 +380,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -406,10 +432,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0364db0-3158-4f4a-a793-1811234ae1dc")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ee0ba2d5-6a5d-49ec-a7ae-bc137531ecc2")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/f2df561a-298f-40d8-a571-1e5a528d3b83")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -485,7 +537,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -524,7 +576,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-077K68L "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -537,9 +589,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "58ab64aa-3333-4229-ae75-68140e7ba739")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c5a2d240-7d3c-4fa6-a72d-4b5dd187e956")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/7367e009-fa55-4745-abbb-5b06cf650a30")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -712,7 +790,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -751,9 +829,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "524fd6b0-2d0e-49d9-86fb-9a259ae53ff6")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c1dc6be4-d48a-4c7b-acfb-80ed7dd97231")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/878bdbd6-d090-450c-9c9b-b272275b0819")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -927,7 +1031,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -979,9 +1083,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ef0160c9-653d-4027-88bb-fc128b165fd6")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "750fd370-a995-430f-bed6-770229e1a544")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/9778fd4f-f1ea-4354-b641-e072e55fb644")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
@@ -1056,7 +1186,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1095,9 +1225,48 @@
 				)
 			)
 		)
+		(property "Mouser Nr." " 80-C0805C561K2R "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "527bee29-cb5c-49d1-a2b8-bf78c82fd143")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b18b4051-dc54-4e9b-9d49-bd4122c62783")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "05771021-18a1-4eed-90cb-f49fbf90546a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/a6392178-a13e-4e24-8de0-b444314ef546")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1270,7 +1439,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1309,9 +1478,48 @@
 				)
 			)
 		)
+		(property "Mouser Nr." " 80-C0805C431J5G "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "94087a02-a5c7-45dc-99e4-c9cc5ee0cea4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2f5ce0c3-5fd7-4c55-ae5f-352c4ad00b05")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f5fe24b0-ad39-4805-8d4c-5c52101ec217")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/39d48c90-b739-43b5-ab03-10452f59c9d8")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1459,11 +1667,11 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "1232f0cd-dddd-4970-948e-ff3d49a6d1eb")
-		(at 87.66105 114.14105)
+		(at 87.25 118.5 90)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C111"
-			(at -2.45 -0.009999 90)
+			(at -2.45 -0.009999 0)
 			(layer "F.SilkS")
 			(uuid "6ad32537-9075-49d8-b3a1-e59cd0fa6691")
 			(effects
@@ -1473,8 +1681,8 @@
 				)
 			)
 		)
-		(property "Value" "1u 250V"
-			(at 0 1.679999 0)
+		(property "Value" "100nf 250V"
+			(at 0 1.679999 90)
 			(layer "F.Fab")
 			(uuid "b33bdcc6-17f1-4453-bde0-58db526efe0a")
 			(effects
@@ -1484,8 +1692,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 0 0 0)
+		(property "Datasheet" "~"
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -1498,7 +1706,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -1511,7 +1719,7 @@
 			)
 		)
 		(property "Mouser URL" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -1523,8 +1731,8 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
-			(at 0 0 0)
+		(property "Mouser Nr." " 810-CGA4J3X7T2E104MA "
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -1536,9 +1744,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9de5e4ad-4154-4212-9438-130ce319ff28")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "307fa27b-50f9-4b8e-8d89-8550d8f3965c")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/039309c7-0bc9-4192-adf7-6c791da0d960")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1562,26 +1796,6 @@
 			(uuid "aea6c32a-c041-479f-b477-10da64547070")
 		)
 		(fp_line
-			(start -1.88 -0.98)
-			(end 1.88 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "0ea81a09-a8a2-402c-909a-91c1fc7921f2")
-		)
-		(fp_line
-			(start -1.88 0.98)
-			(end -1.88 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "6e4fa65d-8b53-4e14-abdb-f6868d158207")
-		)
-		(fp_line
 			(start 1.88 -0.98)
 			(end 1.88 0.98)
 			(stroke
@@ -1590,6 +1804,16 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "1caeee29-261d-405f-bf00-14d98097fcae")
+		)
+		(fp_line
+			(start -1.88 -0.98)
+			(end 1.88 -0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "0ea81a09-a8a2-402c-909a-91c1fc7921f2")
 		)
 		(fp_line
 			(start 1.88 0.98)
@@ -1602,24 +1826,14 @@
 			(uuid "876d0c38-ed4f-4d4b-8aca-5cb7979e5afa")
 		)
 		(fp_line
-			(start -1 -0.625)
-			(end 1 -0.625)
+			(start -1.88 0.98)
+			(end -1.88 -0.98)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "9cde294a-c94d-45c3-8619-cc51ae8418be")
-		)
-		(fp_line
-			(start -1 0.625)
-			(end -1 -0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "814c02e1-a13f-4a72-8eba-fd17b1fa4b87")
+			(layer "F.CrtYd")
+			(uuid "6e4fa65d-8b53-4e14-abdb-f6868d158207")
 		)
 		(fp_line
 			(start 1 -0.625)
@@ -1632,6 +1846,16 @@
 			(uuid "82a385e0-3cc0-446d-ace4-c215804eb490")
 		)
 		(fp_line
+			(start -1 -0.625)
+			(end 1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9cde294a-c94d-45c3-8619-cc51ae8418be")
+		)
+		(fp_line
 			(start 1 0.625)
 			(end -1 0.625)
 			(stroke
@@ -1641,8 +1865,18 @@
 			(layer "F.Fab")
 			(uuid "1c50ef8c-b163-480d-b292-9e282e496ea0")
 		)
+		(fp_line
+			(start -1 0.625)
+			(end -1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "814c02e1-a13f-4a72-8eba-fd17b1fa4b87")
+		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0.735 90)
 			(layer "F.Fab")
 			(uuid "2f849b3c-f20c-4fad-9f9b-71f289acd173")
 			(effects
@@ -1653,7 +1887,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.0375 0)
+			(at -1.0375 0 90)
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
@@ -1662,7 +1896,7 @@
 			(uuid "1d450fb2-2b84-437f-9f12-08c44c9ca058")
 		)
 		(pad "2" smd roundrect
-			(at 1.0375 0)
+			(at 1.0375 0 90)
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
@@ -1711,7 +1945,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1737,10 +1971,49 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "12df7a70-9edf-467c-ae67-a76c6e8c3bf3")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08751fb8-3fc6-488a-a3d3-885e487c7cd1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "94bb7d8a-54f2-4000-8d46-9890f3388e0a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/0a961d4d-0a66-4eac-8a3b-606edc88d790")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -1912,7 +2185,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1964,9 +2237,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "209233df-1e62-4645-af6e-9a219e955cc6")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4d215141-6e28-4208-b3c7-02e646a6b87e")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/112ed3c4-1b2c-4c4d-b59b-384298997905")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2161,7 +2460,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2200,7 +2499,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 187-CL21B106KPQNNNE "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2213,10 +2512,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "988f891d-5301-4cde-8780-f531762c6414")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fae49725-857e-4ac7-979f-29c92de983c8")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/772d81fd-9ceb-49dd-8f58-0e8fa1717ef6")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 -0.735)
@@ -2389,7 +2714,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2441,10 +2766,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1b059189-73ef-4adc-8d5f-d30c49a80eea")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b870ef17-edf2-441e-a3ba-e3669ba47bfd")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/c482bd10-9d91-4ef8-9ce2-a073f66ed38a")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -2520,7 +2871,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2559,7 +2910,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 187-CL21A226MQQNNNG "
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2572,10 +2923,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bd738596-5994-4156-9716-fb6927a02083")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "347b9ec5-0ef9-4878-8360-b6707ab939d5")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/f4e33e76-7654-47f6-aad2-c48ad670d5bd")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 0.735)
@@ -2736,7 +3113,7 @@
 				)
 			)
 		)
-		(property "Value" "18p"
+		(property "Value" "6p"
 			(at 0 1.679999 135)
 			(layer "F.Fab")
 			(uuid "1e77a2f5-c4db-4728-a0b6-7e42cbf6fc5d")
@@ -2747,7 +3124,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 135)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2786,7 +3163,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 80-C0805C180K5HACTU "
 			(at 0 0 135)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2799,10 +3176,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e81d7425-f642-484f-9da2-7dbbfd31e2ea")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5779295c-b0e5-4ee0-b45a-6f33f6851080")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/5db8e587-c133-4388-83cf-39745e3f706b")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 -0.735)
@@ -2974,7 +3377,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3013,7 +3416,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3026,10 +3429,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "77f8652d-7a8e-4693-ae0e-bf066418707f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce2a0b30-2093-4b32-bee7-9ace943b4d9e")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/ee5b7d43-ecc5-4c3e-a86f-03d6798111c7")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -3201,7 +3630,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3253,10 +3682,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a9cfcd60-e9bd-46fe-b0e8-dd795a329b00")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d3208c8b-2707-4ca6-b500-0fa90c13eb11")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/75c29eb4-84e6-4201-b049-ba81ef695b67")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 -0.735)
@@ -3428,7 +3883,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3467,7 +3922,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-132KL "
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3480,9 +3935,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c24fa128-5a7a-460d-80f4-74955f28bba4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "432f6d9d-2296-40ad-9b24-6c4c0f07bddc")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/1e0b73a9-95d3-4f0e-8501-08b4683ded52")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3655,7 +4136,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3694,7 +4175,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3707,10 +4188,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "535e383a-56da-4e7a-8ecc-1eff51bc288a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ce4ede6-6976-418a-812c-039275152d61")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/b468068c-43ea-4b7c-b67d-118a6f25d22d")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -3882,7 +4389,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 315)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3934,10 +4441,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 315)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3d245ee1-4085-4936-8231-596c9e092724")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 315)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dc7d9414-5df2-4eca-9b19-15ce9747f688")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/8c806d36-924c-4b5c-8ad5-cd3dec96515e")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 0.735)
@@ -4085,7 +4618,7 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "340a234e-aa3b-484d-8353-9579c4e3bf5b")
-		(at 83.91105 102.481052 90)
+		(at 83.91105 103 90)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C109"
@@ -4110,7 +4643,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4149,9 +4682,48 @@
 				)
 			)
 		)
+		(property "Mouser Nr." " 581-08052C101K "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "de03ef11-0d39-428d-a173-a0550eadc9f3")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5bbfeb8b-ee52-43f3-8264-5d79d4c00a25")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "568345d5-b3ac-4419-9cf8-0837c884cf94")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/f90ca94f-fdf9-4974-9ad3-2e577adf63aa")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4324,7 +4896,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4363,7 +4935,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4376,10 +4948,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "22950bf7-8031-4c45-a89c-cda37b387aee")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "536d8dd8-e4f0-43d6-be34-bd6aeb4c097f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/45fbeee5-714a-4a94-8e15-ffeed493c3a2")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -4552,7 +5150,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4604,10 +5202,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9a17ade5-4963-479e-b3cb-c0786fde3169")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bf486399-ca1b-491e-8eb8-ffa733b73299")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/6d901828-18d6-4484-b50a-9e49415a69f6")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -4684,7 +5308,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4736,10 +5360,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "19d5f8e2-9b24-4220-a88f-950e2f83f1b4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "95d0e2b9-105c-4886-b21b-eb239ddfe51e")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/481d07db-a838-4c8c-bfcd-4a2f84d0dc11")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -4815,7 +5465,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4854,9 +5504,48 @@
 				)
 			)
 		)
+		(property "Mouser Nr." " 187-CL21B102KBANNNC "
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dc1e95c9-c6e3-4ccf-9e90-e828ddcf3619")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "07f13cef-4f9e-4b9e-ae56-a89c6b82bb1b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "753a2b70-0e8b-49d8-9428-26b42d1e133c")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/1a1d00a5-0575-40e5-8a60-baabf475ec56")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5029,7 +5718,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5055,9 +5744,48 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "47632aa6-c5f4-465e-b07f-9bd532434f75")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d80164ac-986a-42e8-aa9e-3f740df21d72")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 603-RC0805FR-074K12L "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "55c9c948-eea8-42cb-b9a1-6205fd926d52")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/5fd0f985-0f89-40f0-962c-ef51fb249363")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5230,7 +5958,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5256,10 +5984,49 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "76a74450-fa24-431e-98d7-c3961c351a18")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce258bd1-dc19-489a-98f0-f1dadb4a5b9a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "26f59dae-ed3c-4cee-9f16-699064b2dbb2")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061c919c2")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -5431,7 +6198,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5470,7 +6237,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-AC0805FR-07330KL "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5483,9 +6250,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fa24e4d4-e84b-498f-a200-873dafa23ee6")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5dbceaf8-547f-4df6-9266-b635f226db85")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/5b5a0376-4702-42f4-8057-3b0c4ac77229")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5658,7 +6451,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 225)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5710,10 +6503,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 225)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a4c65738-c7e2-44f9-b336-d81b6a5b32e0")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 225)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4f31896d-a77b-4a12-a114-c9f1203013ef")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Crystal*")
 		(path "/9c2d4b72-a65b-439e-bcca-73c866b65a0f")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 2.01 4.1)
@@ -5993,7 +6812,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6019,10 +6838,49 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "63f623a4-e27b-4e57-a11e-f977f71dd954")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e603aa67-234c-4dd7-9661-92431a4216db")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 652-CR0805FX-5101ELF "
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a74a21ff-dcce-4cc5-a08a-50187d39e41d")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/eff9b1d8-d4d0-40ca-90d1-83dd6b709408")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -6246,9 +7104,74 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0dd981c2-4cb7-4153-84d1-4e4e9dabb87c")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0c3b041d-2db3-40e5-89c6-6f91f23221c6")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "45a548db-9d2f-4cc0-af4d-425039779985")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a0c8f956-9493-43b1-a739-dc499a0e0dbc")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Link" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f72aee86-a07e-446c-93ba-3b62f6f0b3cc")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/3c9bba33-a546-4565-bcb8-bd1b23e67eaf")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6423,7 +7346,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6475,10 +7398,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "30d7db2a-3956-427d-9b1b-456c9ee250a3")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "98838f1c-0179-40be-b8dd-b698cbd7a126")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/cdbc545b-3dca-4ba0-baa7-8c93a54479ed")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -6554,7 +7503,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6606,10 +7555,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f1ce7568-d483-4bc4-86f6-7ff117c3f01d")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "624e5e13-7a04-4cdf-8a8e-37052d3f4450")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/5801a2e4-5977-44a1-8b39-242cd961f13b")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 -0.735)
@@ -6781,7 +7756,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6820,7 +7795,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6833,10 +7808,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "486c2dc9-3e66-4d9e-b133-8e764660f26a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7abc0a57-e61f-4c54-b950-ded5fa6eeff9")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/f631c48a-2eb9-4306-b088-83003e742ddd")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -7008,7 +8009,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7034,10 +8035,49 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a70eb406-67a4-43b0-b123-f23d5af2bfa1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "83ce7e6b-49a5-40e6-903a-a7f8e06fd665")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4cb7d293-fe99-4411-9e7f-eaf8289cdbab")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/269b03e6-11ae-49d2-8e01-b44ae2e7b444")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -7210,7 +8250,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7262,10 +8302,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "030b1d6f-785e-44df-b37d-9ac579769bfc")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "573a7fa7-d7c1-4f79-a55f-1ae4a99a8eb2")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/4c0ddcf5-127b-4e2b-94f8-bccd7e44204f")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -7341,7 +8407,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7393,10 +8459,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e87fb711-9e5c-48b3-af6c-80a3c6e6050b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "32a683aa-d287-469c-84ba-4a0517eb0874")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/e4be6c11-26fd-4b4f-b2bc-9f95bb737858")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 -0.735)
@@ -7568,7 +8660,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7607,7 +8699,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-132KL "
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7620,10 +8712,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "af173259-adf5-43e9-9939-7696d506368f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ab1665d2-4dde-499d-83a2-6757e862c99b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/7173b600-93d8-4cf0-a459-0182fc17d85f")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -7796,7 +8914,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7848,10 +8966,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a81f7dab-41b8-4eea-af8b-e01918f49b4f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "689d7136-8392-478b-9fa6-93140e6338f2")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/539229eb-c146-4bae-8e6b-496604bdc2ad")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -7979,7 +9123,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8031,10 +9175,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6625f92e-9ce5-4804-9dbb-f70fc3f5c0de")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "64e0a8f6-2def-4d47-9f36-f6713628d3de")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/49badf32-3f8c-4a67-8610-254413066bde")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -8110,7 +9280,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8136,9 +9306,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "15b43e40-c8af-4133-83a0-7ebbe82f37a9")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "679a3413-1d9c-4499-8630-7ba4b3d6370a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(path "/00000000-0000-0000-0000-000061d9385d")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.61 -0.9)
@@ -8536,9 +9732,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d907fc4b-249c-4c9f-99e3-4fcd16291168")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "55ee77e9-06b4-422b-8523-e452f7a866d1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "SOT?23*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/fe954482-1866-4d2d-904b-f52b69dc5b08")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8766,7 +9988,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8818,10 +10040,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9cf46b04-33d1-4574-91a4-6cf5215f933c")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c2dd6602-357c-4cb3-91a8-fa417a65db07")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/6484f02d-7351-4dea-b16d-9b9fa93a9faf")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -8896,7 +10144,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8948,10 +10196,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e84087e1-8a6a-44b3-b4d7-4f56c16ab949")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f43697d9-d7f6-4f39-b932-6169be5cc0f4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/3439e5bd-4b3c-4519-b51d-334d3b39133e")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -9027,7 +10301,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9079,10 +10353,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "709715c5-a28b-4388-bd3b-bf058dfc7d0b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4bc178b3-59dd-4790-b871-02ab7f90014b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/bf131509-bfc7-4ad8-a14f-c5d7020cbe32")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 19.11)
@@ -9375,7 +10675,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9427,10 +10727,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eb4e8bc0-7f34-4b57-9d48-8b1761fd400f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "184a679a-645d-47e0-8f75-f86c8d11f281")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/0ac8f7db-6d4b-4f82-ac3a-0674d42f3255")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -9495,7 +10821,7 @@
 				)
 			)
 		)
-		(property "Value" "18p"
+		(property "Value" "6p"
 			(at 0 1.679999 135)
 			(layer "F.Fab")
 			(uuid "fc5b32a8-84cf-4658-8f09-04bc8ef6b6d2")
@@ -9506,7 +10832,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 135)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9545,7 +10871,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 80-C0805C180K5HACTU "
 			(at 0 0 135)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9558,10 +10884,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6cc5dfb-93cf-4af7-86c1-d10e1c27ea66")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "767fc35d-4e03-427b-8fa3-2322ec058d45")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/54304558-9963-44e8-b879-397d8767dc45")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 -0.735)
@@ -9733,7 +11085,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9759,10 +11111,49 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "931180f8-7029-4206-b609-22ceba4b1941")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c69af2e6-7ff6-4b52-8f8f-070028318f69")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 652-CR0805FX-5101ELF "
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d382e80f-3b06-47e2-a222-cec90573924f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/4eaacab0-af8d-4f3d-8c14-b5972489cc0d")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -9935,7 +11326,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9987,10 +11378,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "57c63b3e-1c44-4b6d-a028-3704101e31b8")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d4312cde-7552-48c6-97f7-9494f7340b3f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/0edc79cb-6bdc-4646-9288-9b2d2aab9d72")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -10041,11 +11458,11 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "7aceb627-a1ea-4903-8594-1921bff667ba")
-		(at 87.66105 116.931052)
+		(at 89.5 118.5 90)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C112"
-			(at -2.450001 0 90)
+			(at -2.450001 0 0)
 			(layer "F.SilkS")
 			(uuid "83bfb099-6b35-4a40-86b1-b5382bd587fc")
 			(effects
@@ -10056,7 +11473,7 @@
 			)
 		)
 		(property "Value" "100n 250V"
-			(at 0 1.679999 0)
+			(at 0 1.679999 90)
 			(layer "F.Fab")
 			(uuid "8ddde0fc-cb0d-43fc-ae3a-14754704ab4d")
 			(effects
@@ -10066,8 +11483,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 0 0 0)
+		(property "Datasheet" "~"
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -10080,7 +11497,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -10093,7 +11510,7 @@
 			)
 		)
 		(property "Mouser URL" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -10105,8 +11522,8 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
-			(at 0 0 0)
+		(property "Mouser Nr." " 810-CGA4J3X7T2E104MA "
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -10118,9 +11535,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a09ff037-5ed2-4d40-850d-16303c887c74")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6081f3c7-ca55-407f-8793-a95a2733ebd8")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/20a43c46-3136-4181-9912-15438956002c")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10144,26 +11587,6 @@
 			(uuid "f643dd79-cba0-4ac4-b934-fd2d3dba5f19")
 		)
 		(fp_line
-			(start -1.88 -0.98)
-			(end 1.88 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "1c2e9411-bfd3-43d7-8490-19ab06b31fa4")
-		)
-		(fp_line
-			(start -1.88 0.98)
-			(end -1.88 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "01ce7721-4f27-438a-8958-d85a699161fd")
-		)
-		(fp_line
 			(start 1.88 -0.98)
 			(end 1.88 0.98)
 			(stroke
@@ -10172,6 +11595,16 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "e169827b-edf4-4310-8c6f-bc87e784e4f4")
+		)
+		(fp_line
+			(start -1.88 -0.98)
+			(end 1.88 -0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "1c2e9411-bfd3-43d7-8490-19ab06b31fa4")
 		)
 		(fp_line
 			(start 1.88 0.98)
@@ -10184,24 +11617,14 @@
 			(uuid "11412b97-be5e-423b-9b47-66e33258c40b")
 		)
 		(fp_line
-			(start -1 -0.625)
-			(end 1 -0.625)
+			(start -1.88 0.98)
+			(end -1.88 -0.98)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "4918edfb-adb2-4aec-818b-6f91a679aa71")
-		)
-		(fp_line
-			(start -1 0.625)
-			(end -1 -0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "2461b01d-b1d3-4fbf-88c1-056ab1184de6")
+			(layer "F.CrtYd")
+			(uuid "01ce7721-4f27-438a-8958-d85a699161fd")
 		)
 		(fp_line
 			(start 1 -0.625)
@@ -10214,6 +11637,16 @@
 			(uuid "1e35919e-3838-4330-92f4-5372568e0af7")
 		)
 		(fp_line
+			(start -1 -0.625)
+			(end 1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "4918edfb-adb2-4aec-818b-6f91a679aa71")
+		)
+		(fp_line
 			(start 1 0.625)
 			(end -1 0.625)
 			(stroke
@@ -10223,8 +11656,18 @@
 			(layer "F.Fab")
 			(uuid "1b3e98b3-29de-4f3a-a93f-f66d37d87b9d")
 		)
+		(fp_line
+			(start -1 0.625)
+			(end -1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "2461b01d-b1d3-4fbf-88c1-056ab1184de6")
+		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "9c32d23b-2d43-49d9-9e5b-f8ba1f6a7e13")
 			(effects
@@ -10235,7 +11678,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.0375 0)
+			(at -1.0375 0 90)
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
@@ -10244,7 +11687,7 @@
 			(uuid "7d7c3a02-9ca4-48b5-8420-7d8ab1bbd239")
 		)
 		(pad "2" smd roundrect
-			(at 1.0375 0)
+			(at 1.0375 0 90)
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
@@ -10293,7 +11736,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10332,9 +11775,48 @@
 				)
 			)
 		)
+		(property "Mouser Nr." " 187-CL21A476MRYNNNE "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "214fbb08-8d99-4d79-bf47-c0befcaaf9f9")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "57c37a8c-1c5c-4095-9aba-df341a33b327")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2ca2e568-ad02-4390-9fd9-a2648fd70a1f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/18506353-4898-4f5e-a476-d087c409ddf5")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10507,7 +11989,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10533,9 +12015,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aec52078-e85b-4324-8749-ce0c0e7c5ed8")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d6b15cd5-3cc0-41cd-a295-97694527c071")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/20359006-f56c-42b1-9069-626012da5501")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10708,7 +12216,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10760,10 +12268,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "675e8e07-aa6c-47ae-bf51-8f6929658c15")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "56c2743d-fe99-48f4-8a52-c1f72961d708")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/cee8293e-917b-40e4-bd8c-867e2e926f74")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 -0.735)
@@ -10935,7 +12469,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10961,9 +12495,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4f4c08cf-b1ca-4fc9-8451-64e27ef70025")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f4a04ab4-8c27-43d6-813d-8413e2dcea09")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(path "/00000000-0000-0000-0000-000061d938c5")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.61 -0.9)
@@ -11336,7 +12896,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11388,10 +12948,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6e32ed08-aef2-4a50-a1c2-4bfa0bc6ca57")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0799318b-65f4-4127-aa54-2957cfcc7b36")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/f95e2f3b-a1ef-4064-af13-878fb650b75c")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -11456,7 +13042,7 @@
 				)
 			)
 		)
-		(property "Value" "68u, 2.8A"
+		(property "Value" "33u, 4.2A"
 			(at 0 7.600001 0)
 			(layer "F.Fab")
 			(uuid "00979e29-e0ee-4d01-8e3b-db91af2a3550")
@@ -11467,7 +13053,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11506,7 +13092,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." " 871-B82477R4683M100 "
+		(property "Mouser Nr." "7447709330"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11519,9 +13105,74 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7db0c182-9163-4935-a9b8-be5211a98d89")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9bc42aeb-5557-4bc2-a66b-a7f85ac04ead")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "934027b5-a8d7-4155-83e6-8049a2a3eb01")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "19ee0ed2-319d-45bc-96ca-8862dd025091")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Link" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cb34c33c-8309-4c9d-b227-e4f53b93ae85")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/5842ca59-b509-4186-aeb3-52eba452af9d")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12316,7 +13967,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12342,10 +13993,49 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "775d2666-da4b-4460-ad89-76a027d11eed")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c1b05f4-4bab-4c5e-8da3-840bdb8924d1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b964d93a-1558-4084-9f74-0e7e9db06980")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000061c91449")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 0.735)
@@ -12543,9 +14233,87 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." "637-BAT54W"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2554c6c5-aec8-4cae-83f1-b018349ffc6b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ee58c22-69e7-4e0e-8e54-0af921a0c4f1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." "637-BAT54W"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "af87361b-d5e5-4655-9f25-06896dd98e40")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5e7e8847-062f-4633-8dac-367b1211660a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1589e090-9db4-4354-97ce-d07e49b2c708")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Link" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0f933acc-d538-4eaa-939e-671036e1a71c")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "SOT?323*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/5fdcd687-c8a9-45b8-a798-7b61e30d6712")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12772,7 +14540,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12798,10 +14566,49 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1bef610d-8305-4309-bfe4-253dc40d0fb4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2d7e531b-7430-4a70-8115-645b592d5563")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "24d869da-ccc9-42e8-8e68-6b5cd5a9a475")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/56c46cec-9862-450d-affc-9231d45d8cc8")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -12973,7 +14780,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13025,10 +14832,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8b9b227b-d600-430b-b814-ea3f617871d4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "37ab9aec-5944-4415-8856-ded5af62e550")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/b6a61520-93ad-4e0f-bfd4-679cb9444c0e")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 0.735)
@@ -13200,7 +15033,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13226,10 +15059,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6f285f7-0867-4606-836b-a71755226de7")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "04e643e6-69e6-410d-a823-212e9e45237d")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/aa291cf1-7ea9-491a-96ba-2de15de8303a")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -13401,7 +15260,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13427,10 +15286,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e0e981f1-611b-4062-8cda-80a4d41fb251")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "031a24cb-be62-4bed-b550-aadd3a871953")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/a4be5f68-f515-4f1c-a4c1-dec70882e650")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.86 -0.96)
@@ -13625,7 +15510,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13664,7 +15549,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 647-UUX1E221MNL6GS "
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13677,9 +15562,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e926d65c-05d3-4a1c-a911-0589f0ceef6d")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7a763204-57a1-4fc3-a761-ff885990a75a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "CP_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/fbb6ea08-a8d3-44e9-a609-be94f6a0e1e3")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14083,7 +15994,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14122,9 +16033,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0e26a427-3eeb-42c3-b57b-4b7c12810f4b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ad0f74e5-e04f-42ee-b476-83f63e21ff69")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/7612d1b3-1111-43fd-952c-d110dc94c1a0")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14297,7 +16234,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14323,7 +16260,7 @@
 				)
 			)
 		)
-		(property "Mouser URL" ""
+		(property "Mouser URL" "https://www.mouser.de/ProductDetail/Wurth-Elektronik/865080343009?qs=0KOYDY2FL28Gid9q%2FqirTQ%3D%3D"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14336,7 +16273,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." "710-865080343009 "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14349,10 +16286,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "de0eb27d-127e-4469-bb58-14fb4b8e64e1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "25255874-e2b3-495b-93de-c8d6a4c36fb5")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "CP_*")
 		(path "/0e8eb2ec-3714-4a69-9c98-9eabaa89e51b")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.345563 -3.410001)
@@ -14755,7 +16718,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14794,7 +16757,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-RC0805FR-074K7P "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14807,10 +16770,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ba87b84-d68d-4f4f-967a-c0be9bba9405")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6b0416b5-84b9-4179-b2e9-3444a7653c15")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/dc0619a2-ca06-4ea2-aed5-87013c4769ec")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -14983,7 +16972,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15035,10 +17024,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a95d825-1734-418d-b47d-19096c52db36")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4932c17c-3c77-4b27-97e8-5ffee267cd3e")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/c3f4e827-9d42-4d68-89cb-6c1038c3c28f")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -15114,7 +17129,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15140,9 +17155,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "18d76f36-a380-4682-9301-afcd84fbcdf5")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f7780b4e-6046-416e-a437-5c656bee9aa5")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/5c55a2ba-3fa1-4927-b287-33a9c921e643")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15352,7 +17393,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 595-UCC3803DTR "
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15365,9 +17406,74 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a593fcbe-8d72-48d4-b72f-acf6c0348c96")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e4373880-e402-4d49-8936-cb6ddf224205")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ff77d63-97a5-4d1a-a6c0-54a99e0cf8aa")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ccb768a7-60a1-4b93-9c14-4fd2e076707e")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Link" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e3a6fc32-264a-428d-86d1-28692a82839a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "TSSOP*4.4x3mm*P0.65mm* SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/3a20da92-fd18-401c-a524-084380bdf404")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15645,7 +17751,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15697,10 +17803,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cbfcf7e6-2b2f-488e-a892-48b21ee4e8da")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2b501139-734f-46db-9aa4-056dd62e8795")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/be599421-d76b-4fce-9c89-961830509688")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -15755,7 +17887,7 @@
 		(descr "SO, 8 Pin (https://www.nxp.com/docs/en/data-sheet/PCF8523.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SO SO")
 		(property "Reference" "Q101"
-			(at 2.000001 3.25 90)
+			(at 0 0 180)
 			(layer "F.SilkS")
 			(uuid "f4e8828d-9a92-4348-8c1d-199e37a397cf")
 			(effects
@@ -15865,8 +17997,34 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "33ae0515-fa0c-4da0-adaa-6978ae8720da")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d8beb195-7347-4ca0-a947-1d7d5df3527a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/f651c8cf-a796-4063-b26f-d817dab0337b")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16143,7 +18301,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16221,9 +18379,74 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b9bbd30c-b3ea-45a2-a9e2-0c31ec9b4974")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "314272da-cc8f-420f-9ddc-7ed70761d344")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4ad04b1e-421d-4131-a047-84a4e939b5e4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e0c6d557-47c6-4de3-9d8f-3ebae2de36fe")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt Link" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eecfd46f-793a-4918-b031-339e1cef6de1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/7ac8cfb5-0736-439e-83c9-1430bc4c8687")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16470,7 +18693,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16522,10 +18745,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c796c759-ddd1-486f-9d6c-58fa380f4ec9")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b7a96da-a398-4d8a-b75b-f288c4e9de19")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/182cf939-caee-4235-a028-c9df5c608ac1")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -16599,7 +18848,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16625,9 +18874,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "acfb191b-4a21-470b-a5e4-9b35a5db61c2")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d464cbd6-46e1-4726-bfcc-88ece6b34cd4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/158686e7-9173-4b8d-8592-5591170c832e")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -16789,7 +19064,7 @@
 				)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "60k4"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(uuid "84ce0a4c-6a74-46da-9e0f-e8bee58609b4")
@@ -16800,7 +19075,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16826,9 +19101,48 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "61d3de4d-70dd-463e-9d89-c9ba65448220")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f9de7f01-9962-4b2e-a4a6-87c7fed4bf1c")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser Nr." " 603-RE0805FRE0747KL "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d32dc0c-b608-4805-93a5-32c0654e4a15")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/86c616da-997c-40b1-b2ae-b86503d5d457")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17001,7 +19315,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17053,9 +19367,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e7c299fd-76bb-4a55-8caf-be32604cafbe")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2f478345-c5ed-46af-ac48-db00795d8935")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/3a8646d8-01b7-4310-8a89-a8d7b6327238")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17228,7 +19568,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17267,7 +19607,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 187-CL21B106KPQNNNE "
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17280,10 +19620,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f1e248aa-45c4-42fb-a696-cc81d75cd006")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aa3e96eb-a9d5-499c-b5e8-67fd405e68db")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/1184a576-92ec-45e0-ab28-b42d91677209")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 0.735)
@@ -17455,7 +19821,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17507,9 +19873,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d706f80-b6fe-404e-b24f-c1fd3e5cb6b7")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "14624892-b517-4099-827f-76c769664004")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/2b0bc69e-0807-4a85-b1de-ec666a9f7662")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17705,7 +20097,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17757,10 +20149,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8f974083-f773-4ede-a386-c233034bdcfa")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0e255c0a-92ac-45c7-b463-0924312a9ccb")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/e48686bb-68c1-4633-8171-f8b2f9cbafda")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -17884,10 +20302,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d22f5d00-7efe-4cea-b4b9-164f22942944")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "361a8487-1b67-4043-8a02-6c87f26b15b2")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "LQFP*7x7mm*P0.5mm*")
 		(path "/ccc3f9d5-ee3e-4311-8066-51443ccfda2c")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 3.61 -3.61)
@@ -18803,7 +21247,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18829,10 +21273,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0b05087f-215a-42a4-aaea-a661a46519f5")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eca0a2f4-6bac-46e4-9d31-ad21dd48d7d7")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/546ef101-f6b8-4efb-98f4-eafe5f7f57a4")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.86 -0.96)
@@ -19026,7 +21496,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 135)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19078,10 +21548,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7eaa4700-64d8-4e3f-82eb-d3426dee3354")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b8f6369d-032b-4f5c-95ef-a1c33358df94")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/9714103f-da90-4bce-944f-e0f8160775a7")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 1.270001)
@@ -19301,172 +21797,6 @@
 			)
 		)
 	)
-	(footprint "Symbol:ESD-Logo_6.6x6mm_SilkScreen"
-		(layer "F.Cu")
-		(uuid "cfe599d8-b80b-4534-bbe3-fc40e97df785")
-		(at 68.765 123.685)
-		(descr "Electrostatic discharge Logo")
-		(tags "Logo ESD")
-		(property "Reference" "REF**"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "769112db-c093-4902-a4e5-05725e07ac0b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "ESD-Logo_6.6x6mm_SilkScreen"
-			(at 0.75 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3d5af8eb-3ec0-4cdf-aa29-d9b5887d64e5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "7a8cbe7c-b06c-4d01-a68f-2b28a102aa96")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6c4f4c46-22d8-45b4-8d63-8f2fc780f877")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
-		(fp_poly
-			(pts
-				(xy 1.987528 0.234619) (xy 1.998908 0.253693) (xy 2.024488 0.297421) (xy 2.063002 0.363619) (xy 2.113186 0.450102)
-				(xy 2.173775 0.554685) (xy 2.243503 0.675183) (xy 2.321107 0.809412) (xy 2.40532 0.955187) (xy 2.494879 1.110323)
-				(xy 2.586998 1.27) (xy 2.681076 1.433117) (xy 2.771402 1.589709) (xy 2.856665 1.737506) (xy 2.935557 1.87424)
-				(xy 3.006769 1.997642) (xy 3.068991 2.105444) (xy 3.120913 2.195377) (xy 3.161228 2.265173) (xy 3.188624 2.312564)
-				(xy 3.201507 2.334786) (xy 3.222507 2.37233) (xy 3.233925 2.395831) (xy 3.234551 2.39992) (xy 3.220636 2.392242)
-				(xy 3.181941 2.370203) (xy 3.120487 2.334971) (xy 3.038298 2.287711) (xy 2.937396 2.229589) (xy 2.819805 2.161771)
-				(xy 2.687546 2.085424) (xy 2.542642 2.001714) (xy 2.387117 1.911806) (xy 2.222992 1.816867) (xy 2.160549 1.780732)
-				(xy 1.993487 1.684083) (xy 1.834074 1.591938) (xy 1.684355 1.505475) (xy 1.546376 1.425871) (xy 1.422185 1.354305)
-				(xy 1.313827 1.291955) (xy 1.223348 1.239998) (xy 1.152796 1.199613) (xy 1.104215 1.171978) (xy 1.079654 1.158272)
-				(xy 1.077085 1.156974) (xy 1.084569 1.14522) (xy 1.110614 1.113795) (xy 1.152559 1.065594) (xy 1.207746 1.00351)
-				(xy 1.273517 0.930439) (xy 1.347212 0.849276) (xy 1.426173 0.762916) (xy 1.50774 0.674253) (xy 1.589254 0.586182)
-				(xy 1.668057 0.501599) (xy 1.74149 0.423397) (xy 1.806893 0.354472) (xy 1.861608 0.297719) (xy 1.902977 0.256032)
-				(xy 1.917164 0.242363) (xy 1.96418 0.198201) (xy 1.987528 0.234619)
-			)
-			(stroke
-				(width 0.01)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.SilkS")
-			(uuid "baef7b5d-ab34-4fa7-a54a-49d623f20a6a")
-		)
-		(fp_poly
-			(pts
-				(xy 0.164043 -2.914165) (xy 0.187065 -2.876755) (xy 0.222534 -2.817486) (xy 0.268996 -2.738882)
-				(xy 0.324996 -2.643462) (xy 0.389081 -2.53375) (xy 0.459796 -2.412266) (xy 0.535687 -2.281532) (xy 0.615299 -2.14407)
-				(xy 0.697178 -2.002402) (xy 0.77987 -1.859049) (xy 0.861921 -1.716533) (xy 0.941876 -1.577376) (xy 1.018281 -1.444099)
-				(xy 1.089682 -1.319224) (xy 1.154624 -1.205273) (xy 1.211653 -1.104767) (xy 1.259315 -1.020228)
-				(xy 1.296155 -0.954178) (xy 1.32072 -0.909138) (xy 1.331554 -0.88763) (xy 1.331951 -0.886286) (xy 1.318501 -0.868035)
-				(xy 1.281114 -0.840118) (xy 1.224235 -0.805275) (xy 1.152312 -0.766246) (xy 1.077015 -0.729157)
-				(xy 0.97456 -0.684183) (xy 0.866817 -0.643774) (xy 0.750073 -0.607031) (xy 0.620618 -0.573058) (xy 0.47474 -0.540956)
-				(xy 0.308726 -0.509827) (xy 0.118866 -0.478773) (xy -0.077531 -0.449855) (xy -0.248166 -0.4242)
-				(xy -0.391455 -0.398802) (xy -0.510992 -0.372398) (xy -0.61037 -0.343727) (xy -0.693182 -0.311527)
-				(xy -0.763022 -0.274535) (xy -0.823482 -0.231488) (xy -0.878155 -0.181125) (xy -0.895786 -0.162417)
-				(xy -0.934 -0.118861) (xy -0.962268 -0.083318) (xy -0.975382 -0.062417) (xy -0.975732 -0.060703)
-				(xy -0.98032 -0.050194) (xy -0.996242 -0.050076) (xy -1.026734 -0.061746) (xy -1.075032 -0.086604)
-				(xy -1.144373 -0.126048) (xy -1.192561 -0.154413) (xy -1.264417 -0.198753) (xy -1.320258 -0.236721)
-				(xy -1.356333 -0.265584) (xy -1.368887 -0.282612) (xy -1.368879 -0.282736) (xy -1.361094 -0.298963)
-				(xy -1.339108 -0.3396) (xy -1.304197 -0.402433) (xy -1.257637 -0.485248) (xy -1.200705 -0.585828)
-				(xy -1.134677 -0.70196) (xy -1.060828 -0.831429) (xy -0.980436 -0.97202) (xy -0.894776 -1.121518)
-				(xy -0.805124 -1.277708) (xy -0.712757 -1.438376) (xy -0.618951 -1.601307) (xy -0.524982 -1.764287)
-				(xy -0.432126 -1.9251) (xy -0.34166 -2.081532) (xy -0.254859 -2.231367) (xy -0.173 -2.372392) (xy -0.097359 -2.502391)
-				(xy -0.029213 -2.619151) (xy 0.030163 -2.720455) (xy 0.079493 -2.804089) (xy 0.1175 -2.867838) (xy 0.142907 -2.909489)
-				(xy 0.15444 -2.926825) (xy 0.154923 -2.927195) (xy 0.164043 -2.914165)
-			)
-			(stroke
-				(width 0.01)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.SilkS")
-			(uuid "2e2ac203-ed90-45ec-a93d-6e78934b2e21")
-		)
-		(fp_poly
-			(pts
-				(xy -1.677906 0.291158) (xy -1.645381 0.303736) (xy -1.595807 0.328712) (xy -1.524626 0.367876)
-				(xy -1.519084 0.370988) (xy -1.453526 0.408476) (xy -1.398202 0.441319) (xy -1.358545 0.466205)
-				(xy -1.339988 0.47982) (xy -1.339469 0.480487) (xy -1.343952 0.49939) (xy -1.364514 0.541605) (xy -1.399817 0.604832)
-				(xy -1.44852 0.686772) (xy -1.509282 0.785122) (xy -1.580764 0.897585) (xy -1.598555 0.925165) (xy -1.644907 1.001699)
-				(xy -1.678658 1.067556) (xy -1.696847 1.116782) (xy -1.698714 1.126507) (xy -1.697885 1.169312)
-				(xy -1.688606 1.237209) (xy -1.672032 1.325843) (xy -1.64932 1.430859) (xy -1.621627 1.547902) (xy -1.59011 1.672616)
-				(xy -1.555925 1.800645) (xy -1.520229 1.927634) (xy -1.484179 2.049228) (xy -1.448932 2.161072)
-				(xy -1.415644 2.25881) (xy -1.385472 2.338087) (xy -1.364439 2.385122) (xy -1.339663 2.435225) (xy -1.31627 2.483168)
-				(xy -1.315003 2.485793) (xy -1.276301 2.53422) (xy -1.219816 2.566828) (xy -1.154061 2.582454) (xy -1.087549 2.579937)
-				(xy -1.028795 2.558114) (xy -0.995742 2.529382) (xy -0.948141 2.450583) (xy -0.913261 2.352378)
-				(xy -0.894123 2.244779) (xy -0.891412 2.18378) (xy -0.90233 2.069935) (xy -0.934376 1.97566) (xy -0.989274 1.896379)
-				(xy -1.006393 1.878733) (xy -1.057339 1.829235) (xy -1.060837 1.479362) (xy -1.064336 1.129489)
-				(xy -0.975182 0.994531) (xy -0.933346 0.933445) (xy -0.893055 0.878493) (xy -0.860057 0.837336)
-				(xy -0.845874 0.822192) (xy -0.805719 0.78481) (xy -0.751335 0.814098) (xy -0.716961 0.835084) (xy -0.698154 0.851378)
-				(xy -0.696951 0.854307) (xy -0.684097 0.866728) (xy -0.662104 0.875977) (xy -0.64085 0.884313) (xy -0.608306 0.900149)
-				(xy -0.561678 0.925033) (xy -0.498171 0.960509) (xy -0.414992 1.008123) (xy -0.309347 1.069422)
-				(xy -0.251938 1.102932) (xy -0.184406 1.143071) (xy -0.140115 1.171659) (xy -0.115145 1.192039)
-				(xy -0.105577 1.207553) (xy -0.107492 1.221546) (xy -0.109089 1.224796) (xy -0.124624 1.245266)
-				(xy -0.157864 1.283665) (xy -0.204938 1.335696) (xy -0.261972 1.397066) (xy -0.3113 1.44909) (xy -0.42497 1.572567)
-				(xy -0.513895 1.679591) (xy -0.578866 1.77124) (xy -0.620679 1.848588) (xy -0.634783 1.887866) (xy -0.640608 1.922249)
-				(xy -0.646625 1.980899) (xy -0.652304 2.057117) (xy -0.657116 2.144202) (xy -0.659381 2.199268)
-				(xy -0.662541 2.294464) (xy -0.663931 2.364062) (xy -0.663142 2.413409) (xy -0.659765 2.447854)
-				(xy -0.653392 2.472743) (xy -0.643613 2.493425) (xy -0.635933 2.506053) (xy -0.591579 2.554726)
-				(xy -0.534426 2.588645) (xy -0.474292 2.603438) (xy -0.429227 2.598086) (xy -0.388424 2.57493) (xy -0.337276 2.533462)
-				(xy -0.282958 2.480912) (xy -0.232643 2.424516) (xy -0.193506 2.371505) (xy -0.179095 2.345889)
-				(xy -0.157509 2.310814) (xy -0.118247 2.257389) (xy -0.064898 2.189789) (xy -0.001048 2.11219) (xy 0.069715 2.028768)
-				(xy 0.143804 1.943698) (xy 0.217632 1.861155) (xy 0.287611 1.785316) (xy 0.350155 1.720356) (xy 0.39926 1.672669)
-				(xy 0.453779 1.625032) (xy 0.499642 1.589908) (xy 0.531811 1.570949) (xy 0.542489 1.568864) (xy 0.558853 1.577274)
-				(xy 0.599671 1.599846) (xy 0.662586 1.635224) (xy 0.745244 1.682054) (xy 0.845289 1.738981) (xy 0.960366 1.804649)
-				(xy 1.088119 1.877703) (xy 1.226194 1.956788) (xy 1.372234 2.040548) (xy 1.523884 2.127629) (xy 1.67879 2.216676)
-				(xy 1.834595 2.306332) (xy 1.988944 2.395243) (xy 2.139482 2.482054) (xy 2.283854 2.565409) (xy 2.419704 2.643954)
-				(xy 2.544677 2.716333) (xy 2.656417 2.78119) (xy 2.75257 2.837171) (xy 2.830779 2.88292) (xy 2.888689 2.917083)
-				(xy 2.923946 2.938304) (xy 2.934165 2.944963) (xy 2.920402 2.94628) (xy 2.877104 2.947559) (xy 2.805714 2.948796)
-				(xy 2.707673 2.949983) (xy 2.584422 2.951115) (xy 2.437403 2.952186) (xy 2.268057 2.953189) (xy 2.077826 2.954119)
-				(xy 1.868151 2.954968) (xy 1.640473 2.955732) (xy 1.396235 2.956403) (xy 1.136877 2.956976) (xy 0.863841 2.957444)
-				(xy 0.578568 2.957802) (xy 0.2825 2.958042) (xy -0.022921 2.958159) (xy -0.151076 2.958171) (xy -3.25103 2.958171)
-				(xy -3.029947 2.574847) (xy -2.983144 2.49368) (xy -2.922898 2.389166) (xy -2.851222 2.264801) (xy -2.770131 2.124082)
-				(xy -2.681638 1.970503) (xy -2.58776 1.807562) (xy -2.490509 1.638754) (xy -2.3919 1.467575) (xy -2.293947 1.297521)
-				(xy -2.269175 1.254512) (xy -2.178848 1.097857) (xy -2.092711 0.948803) (xy -2.012058 0.809568)
-				(xy -1.938184 0.682371) (xy -1.872383 0.569432) (xy -1.81595 0.472968) (xy -1.770179 0.3952) (xy -1.736365 0.338346)
-				(xy -1.715802 0.304625) (xy -1.710047 0.29604) (xy -1.697942 0.289189) (xy -1.677906 0.291158)
-			)
-			(stroke
-				(width 0.01)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.SilkS")
-			(uuid "75867acc-812c-496e-8ee3-54e932cc20ec")
-		)
-		(embedded_fonts no)
-	)
 	(footprint "Battery:BatteryHolder_Renata_SMTU2032-LF_1x2032"
 		(layer "F.Cu")
 		(uuid "d127ed3f-1a08-47cb-a211-ec870329597d")
@@ -19496,7 +21826,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19548,9 +21878,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9ed31d9e-3953-48b6-9dbd-67a63442f024")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "42fa8cce-962d-4b6a-898d-ddb76afdc3b3")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(path "/32bf5d57-fe6e-4220-930c-175bc8f81fb7")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -14.37 -3.62)
@@ -20041,7 +22397,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20080,9 +22436,48 @@
 				)
 			)
 		)
+		(property "Mouser Nr." " 710-885012207082 "
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "497c8600-82da-425e-af17-ba5a452f186a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c1c95241-87a5-4e11-97b3-f3305a55c5e4")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ec12e66c-197e-4d1f-8e69-0ad975fe9428")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/f49a325c-979c-43b5-aaa0-27bfa423e086")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20255,7 +22650,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20281,9 +22676,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "abbdf33b-48ed-40a3-bbd8-a7fca35cb8a3")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7002b71f-f85d-46b1-8339-3870100b2ab0")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(path "/00000000-0000-0000-0000-000061d93a0e")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.61 -0.9)
@@ -20694,10 +23115,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b955b1f5-582c-4f9d-a08f-a033eb661601")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "38276cf8-9fb6-4d50-a162-c371e0566d87")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "USB*C*Receptacle*")
 		(path "/ee5e4c26-3839-4ab6-930b-fd6c25abb041")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.5 -0.68)
@@ -21132,7 +23579,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21171,7 +23618,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 71-CRCW0805634KFKEA "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21184,9 +23631,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6cfe5366-ec1f-4477-a040-a0ff72a37924")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "33b1090e-df40-4510-a7bc-d4bd683a4e3f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/b7f0c161-cae1-43ee-b3aa-a567fbbe6f92")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21359,7 +23832,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21385,9 +23858,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "002a28c1-2889-4024-808e-6af0dd591a33")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "028d7566-9a77-464e-a945-c0dddf3241e5")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/a84b3058-1734-4641-8954-6fe4edfacd62")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -21586,10 +24085,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a2dd504a-109f-4ff7-9555-41ec88b8134a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "95d41e93-9f24-474a-a750-03d633585e70")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "SOT?223*TabPin2*")
 		(path "/cbcd86e8-51c1-4da3-bbb0-63c09c2500a4")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -1.85 -3.410001)
@@ -21825,7 +24350,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21864,7 +24389,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 603-AC0805FR-07330KL "
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21877,9 +24402,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08a9e045-8696-46ee-9841-b0f7eda5037f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fce93307-09d2-45b6-9ac4-2c5c5cd51168")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/1395a560-4b46-49c4-b811-8613540bcff3")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22052,7 +24603,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22078,9 +24629,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5994e1d5-bdf2-4ab5-9da8-9d9502f0dca0")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "44ad52f5-232f-4884-a9b1-222a577b6cc9")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(path "/b6fbcdbf-410d-490f-ba54-6f7877cb9f0c")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -5.1 -3.3)
@@ -22402,7 +24979,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22454,10 +25031,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3f04aa37-ae83-4a00-b9c1-d1463693f411")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ade35aeb-6ae7-4757-a6fb-8521d0e14c7d")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/271c9491-6fe1-4a23-92fe-a1f6518eabf1")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -22533,7 +25136,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22559,10 +25162,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c642913a-4ef6-439f-851f-829729fdde4f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "149cd3fa-c4c9-4d1f-a1b1-10076764428f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/5446939c-0bdd-48a6-b4a5-1e043c4dd972")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 1 -0.96)
@@ -22728,25 +25357,25 @@
 			)
 		)
 	)
-	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+	(footprint "Capacitor_SMD:C_2220_5750Metric_Pad1.97x5.40mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "ea864112-85ed-4c92-86df-3adbc9c966ab")
-		(at 87.661049 111.23105)
-		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
+		(at 86.75 113.25)
+		(descr "Capacitor SMD 2220 (5750 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size from: http://datasheets.avx.com/AVX-HV_MLCC.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C110"
-			(at -2.450001 0 90)
+			(at -2 -3.65 0)
 			(layer "F.SilkS")
 			(uuid "b2ffbf23-6b3e-4828-b04b-87d4ae5ee9bc")
 			(effects
 				(font
-					(size 0.6 0.6)
-					(thickness 0.1)
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
-		(property "Value" "1u 250V"
-			(at 0 1.679999 0)
+		(property "Value" "2u2 250V"
+			(at 0 3.65 0)
 			(layer "F.Fab")
 			(uuid "6b68f486-0c89-4064-86f6-7194ad354c8d")
 			(effects
@@ -22756,9 +25385,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
-			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4923d901-4020-4686-921e-f16732b9af1f")
@@ -22771,7 +25399,6 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 0 0 0)
-			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8aab8788-9a8c-41a0-a02e-f07304b368c1")
@@ -22787,131 +25414,99 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9ff03bb3-baee-457c-b8e2-e4fc478d1a21")
+			(uuid "66402d2c-b76d-447e-86c3-88aefdddab60")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 810-CGA4J3X7T2E104MA "
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b755fb49-54af-4b35-8311-992aa97f8635")
+			(uuid "8ad51785-ae63-409a-acba-93e72742d993")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2675b5f1-9c9e-40af-82a1-3dd60a7fc2da")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3e4e8ac0-1773-4228-b0a2-6d79993ab1c0")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
 				)
 			)
 		)
 		(property ki_fp_filters "C_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/70d0c0fc-1ff9-4e75-b64d-83978109ee27")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.261253 -0.735)
-			(end 0.261253 -0.735)
+			(start -1.415748 -2.61)
+			(end 1.415748 -2.61)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "9814365f-b5ee-43fa-b745-ebfdd5225d39")
+			(uuid "11d63c91-a6c7-4150-b666-88855ec31fa4")
 		)
 		(fp_line
-			(start -0.261253 0.735)
-			(end 0.261253 0.735)
+			(start -1.415748 2.61)
+			(end 1.415748 2.61)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "a38d80c1-c824-4adc-8f1e-194c3960fb8e")
+			(uuid "2699cc0a-d998-4446-9d61-8a1437df49a9")
 		)
-		(fp_line
-			(start -1.88 -0.98)
-			(end 1.88 -0.98)
+		(fp_rect
+			(start -3.88 -2.95)
+			(end 3.88 2.95)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
+			(fill no)
 			(layer "F.CrtYd")
-			(uuid "b91ac64f-a326-485c-a6e2-bbbefa155f74")
+			(uuid "f8e83de8-857e-490a-8eaf-337fc516266a")
 		)
-		(fp_line
-			(start -1.88 0.98)
-			(end -1.88 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "16ee536c-e278-43c9-8b71-c48f4ab34dcf")
-		)
-		(fp_line
-			(start 1.88 -0.98)
-			(end 1.88 0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "68ea8d0d-4f30-4f31-9138-d17d62573981")
-		)
-		(fp_line
-			(start 1.88 0.98)
-			(end -1.88 0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "584644e2-8c15-4b07-903c-882397d21d8a")
-		)
-		(fp_line
-			(start -1 -0.625)
-			(end 1 -0.625)
+		(fp_rect
+			(start -2.85 -2.5)
+			(end 2.85 2.5)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
+			(fill no)
 			(layer "F.Fab")
-			(uuid "99792550-eed7-4357-9a1a-b18d91743444")
-		)
-		(fp_line
-			(start -1 0.625)
-			(end -1 -0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "0653ea8e-e8ab-4205-ab85-cfb9e9844b1e")
-		)
-		(fp_line
-			(start 1 -0.625)
-			(end 1 0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "9f84313d-7b1a-4a6f-9a8a-4c4e87679a13")
-		)
-		(fp_line
-			(start 1 0.625)
-			(end -1 0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "20df7422-f9c2-475b-99d4-ac609df053c2")
+			(uuid "1a6c4b68-01c1-4a10-9862-989e81d96f0f")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
@@ -22919,31 +25514,31 @@
 			(uuid "d7dde62d-8c19-4cd4-b5b9-c1be2e32f3d9")
 			(effects
 				(font
-					(size 0.5 0.5)
-					(thickness 0.08)
+					(size 1 1)
+					(thickness 0.15)
 				)
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.0375 0)
-			(size 1.175 1.45)
+			(at -2.6375 0)
+			(size 1.975 5.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.212766)
+			(roundrect_rratio 0.126582)
 			(net 2 "HT")
 			(pintype "passive")
 			(uuid "c794710c-65e6-465a-9fc0-06b82c500bf9")
 		)
 		(pad "2" smd roundrect
-			(at 1.0375 0)
-			(size 1.175 1.45)
+			(at 2.6375 0)
+			(size 1.975 5.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(roundrect_rratio 0.212766)
+			(roundrect_rratio 0.126582)
 			(net 1 "GND")
 			(pintype "passive")
 			(uuid "301140f8-46e4-4ca1-a831-3485766560fc")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.wrl"
+		(model "${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_2220_5750Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -22984,7 +25579,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23036,10 +25631,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8cfffe90-1505-4704-9ea5-7f7c34a6f393")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0774c2d7-7968-4393-a051-f6ab7b74701d")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/ea56946d-60f1-4d0c-b9f5-069b39405b5b")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -23114,7 +25735,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23166,10 +25787,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "92c6e35d-b233-485b-9de7-4e6ffb31c171")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "51d15cef-442c-431f-8596-2efc6dcde2ec")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/1fffd277-64b8-46e8-be39-ce1f773310a4")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -23245,7 +25892,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23297,10 +25944,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "53fa6475-1235-45b7-b126-bf5eff4cbf36")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a6dba53-153c-47cd-a38d-1de47a7d0d89")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/e8ce11aa-11f4-432c-b80e-977a9143653d")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -23377,7 +26050,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23429,10 +26102,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ed63279-d242-486c-81ce-6bee4f403dc8")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6af51b92-494f-40c5-8012-ed353d95c353")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/769c2275-80a5-4610-aa4a-7bff04168509")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -23478,172 +26177,6 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Symbol:ESD-Logo_6.6x6mm_SilkScreen"
-		(layer "F.Cu")
-		(uuid "f504b6d7-b3ec-4931-9dc4-2235f17d0501")
-		(at 108.265 121.585)
-		(descr "Electrostatic discharge Logo")
-		(tags "Logo ESD")
-		(property "Reference" "REF**"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "45c26393-806d-4acd-897c-7f2f7645f4e8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "ESD-Logo_6.6x6mm_SilkScreen"
-			(at 0.75 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3cf321e0-2d1b-474c-ac80-92e932cd6cb2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "7a8cbe7c-b06c-4d01-a68f-2b28a102aa96")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6c4f4c46-22d8-45b4-8d63-8f2fc780f877")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(attr exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
-		(fp_poly
-			(pts
-				(xy 1.987528 0.234619) (xy 1.998908 0.253693) (xy 2.024488 0.297421) (xy 2.063002 0.363619) (xy 2.113186 0.450102)
-				(xy 2.173775 0.554685) (xy 2.243503 0.675183) (xy 2.321107 0.809412) (xy 2.40532 0.955187) (xy 2.494879 1.110323)
-				(xy 2.586998 1.27) (xy 2.681076 1.433117) (xy 2.771402 1.589709) (xy 2.856665 1.737506) (xy 2.935557 1.87424)
-				(xy 3.006769 1.997642) (xy 3.068991 2.105444) (xy 3.120913 2.195377) (xy 3.161228 2.265173) (xy 3.188624 2.312564)
-				(xy 3.201507 2.334786) (xy 3.222507 2.37233) (xy 3.233925 2.395831) (xy 3.234551 2.39992) (xy 3.220636 2.392242)
-				(xy 3.181941 2.370203) (xy 3.120487 2.334971) (xy 3.038298 2.287711) (xy 2.937396 2.229589) (xy 2.819805 2.161771)
-				(xy 2.687546 2.085424) (xy 2.542642 2.001714) (xy 2.387117 1.911806) (xy 2.222992 1.816867) (xy 2.160549 1.780732)
-				(xy 1.993487 1.684083) (xy 1.834074 1.591938) (xy 1.684355 1.505475) (xy 1.546376 1.425871) (xy 1.422185 1.354305)
-				(xy 1.313827 1.291955) (xy 1.223348 1.239998) (xy 1.152796 1.199613) (xy 1.104215 1.171978) (xy 1.079654 1.158272)
-				(xy 1.077085 1.156974) (xy 1.084569 1.14522) (xy 1.110614 1.113795) (xy 1.152559 1.065594) (xy 1.207746 1.00351)
-				(xy 1.273517 0.930439) (xy 1.347212 0.849276) (xy 1.426173 0.762916) (xy 1.50774 0.674253) (xy 1.589254 0.586182)
-				(xy 1.668057 0.501599) (xy 1.74149 0.423397) (xy 1.806893 0.354472) (xy 1.861608 0.297719) (xy 1.902977 0.256032)
-				(xy 1.917164 0.242363) (xy 1.96418 0.198201) (xy 1.987528 0.234619)
-			)
-			(stroke
-				(width 0.01)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.SilkS")
-			(uuid "4cb0169a-0565-42b8-b77e-61f072fcdb7f")
-		)
-		(fp_poly
-			(pts
-				(xy 0.164043 -2.914165) (xy 0.187065 -2.876755) (xy 0.222534 -2.817486) (xy 0.268996 -2.738882)
-				(xy 0.324996 -2.643462) (xy 0.389081 -2.53375) (xy 0.459796 -2.412266) (xy 0.535687 -2.281532) (xy 0.615299 -2.14407)
-				(xy 0.697178 -2.002402) (xy 0.77987 -1.859049) (xy 0.861921 -1.716533) (xy 0.941876 -1.577376) (xy 1.018281 -1.444099)
-				(xy 1.089682 -1.319224) (xy 1.154624 -1.205273) (xy 1.211653 -1.104767) (xy 1.259315 -1.020228)
-				(xy 1.296155 -0.954178) (xy 1.32072 -0.909138) (xy 1.331554 -0.88763) (xy 1.331951 -0.886286) (xy 1.318501 -0.868035)
-				(xy 1.281114 -0.840118) (xy 1.224235 -0.805275) (xy 1.152312 -0.766246) (xy 1.077015 -0.729157)
-				(xy 0.97456 -0.684183) (xy 0.866817 -0.643774) (xy 0.750073 -0.607031) (xy 0.620618 -0.573058) (xy 0.47474 -0.540956)
-				(xy 0.308726 -0.509827) (xy 0.118866 -0.478773) (xy -0.077531 -0.449855) (xy -0.248166 -0.4242)
-				(xy -0.391455 -0.398802) (xy -0.510992 -0.372398) (xy -0.61037 -0.343727) (xy -0.693182 -0.311527)
-				(xy -0.763022 -0.274535) (xy -0.823482 -0.231488) (xy -0.878155 -0.181125) (xy -0.895786 -0.162417)
-				(xy -0.934 -0.118861) (xy -0.962268 -0.083318) (xy -0.975382 -0.062417) (xy -0.975732 -0.060703)
-				(xy -0.98032 -0.050194) (xy -0.996242 -0.050076) (xy -1.026734 -0.061746) (xy -1.075032 -0.086604)
-				(xy -1.144373 -0.126048) (xy -1.192561 -0.154413) (xy -1.264417 -0.198753) (xy -1.320258 -0.236721)
-				(xy -1.356333 -0.265584) (xy -1.368887 -0.282612) (xy -1.368879 -0.282736) (xy -1.361094 -0.298963)
-				(xy -1.339108 -0.3396) (xy -1.304197 -0.402433) (xy -1.257637 -0.485248) (xy -1.200705 -0.585828)
-				(xy -1.134677 -0.70196) (xy -1.060828 -0.831429) (xy -0.980436 -0.97202) (xy -0.894776 -1.121518)
-				(xy -0.805124 -1.277708) (xy -0.712757 -1.438376) (xy -0.618951 -1.601307) (xy -0.524982 -1.764287)
-				(xy -0.432126 -1.9251) (xy -0.34166 -2.081532) (xy -0.254859 -2.231367) (xy -0.173 -2.372392) (xy -0.097359 -2.502391)
-				(xy -0.029213 -2.619151) (xy 0.030163 -2.720455) (xy 0.079493 -2.804089) (xy 0.1175 -2.867838) (xy 0.142907 -2.909489)
-				(xy 0.15444 -2.926825) (xy 0.154923 -2.927195) (xy 0.164043 -2.914165)
-			)
-			(stroke
-				(width 0.01)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.SilkS")
-			(uuid "11b434d6-0950-44a1-b649-21868ca25f29")
-		)
-		(fp_poly
-			(pts
-				(xy -1.677906 0.291158) (xy -1.645381 0.303736) (xy -1.595807 0.328712) (xy -1.524626 0.367876)
-				(xy -1.519084 0.370988) (xy -1.453526 0.408476) (xy -1.398202 0.441319) (xy -1.358545 0.466205)
-				(xy -1.339988 0.47982) (xy -1.339469 0.480487) (xy -1.343952 0.49939) (xy -1.364514 0.541605) (xy -1.399817 0.604832)
-				(xy -1.44852 0.686772) (xy -1.509282 0.785122) (xy -1.580764 0.897585) (xy -1.598555 0.925165) (xy -1.644907 1.001699)
-				(xy -1.678658 1.067556) (xy -1.696847 1.116782) (xy -1.698714 1.126507) (xy -1.697885 1.169312)
-				(xy -1.688606 1.237209) (xy -1.672032 1.325843) (xy -1.64932 1.430859) (xy -1.621627 1.547902) (xy -1.59011 1.672616)
-				(xy -1.555925 1.800645) (xy -1.520229 1.927634) (xy -1.484179 2.049228) (xy -1.448932 2.161072)
-				(xy -1.415644 2.25881) (xy -1.385472 2.338087) (xy -1.364439 2.385122) (xy -1.339663 2.435225) (xy -1.31627 2.483168)
-				(xy -1.315003 2.485793) (xy -1.276301 2.53422) (xy -1.219816 2.566828) (xy -1.154061 2.582454) (xy -1.087549 2.579937)
-				(xy -1.028795 2.558114) (xy -0.995742 2.529382) (xy -0.948141 2.450583) (xy -0.913261 2.352378)
-				(xy -0.894123 2.244779) (xy -0.891412 2.18378) (xy -0.90233 2.069935) (xy -0.934376 1.97566) (xy -0.989274 1.896379)
-				(xy -1.006393 1.878733) (xy -1.057339 1.829235) (xy -1.060837 1.479362) (xy -1.064336 1.129489)
-				(xy -0.975182 0.994531) (xy -0.933346 0.933445) (xy -0.893055 0.878493) (xy -0.860057 0.837336)
-				(xy -0.845874 0.822192) (xy -0.805719 0.78481) (xy -0.751335 0.814098) (xy -0.716961 0.835084) (xy -0.698154 0.851378)
-				(xy -0.696951 0.854307) (xy -0.684097 0.866728) (xy -0.662104 0.875977) (xy -0.64085 0.884313) (xy -0.608306 0.900149)
-				(xy -0.561678 0.925033) (xy -0.498171 0.960509) (xy -0.414992 1.008123) (xy -0.309347 1.069422)
-				(xy -0.251938 1.102932) (xy -0.184406 1.143071) (xy -0.140115 1.171659) (xy -0.115145 1.192039)
-				(xy -0.105577 1.207553) (xy -0.107492 1.221546) (xy -0.109089 1.224796) (xy -0.124624 1.245266)
-				(xy -0.157864 1.283665) (xy -0.204938 1.335696) (xy -0.261972 1.397066) (xy -0.3113 1.44909) (xy -0.42497 1.572567)
-				(xy -0.513895 1.679591) (xy -0.578866 1.77124) (xy -0.620679 1.848588) (xy -0.634783 1.887866) (xy -0.640608 1.922249)
-				(xy -0.646625 1.980899) (xy -0.652304 2.057117) (xy -0.657116 2.144202) (xy -0.659381 2.199268)
-				(xy -0.662541 2.294464) (xy -0.663931 2.364062) (xy -0.663142 2.413409) (xy -0.659765 2.447854)
-				(xy -0.653392 2.472743) (xy -0.643613 2.493425) (xy -0.635933 2.506053) (xy -0.591579 2.554726)
-				(xy -0.534426 2.588645) (xy -0.474292 2.603438) (xy -0.429227 2.598086) (xy -0.388424 2.57493) (xy -0.337276 2.533462)
-				(xy -0.282958 2.480912) (xy -0.232643 2.424516) (xy -0.193506 2.371505) (xy -0.179095 2.345889)
-				(xy -0.157509 2.310814) (xy -0.118247 2.257389) (xy -0.064898 2.189789) (xy -0.001048 2.11219) (xy 0.069715 2.028768)
-				(xy 0.143804 1.943698) (xy 0.217632 1.861155) (xy 0.287611 1.785316) (xy 0.350155 1.720356) (xy 0.39926 1.672669)
-				(xy 0.453779 1.625032) (xy 0.499642 1.589908) (xy 0.531811 1.570949) (xy 0.542489 1.568864) (xy 0.558853 1.577274)
-				(xy 0.599671 1.599846) (xy 0.662586 1.635224) (xy 0.745244 1.682054) (xy 0.845289 1.738981) (xy 0.960366 1.804649)
-				(xy 1.088119 1.877703) (xy 1.226194 1.956788) (xy 1.372234 2.040548) (xy 1.523884 2.127629) (xy 1.67879 2.216676)
-				(xy 1.834595 2.306332) (xy 1.988944 2.395243) (xy 2.139482 2.482054) (xy 2.283854 2.565409) (xy 2.419704 2.643954)
-				(xy 2.544677 2.716333) (xy 2.656417 2.78119) (xy 2.75257 2.837171) (xy 2.830779 2.88292) (xy 2.888689 2.917083)
-				(xy 2.923946 2.938304) (xy 2.934165 2.944963) (xy 2.920402 2.94628) (xy 2.877104 2.947559) (xy 2.805714 2.948796)
-				(xy 2.707673 2.949983) (xy 2.584422 2.951115) (xy 2.437403 2.952186) (xy 2.268057 2.953189) (xy 2.077826 2.954119)
-				(xy 1.868151 2.954968) (xy 1.640473 2.955732) (xy 1.396235 2.956403) (xy 1.136877 2.956976) (xy 0.863841 2.957444)
-				(xy 0.578568 2.957802) (xy 0.2825 2.958042) (xy -0.022921 2.958159) (xy -0.151076 2.958171) (xy -3.25103 2.958171)
-				(xy -3.029947 2.574847) (xy -2.983144 2.49368) (xy -2.922898 2.389166) (xy -2.851222 2.264801) (xy -2.770131 2.124082)
-				(xy -2.681638 1.970503) (xy -2.58776 1.807562) (xy -2.490509 1.638754) (xy -2.3919 1.467575) (xy -2.293947 1.297521)
-				(xy -2.269175 1.254512) (xy -2.178848 1.097857) (xy -2.092711 0.948803) (xy -2.012058 0.809568)
-				(xy -1.938184 0.682371) (xy -1.872383 0.569432) (xy -1.81595 0.472968) (xy -1.770179 0.3952) (xy -1.736365 0.338346)
-				(xy -1.715802 0.304625) (xy -1.710047 0.29604) (xy -1.697942 0.289189) (xy -1.677906 0.291158)
-			)
-			(stroke
-				(width 0.01)
-				(type solid)
-			)
-			(fill yes)
-			(layer "F.SilkS")
-			(uuid "ae37d7d7-7774-4070-83fb-92692d58355d")
-		)
-		(embedded_fonts no)
-	)
 	(footprint "Capacitor_SMD:CP_Elec_8x10"
 		(layer "F.Cu")
 		(uuid "f5583099-1c36-4938-a6b5-4996b7b8cab8")
@@ -23672,7 +26205,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23711,7 +26244,7 @@
 				)
 			)
 		)
-		(property "Mouser Nr." ""
+		(property "Mouser Nr." " 647-UUX1E221MNL6GS "
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23724,9 +26257,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ba0b6106-55d5-40a3-8c48-48c20ea9dc0c")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7515ec1d-430c-456c-a4d0-d883afcab46a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "CP_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/b6c51cfa-f73a-431e-9a1a-b53f7f926b1d")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24131,7 +26690,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 315)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24183,10 +26742,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 315)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "48f3c5ff-666b-4815-bb01-06d905b7aadb")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 315)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9e0e5f4c-c62e-4415-a040-257e6dc1c149")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/ef1b1607-2424-4984-99b8-3efb0175a6f4")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261253 0.735)
@@ -24358,7 +26943,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 45)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24410,10 +26995,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ab184b6-6578-434d-a4fc-c5d1c82543b2")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a5abad02-7e32-4f31-8774-f99ff267e31e")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/68a457dc-8154-406f-bbac-8c92093e14f9")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 -1.33)
@@ -24661,7 +27272,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24687,9 +27298,35 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "51bb8c22-74c0-48e3-b045-cd95e569e3de")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aafb493d-92fa-4a67-83cf-f0c767924bd9")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/9c594c2f-787f-4f16-953b-7a7d40f29933/06ac61a4-0616-4e39-a231-cc8a1c05835d")
-		(sheetname "HV Power Supply")
+		(sheetname "/HV Power Supply/")
 		(sheetfile "psu.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24863,7 +27500,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24915,10 +27552,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "82e35217-de3f-4717-86ea-b3ffd5bbf407")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7f8b96b1-f2e8-40d3-a02b-848b1b81998a")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/bb975dbb-2c7e-4cdd-9962-78569e5a8b2e")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -24994,7 +27657,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25046,10 +27709,36 @@
 				)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8f062243-a376-48cf-a97b-4cc9b5366094")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d60ed5f1-8caa-4e9f-81b9-12e7540bc44d")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/91163587-8242-4d62-a2e3-6db193fb9c61")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.33 8.95)
@@ -25299,7 +27988,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -25355,10 +28044,38 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "aa7d2fb8-0463-435d-a8cc-5356926d1493")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7d8c8f90-9b4e-4b84-b508-4707e0e0126f")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/3a5eda13-3af5-47f4-aabc-e6f2fa5440c3")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.27 1.33)
@@ -25761,7 +28478,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -25789,10 +28506,38 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d575984b-4424-4485-9ca1-e69b6ef9ca5b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ff587e7-2036-4550-9463-3824c76c8f0b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/208aa5b6-73f9-4b39-ac24-702839b754fa")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -3.87)
@@ -26021,7 +28766,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -26049,10 +28794,38 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6f8873f9-656c-4072-8a03-9eec2437b1c1")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3080a3d9-0db3-4494-a9cd-21b3005f5b43")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/f660d9f1-20eb-4063-a28c-5339ff3374b7")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -3.87)
@@ -26281,7 +29054,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -26309,10 +29082,38 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b2e3f852-5223-4f11-a52c-8e82a00b2a5b")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0684a6c0-7a54-4df7-ba74-c1f056f1ddce")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/aee1e8d1-690d-45a6-b85e-5aa0a33e5c93")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 1.33)
@@ -26541,7 +29342,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -26569,10 +29370,38 @@
 				(justify mirror)
 			)
 		)
+		(property "Mouser-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b4bcaeba-1bc0-4bec-a672-0f66aeac642e")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Reichelt-Nr." ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "de9fd169-3cac-4094-990a-b9bb0333c914")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/951267df-3242-4bfe-9a6f-9d200a1e88b1")
-		(sheetname "Stammblatt")
-		(sheetfile "NixieClock control board.kicad_sch")
+		(sheetname "/")
+		(sheetfile "CNIX V2 Control Board.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 1.33 -3.87)
@@ -27094,7 +29923,7 @@
 		)
 	)
 	(gr_text "V_HT"
-		(at 85.511051 121.331051 0)
+		(at 82.517458 124.242372 0)
 		(layer "F.SilkS" knockout)
 		(uuid "4b6c4e2d-f22e-4865-84b8-f7f2affa6b2b")
 		(effects
@@ -27106,7 +29935,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Version: 1.0"
+	(gr_text "Version: 1.1"
 		(at 78.5 130.5 0)
 		(layer "F.SilkS")
 		(uuid "4f773aae-4bda-4369-b6aa-6846dd66aed2")
@@ -30476,92 +33305,68 @@
 		(uuid "b40e25c9-ea3a-487a-99d4-21cab234d373")
 	)
 	(segment
-		(start 85.811051 111.231051)
-		(end 86.623551 111.231051)
-		(width 0.4)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "2c88fd9c-7dfb-4b95-ae9b-cdd2a9e73cc4")
-	)
-	(segment
-		(start 83.911051 103.518551)
-		(end 83.911051 104.331051)
-		(width 0.4)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "2ca12869-5dc8-4004-a5c0-6f34f0304cb1")
-	)
-	(segment
-		(start 73.111051 120.731051)
-		(end 69.94 123.902102)
+		(start 69.539999 123.460001)
+		(end 69.539999 129.000001)
 		(width 1)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "462c3b73-37f5-4e45-9beb-15817f6201b1")
+		(uuid "0d1f29e7-2da9-4b85-ac7e-81b0ddb2e0c3")
 	)
 	(segment
-		(start 84.423551 104.031053)
-		(end 86.41105 104.031053)
-		(width 0.4)
+		(start 83.917497 104.031053)
+		(end 83.91105 104.0375)
+		(width 1)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "631f0e5a-b4cc-4e0f-886e-f06d10c82c36")
-	)
-	(segment
-		(start 83.911051 109.331051)
-		(end 85.811051 111.231051)
-		(width 0.4)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "6deb7752-7682-4619-a168-afcba53da926")
-	)
-	(segment
-		(start 83.91105 103.518552)
-		(end 84.423551 104.031053)
-		(width 0.4)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "7165f38e-f000-4aef-b324-ed38280b61c0")
+		(uuid "22951f68-352a-4927-9ca2-95291f48937a")
 	)
 	(segment
 		(start 83.711051 120.731051)
-		(end 73.111051 120.731051)
+		(end 72.268949 120.731051)
 		(width 1)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "97078660-6aba-4865-a86c-44a23b425da9")
+		(uuid "310f0a02-5c0a-42f3-bd08-08bbd762f5e2")
 	)
 	(segment
-		(start 83.711051 120.731051)
-		(end 86.111051 120.731051)
+		(start 84.1125 104.23895)
+		(end 83.91105 104.0375)
+		(width 0.25)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "3aa814a1-2883-42f5-8d71-a25b130edb78")
+	)
+	(segment
+		(start 66.999999 129.000001)
+		(end 69.539999 129.000001)
 		(width 1)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "b414c99e-06de-4047-8726-b63189ecd30c")
+		(uuid "49a2ddcc-0215-41f2-912a-14af610e4a6b")
 	)
 	(segment
-		(start 69.94 128.36)
-		(end 67.4 128.36)
+		(start 86.41105 104.031053)
+		(end 83.917497 104.031053)
 		(width 1)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "bbeaf823-2c52-4761-a885-52567ff1a28d")
+		(uuid "5998b2b4-05ea-4220-ba95-08765e40e601")
 	)
 	(segment
-		(start 83.911051 104.331051)
-		(end 83.911051 109.331051)
-		(width 0.4)
+		(start 84.1125 113.25)
+		(end 84.1125 104.23895)
+		(width 0.25)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "d0e5257b-7d40-4eb1-9a38-256015c35b03")
+		(uuid "5f3189ab-3fe7-4b5c-a873-5d34dcba9357")
 	)
 	(segment
-		(start 69.94 123.902102)
-		(end 69.94 128.36)
+		(start 72.268949 120.731051)
+		(end 69.539999 123.460001)
 		(width 1)
 		(layer "F.Cu")
 		(net 2)
-		(uuid "d9d38282-bcc2-43a1-a629-8fc61e813fa5")
+		(uuid "ba342141-8b62-4b3e-b6f4-4fff696d9e27")
 	)
 	(segment
 		(start 179.188202 117.458202)
@@ -35243,32 +38048,42 @@
 			(thermal_gap 0.5)
 			(thermal_bridge_width 0.5)
 			(smoothing fillet)
+			(radius 1)
 		)
 		(polygon
 			(pts
-				(xy 85.66105 110.271053) (xy 85.66105 122.021052) (xy 95.161051 122.021052) (xy 95.161051 119.021053)
-				(xy 87.411051 119.021052) (xy 87.41105 110.271053)
+				(xy 82.66105 110.271053) (xy 82.66105 122.021052) (xy 95.161051 122.021052) (xy 95.161051 119.021053)
+				(xy 85.411051 119.021052) (xy 85.41105 110.271053)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 87.173793 110.290007) (xy 87.254575 110.343983) (xy 87.308551 110.424765) (xy 87.327505 110.520053)
-				(xy 87.326306 110.544459) (xy 87.310549 110.704441) (xy 87.310549 111.757658) (xy 87.325748 111.911984)
-				(xy 87.385815 112.109998) (xy 87.390499 112.121305) (xy 87.387781 112.12243) (xy 87.409848 112.195148)
-				(xy 87.41105 112.219581) (xy 87.41105 113.152519) (xy 87.392096 113.247807) (xy 87.389205 113.253918)
-				(xy 87.385817 113.262097) (xy 87.325749 113.460115) (xy 87.31055 113.614441) (xy 87.31055 114.667658)
-				(xy 87.325749 114.821984) (xy 87.385817 115.020002) (xy 87.390501 115.031309) (xy 87.387783 115.032434)
-				(xy 87.409848 115.105147) (xy 87.41105 115.12958) (xy 87.41105 115.94252) (xy 87.392096 116.037808)
-				(xy 87.3892 116.043929) (xy 87.385819 116.052091) (xy 87.325749 116.250121) (xy 87.31055 116.404443)
-				(xy 87.31055 117.45766) (xy 87.325749 117.611986) (xy 87.385817 117.810004) (xy 87.390501 117.821311)
-				(xy 87.387783 117.822436) (xy 87.409848 117.895149) (xy 87.41105 117.919582) (xy 87.41105 119.02105)
-				(xy 87.411051 119.021052) (xy 94.912055 119.021052) (xy 95.007339 119.040006) (xy 95.088121 119.093982)
-				(xy 95.142097 119.174764) (xy 95.161051 119.270052) (xy 95.161051 121.772052) (xy 95.142097 121.86734)
-				(xy 95.088121 121.948122) (xy 95.007339 122.002098) (xy 94.912051 122.021052) (xy 85.91005 122.021052)
-				(xy 85.814762 122.002098) (xy 85.73398 121.948122) (xy 85.680004 121.86734) (xy 85.66105 121.772052)
-				(xy 85.66105 110.520053) (xy 85.680004 110.424765) (xy 85.73398 110.343983) (xy 85.814762 110.290007)
-				(xy 85.91005 110.271053) (xy 87.078505 110.271053)
+				(xy 84.423223 110.272252) (xy 84.581732 110.287864) (xy 84.629605 110.297387) (xy 84.770268 110.340056)
+				(xy 84.815364 110.358734) (xy 84.944993 110.428023) (xy 84.985573 110.455138) (xy 85.099198 110.548387)
+				(xy 85.133715 110.582904) (xy 85.226964 110.696529) (xy 85.254083 110.737115) (xy 85.323367 110.866737)
+				(xy 85.342046 110.911834) (xy 85.384715 111.052497) (xy 85.394238 111.100369) (xy 85.409851 111.258878)
+				(xy 85.41105 111.283286) (xy 85.41105 119.02105) (xy 85.411051 119.021052) (xy 85.411052 119.021052)
+				(xy 90.286051 119.021052) (xy 94.148837 119.021052) (xy 94.173203 119.022249) (xy 94.331734 119.037864)
+				(xy 94.379606 119.047387) (xy 94.520269 119.090056) (xy 94.565365 119.108734) (xy 94.694994 119.178023)
+				(xy 94.735574 119.205138) (xy 94.849199 119.298387) (xy 94.883716 119.332904) (xy 94.976965 119.446529)
+				(xy 95.004084 119.487115) (xy 95.073368 119.616737) (xy 95.092047 119.661834) (xy 95.134716 119.802497)
+				(xy 95.144239 119.850369) (xy 95.159852 120.008878) (xy 95.161051 120.033286) (xy 95.161051 121.008818)
+				(xy 95.159852 121.033224) (xy 95.159852 121.033225) (xy 95.144239 121.191739) (xy 95.134716 121.239612)
+				(xy 95.09205 121.380265) (xy 95.07337 121.425363) (xy 95.004082 121.554991) (xy 94.976964 121.595576)
+				(xy 94.883716 121.7092) (xy 94.849199 121.743717) (xy 94.735575 121.836965) (xy 94.69499 121.864083)
+				(xy 94.565362 121.933371) (xy 94.520264 121.952051) (xy 94.379611 121.994717) (xy 94.331738 122.00424)
+				(xy 94.173224 122.019853) (xy 94.148817 122.021052) (xy 83.673284 122.021052) (xy 83.648877 122.019853)
+				(xy 83.490362 122.00424) (xy 83.442489 121.994717) (xy 83.301836 121.952051) (xy 83.256738 121.933371)
+				(xy 83.12711 121.864083) (xy 83.086525 121.836965) (xy 82.972901 121.743717) (xy 82.938384 121.7092)
+				(xy 82.845136 121.595576) (xy 82.818018 121.554991) (xy 82.74873 121.425363) (xy 82.730052 121.380269)
+				(xy 82.687383 121.239607) (xy 82.677861 121.191738) (xy 82.662249 121.033224) (xy 82.66105 121.008818)
+				(xy 82.66105 111.283286) (xy 82.662249 111.25888) (xy 82.677861 111.100366) (xy 82.687383 111.052497)
+				(xy 82.730053 110.911831) (xy 82.748726 110.866748) (xy 82.81802 110.737109) (xy 82.845136 110.696528)
+				(xy 82.853497 110.686339) (xy 82.938387 110.5829) (xy 82.972897 110.54839) (xy 83.086526 110.455138)
+				(xy 83.127106 110.428023) (xy 83.256745 110.358729) (xy 83.301828 110.340056) (xy 83.442496 110.297385)
+				(xy 83.490358 110.287864) (xy 83.61218 110.275866) (xy 83.648878 110.272252) (xy 83.673284 110.271053)
+				(xy 84.398816 110.271053)
 			)
 		)
 	)
@@ -35392,7 +38207,7 @@
 		(uuid "9a9b8950-16ad-410b-838d-832e09aa3dde")
 		(hatch edge 0.5)
 		(priority 6)
-		(connect_pads
+		(connect_pads yes
 			(clearance 0)
 		)
 		(min_thickness 0.25)
@@ -35404,50 +38219,20 @@
 		)
 		(polygon
 			(pts
-				(xy 88.41105 108.231052) (xy 88.411051 117.181051) (xy 90.111049 117.181051) (xy 90.111051 109.731051)
-				(xy 89.16105 109.731051) (xy 89.16105 108.231052)
+				(xy 88.25 108.25) (xy 88.25 116.75) (xy 86.911051 116.75) (xy 86.911051 117.931051) (xy 90.111049 117.931051)
+				(xy 90.111051 109.731051) (xy 89.16105 109.731051) (xy 89.16105 108.231052)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 88.904088 108.588236) (xy 88.949843 108.64104) (xy 88.961049 108.692551) (xy 88.961049 109.65605)
-				(xy 89.03705 109.65605) (xy 89.104089 109.675735) (xy 89.12249 109.696972) (xy 89.124731 109.694732)
-				(xy 89.16105 109.731051) (xy 89.987051 109.731051) (xy 90.05409 109.750736) (xy 90.099845 109.80354)
-				(xy 90.111051 109.855051) (xy 90.111049 117.057051) (xy 90.091364 117.12409) (xy 90.03856 117.169845)
-				(xy 89.987049 117.181051) (xy 88.822547 117.181051) (xy 88.755511 117.161367) (xy 88.709756 117.108563)
-				(xy 88.69855 117.057052) (xy 88.69855 116.931052) (xy 88.57255 116.931052) (xy 88.505511 116.911367)
-				(xy 88.459756 116.858563) (xy 88.44855 116.807052) (xy 88.44855 116.681052) (xy 88.94855 116.681052)
-				(xy 89.786049 116.681052) (xy 89.786049 116.40608) (xy 89.786048 116.406065) (xy 89.775555 116.303354)
-				(xy 89.720408 116.136932) (xy 89.720406 116.136927) (xy 89.628365 115.987706) (xy 89.504395 115.863736)
-				(xy 89.355174 115.771695) (xy 89.355169 115.771693) (xy 89.188747 115.716546) (xy 89.18874 115.716545)
-				(xy 89.086036 115.706052) (xy 88.94855 115.706052) (xy 88.94855 116.681052) (xy 88.44855 116.681052)
-				(xy 88.44855 115.706052) (xy 88.447369 115.704871) (xy 88.413884 115.643548) (xy 88.41105 115.617197)
-				(xy 88.41105 115.454908) (xy 88.430735 115.387872) (xy 88.447369 115.36723) (xy 88.44855 115.366049)
-				(xy 88.94855 115.366049) (xy 89.086022 115.366049) (xy 89.086036 115.366048) (xy 89.188747 115.355555)
-				(xy 89.355169 115.300408) (xy 89.355174 115.300406) (xy 89.504395 115.208365) (xy 89.628365 115.084395)
-				(xy 89.720406 114.935174) (xy 89.720408 114.935169) (xy 89.775555 114.768747) (xy 89.775556 114.76874)
-				(xy 89.786049 114.666036) (xy 89.78605 114.666023) (xy 89.78605 114.39105) (xy 88.94855 114.39105)
-				(xy 88.94855 115.366049) (xy 88.44855 115.366049) (xy 88.44855 113.89105) (xy 88.94855 113.89105)
-				(xy 89.786049 113.89105) (xy 89.786049 113.616078) (xy 89.786048 113.616063) (xy 89.775555 113.513352)
-				(xy 89.720408 113.34693) (xy 89.720406 113.346925) (xy 89.628365 113.197704) (xy 89.504395 113.073734)
-				(xy 89.355174 112.981693) (xy 89.355169 112.981691) (xy 89.188747 112.926544) (xy 89.18874 112.926543)
-				(xy 89.086036 112.91605) (xy 88.94855 112.91605) (xy 88.94855 113.89105) (xy 88.44855 113.89105)
-				(xy 88.44855 112.91605) (xy 88.447369 112.914869) (xy 88.413884 112.853546) (xy 88.41105 112.827192)
-				(xy 88.41105 112.544908) (xy 88.430735 112.477871) (xy 88.447369 112.457229) (xy 88.448549 112.456049)
-				(xy 88.948549 112.456049) (xy 89.086021 112.456049) (xy 89.086035 112.456048) (xy 89.188746 112.445555)
-				(xy 89.355168 112.390408) (xy 89.355173 112.390406) (xy 89.504394 112.298365) (xy 89.628364 112.174395)
-				(xy 89.720405 112.025174) (xy 89.720407 112.025169) (xy 89.775554 111.858747) (xy 89.775555 111.85874)
-				(xy 89.786048 111.756036) (xy 89.786049 111.756023) (xy 89.786049 111.48105) (xy 88.948549 111.48105)
-				(xy 88.948549 112.456049) (xy 88.448549 112.456049) (xy 88.448549 110.98105) (xy 88.948549 110.98105)
-				(xy 89.786048 110.98105) (xy 89.786048 110.706078) (xy 89.786047 110.706063) (xy 89.775554 110.603352)
-				(xy 89.720407 110.43693) (xy 89.720405 110.436925) (xy 89.628364 110.287704) (xy 89.504394 110.163734)
-				(xy 89.355173 110.071693) (xy 89.355168 110.071691) (xy 89.188746 110.016544) (xy 89.188739 110.016543)
-				(xy 89.086035 110.00605) (xy 88.948549 110.00605) (xy 88.948549 110.98105) (xy 88.448549 110.98105)
-				(xy 88.448549 110.00605) (xy 88.447369 110.00487) (xy 88.413884 109.943547) (xy 88.41105 109.917189)
-				(xy 88.41105 109.757411) (xy 88.430735 109.690372) (xy 88.447369 109.66973) (xy 88.461049 109.65605)
-				(xy 88.461049 108.692551) (xy 88.480734 108.625512) (xy 88.533538 108.579757) (xy 88.585049 108.568551)
-				(xy 88.837049 108.568551)
+				(xy 89.101906 108.25197) (xy 89.148749 108.303811) (xy 89.16105 108.357657) (xy 89.16105 109.731051)
+				(xy 89.987051 109.731051) (xy 90.05409 109.750736) (xy 90.099845 109.80354) (xy 90.111051 109.855051)
+				(xy 90.111049 117.807051) (xy 90.091364 117.87409) (xy 90.03856 117.919845) (xy 89.987049 117.931051)
+				(xy 87.035051 117.931051) (xy 86.968012 117.911366) (xy 86.922257 117.858562) (xy 86.911051 117.807051)
+				(xy 86.911051 116.874) (xy 86.930736 116.806961) (xy 86.98354 116.761206) (xy 87.035051 116.75)
+				(xy 88.25 116.75) (xy 88.25 108.371447) (xy 88.269685 108.304408) (xy 88.322489 108.258653) (xy 88.371418 108.247474)
+				(xy 89.034473 108.233684)
 			)
 		)
 	)
@@ -37914,28 +40699,28 @@
 				(xy 86.854089 97.288236) (xy 86.899844 97.34104) (xy 86.91105 97.392551) (xy 86.91105 98.407403)
 				(xy 86.911051 98.407413) (xy 86.911051 99.657051) (xy 86.891366 99.72409) (xy 86.838562 99.769845)
 				(xy 86.787051 99.781051) (xy 86.66105 99.781051) (xy 86.66105 100.807051) (xy 86.641365 100.87409)
-				(xy 86.588561 100.919845) (xy 86.53705 100.931051) (xy 86.28505 100.931051) (xy 86.218011 100.911366)
-				(xy 86.172256 100.858562) (xy 86.16105 100.807051) (xy 86.16105 99.781051) (xy 85.736078 99.781051)
-				(xy 85.736062 99.781052) (xy 85.633352 99.791545) (xy 85.46693 99.846692) (xy 85.466925 99.846694)
-				(xy 85.317704 99.938735) (xy 85.193734 100.062705) (xy 85.101693 100.211926) (xy 85.101691 100.211931)
-				(xy 85.046544 100.378353) (xy 85.046543 100.37836) (xy 85.042245 100.420428) (xy 85.015848 100.48512)
-				(xy 84.958666 100.52527) (xy 84.888855 100.528132) (xy 84.85379 100.513363) (xy 84.705174 100.421695)
-				(xy 84.705169 100.421693) (xy 84.538747 100.366546) (xy 84.53874 100.366545) (xy 84.436036 100.356052)
-				(xy 84.16105 100.356052) (xy 84.16105 101.319552) (xy 84.141365 101.386591) (xy 84.088561 101.432346)
-				(xy 84.03705 101.443552) (xy 83.78505 101.443552) (xy 83.718011 101.423867) (xy 83.672256 101.371063)
-				(xy 83.661051 101.319556) (xy 83.661051 99.655051) (xy 83.680736 99.588012) (xy 83.73354 99.542257)
-				(xy 83.785051 99.531051) (xy 83.861051 99.531051) (xy 84.361051 99.531051) (xy 84.786023 99.531051)
-				(xy 84.786037 99.53105) (xy 84.888748 99.520557) (xy 85.05517 99.46541) (xy 85.055175 99.465408)
-				(xy 85.204396 99.373367) (xy 85.328366 99.249397) (xy 85.420407 99.100176) (xy 85.420409 99.100171)
-				(xy 85.475556 98.933749) (xy 85.475557 98.933742) (xy 85.48605 98.831038) (xy 85.486051 98.831025)
-				(xy 85.486051 98.631052) (xy 84.361051 98.631052) (xy 84.361051 99.531051) (xy 83.861051 99.531051)
-				(xy 83.861051 98.505052) (xy 83.880736 98.438013) (xy 83.93354 98.392258) (xy 83.985051 98.381052)
-				(xy 84.111051 98.381052) (xy 84.111051 98.255052) (xy 84.130736 98.188013) (xy 84.18354 98.142258)
-				(xy 84.235051 98.131052) (xy 85.490632 98.131052) (xy 85.541862 98.103078) (xy 85.611554 98.108062)
-				(xy 85.655901 98.136563) (xy 85.717704 98.198366) (xy 85.866925 98.290407) (xy 85.86693 98.290409)
-				(xy 86.033352 98.345556) (xy 86.033359 98.345557) (xy 86.136069 98.35605) (xy 86.411049 98.35605)
-				(xy 86.41105 98.356049) (xy 86.41105 97.392551) (xy 86.430735 97.325512) (xy 86.483539 97.279757)
-				(xy 86.53505 97.268551) (xy 86.78705 97.268551)
+				(xy 86.588561 100.919845) (xy 86.53705 100.931051) (xy 86.41105 100.931051) (xy 86.41105 101.057051)
+				(xy 86.391365 101.12409) (xy 86.338561 101.169845) (xy 86.28705 101.181051) (xy 85.028964 101.181051)
+				(xy 84.961925 101.161366) (xy 84.91617 101.108562) (xy 84.914404 101.104505) (xy 84.906051 101.08434)
+				(xy 84.854395 101.032684) (xy 84.705174 100.940643) (xy 84.705169 100.940641) (xy 84.538747 100.885494)
+				(xy 84.53874 100.885493) (xy 84.436036 100.875) (xy 84.16105 100.875) (xy 84.16105 101.731052) (xy 83.661051 101.731052)
+				(xy 83.661051 100.481064) (xy 85.03605 100.481064) (xy 85.03605 100.681051) (xy 86.16105 100.681051)
+				(xy 86.16105 99.781051) (xy 85.736078 99.781051) (xy 85.736062 99.781052) (xy 85.633352 99.791545)
+				(xy 85.46693 99.846692) (xy 85.466925 99.846694) (xy 85.317704 99.938735) (xy 85.193734 100.062705)
+				(xy 85.101693 100.211926) (xy 85.101691 100.211931) (xy 85.046544 100.378353) (xy 85.046543 100.37836)
+				(xy 85.03605 100.481064) (xy 83.661051 100.481064) (xy 83.661051 99.655051) (xy 83.680736 99.588012)
+				(xy 83.73354 99.542257) (xy 83.785051 99.531051) (xy 83.861051 99.531051) (xy 84.361051 99.531051)
+				(xy 84.786023 99.531051) (xy 84.786037 99.53105) (xy 84.888748 99.520557) (xy 85.05517 99.46541)
+				(xy 85.055175 99.465408) (xy 85.204396 99.373367) (xy 85.328366 99.249397) (xy 85.420407 99.100176)
+				(xy 85.420409 99.100171) (xy 85.475556 98.933749) (xy 85.475557 98.933742) (xy 85.48605 98.831038)
+				(xy 85.486051 98.831025) (xy 85.486051 98.631052) (xy 84.361051 98.631052) (xy 84.361051 99.531051)
+				(xy 83.861051 99.531051) (xy 83.861051 98.505052) (xy 83.880736 98.438013) (xy 83.93354 98.392258)
+				(xy 83.985051 98.381052) (xy 84.111051 98.381052) (xy 84.111051 98.255052) (xy 84.130736 98.188013)
+				(xy 84.18354 98.142258) (xy 84.235051 98.131052) (xy 85.490632 98.131052) (xy 85.541862 98.103078)
+				(xy 85.611554 98.108062) (xy 85.655901 98.136563) (xy 85.717704 98.198366) (xy 85.866925 98.290407)
+				(xy 85.86693 98.290409) (xy 86.033352 98.345556) (xy 86.033359 98.345557) (xy 86.136069 98.35605)
+				(xy 86.411049 98.35605) (xy 86.41105 98.356049) (xy 86.41105 97.392551) (xy 86.430735 97.325512)
+				(xy 86.483539 97.279757) (xy 86.53505 97.268551) (xy 86.78705 97.268551)
 			)
 		)
 	)
