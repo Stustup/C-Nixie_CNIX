@@ -2558,7 +2558,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x432 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_macro   0x00000000       0xf2 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_macro   0x00000000      0x4ff CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_macro   0x00000000      0x12a CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_macro   0x00000000      0x130 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
@@ -2657,7 +2657,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x432 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_macro   0x00000000       0xf2 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_macro   0x00000000      0x4ff CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_macro   0x00000000      0x12a CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_macro   0x00000000      0x130 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
@@ -3605,7 +3605,7 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 0x08000000                g_pfnVectors
                 0x080000b8                        . = ALIGN (0x4)
 
-.text           0x080000b8     0x4948
+.text           0x080000b8     0x490c
                 0x080000b8                        . = ALIGN (0x4)
  *(.text)
  .text          0x080000b8       0x48 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -3773,305 +3773,305 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
  .text.HAL_RTCEx_BKUPRead
                 0x08002c86       0x36 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
                 0x08002c86                HAL_RTCEx_BKUPRead
- .text.main     0x08002cbc      0x208 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .text.main     0x08002cbc      0x218 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
                 0x08002cbc                main
  .text.SystemClock_Config
-                0x08002ec4       0xd8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08002ec4                SystemClock_Config
+                0x08002ed4       0xd8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08002ed4                SystemClock_Config
  .text.MX_I2C1_Init
-                0x08002f9c       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08002fac       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .text.MX_RTC_Init
-                0x0800301c       0xf4 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800302c       0xf4 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .text.MX_GPIO_Init
-                0x08003110      0x148 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .text.setTime  0x08003258       0x78 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003258                setTime
- .text.setDate  0x080032d0       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080032d0                setDate
+                0x08003120      0x148 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .text.setTime  0x08003268       0x78 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003268                setTime
+ .text.setDate  0x080032e0       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x080032e0                setDate
  .text.getTimeDate
-                0x08003350       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003350                getTimeDate
+                0x08003360       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003360                getTimeDate
  .text.ssd1306_writeTimeDate
-                0x08003440       0x54 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003440                ssd1306_writeTimeDate
+                0x08003450       0x54 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003450                ssd1306_writeTimeDate
  .text.ssd1306_writeTime
-                0x08003494       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003494                ssd1306_writeTime
+                0x080034a4       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x080034a4                ssd1306_writeTime
  .text.ssd1306_writeDate
-                0x080034c8       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080034c8                ssd1306_writeDate
+                0x080034d8       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x080034d8                ssd1306_writeDate
  .text.ssd1306_writeMisc
-                0x080034fc       0x54 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080034fc                ssd1306_writeMisc
+                0x0800350c       0x54 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800350c                ssd1306_writeMisc
  .text.HAL_RTCEx_WakeUpTimerEventCallback
-                0x08003550       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003550                HAL_RTCEx_WakeUpTimerEventCallback
- .text.set_tube_bcdToDecimal
-                0x0800356c       0xdc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x0800356c                set_tube_bcdToDecimal
+                0x08003560       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003560                HAL_RTCEx_WakeUpTimerEventCallback
+ .text.set_tube_numbers
+                0x0800357c       0x90 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800357c                set_tube_numbers
  .text.combine_4bit_numbers
-                0x08003648      0x24e CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003648                combine_4bit_numbers
- *fill*         0x08003896        0x2 
+                0x0800360c      0x24e CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800360c                combine_4bit_numbers
+ *fill*         0x0800385a        0x2 
  .text.HAL_GPIO_EXTI_Falling_Callback
-                0x08003898       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003898                HAL_GPIO_EXTI_Falling_Callback
+                0x0800385c       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800385c                HAL_GPIO_EXTI_Falling_Callback
  .text.Error_Handler
-                0x080038e0        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080038e0                Error_Handler
+                0x080038a4        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x080038a4                Error_Handler
  .text.NMI_Handler
-                0x080038ec        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080038ec                NMI_Handler
+                0x080038b0        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x080038b0                NMI_Handler
  .text.HardFault_Handler
-                0x080038f4        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080038f4                HardFault_Handler
+                0x080038b8        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x080038b8                HardFault_Handler
  .text.SVC_Handler
-                0x080038fc        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080038fc                SVC_Handler
+                0x080038c0        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x080038c0                SVC_Handler
  .text.PendSV_Handler
-                0x08003906        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x08003906                PendSV_Handler
+                0x080038ca        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x080038ca                PendSV_Handler
  .text.SysTick_Handler
-                0x08003910        0xe CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x08003910                SysTick_Handler
- *fill*         0x0800391e        0x2 
+                0x080038d4        0xe CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x080038d4                SysTick_Handler
+ *fill*         0x080038e2        0x2 
  .text.RTC_TAMP_IRQHandler
-                0x08003920       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x08003920                RTC_TAMP_IRQHandler
+                0x080038e4       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x080038e4                RTC_TAMP_IRQHandler
  .text.EXTI4_15_IRQHandler
-                0x08003940       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x08003940                EXTI4_15_IRQHandler
+                0x08003904       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08003904                EXTI4_15_IRQHandler
  .text.HAL_MspInit
-                0x0800395c       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                0x0800395c                HAL_MspInit
+                0x08003920       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x08003920                HAL_MspInit
  .text.HAL_I2C_MspInit
-                0x080039a4       0xc4 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                0x080039a4                HAL_I2C_MspInit
+                0x08003968       0xc4 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x08003968                HAL_I2C_MspInit
  .text.HAL_RTC_MspInit
-                0x08003a68       0x8c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                0x08003a68                HAL_RTC_MspInit
- .text._sbrk    0x08003af4       0x6c CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
-                0x08003af4                _sbrk
+                0x08003a2c       0x8c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x08003a2c                HAL_RTC_MspInit
+ .text._sbrk    0x08003ab8       0x6c CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+                0x08003ab8                _sbrk
  .text.Reset_Handler
-                0x08003b60       0x50 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
-                0x08003b60                Reset_Handler
+                0x08003b24       0x50 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+                0x08003b24                Reset_Handler
  .text.Default_Handler
-                0x08003bb0        0x2 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
-                0x08003bb0                TIM1_CC_IRQHandler
-                0x08003bb0                ADC1_COMP_IRQHandler
-                0x08003bb0                PVD_IRQHandler
-                0x08003bb0                I2C1_IRQHandler
-                0x08003bb0                TIM7_LPTIM2_IRQHandler
-                0x08003bb0                SPI1_IRQHandler
-                0x08003bb0                EXTI2_3_IRQHandler
-                0x08003bb0                I2C2_IRQHandler
-                0x08003bb0                TIM17_IRQHandler
-                0x08003bb0                TIM16_IRQHandler
-                0x08003bb0                TIM3_IRQHandler
-                0x08003bb0                RCC_IRQHandler
-                0x08003bb0                DMA1_Channel1_IRQHandler
-                0x08003bb0                Default_Handler
-                0x08003bb0                TIM14_IRQHandler
-                0x08003bb0                TIM15_IRQHandler
-                0x08003bb0                EXTI0_1_IRQHandler
-                0x08003bb0                SPI2_IRQHandler
-                0x08003bb0                TIM6_DAC_LPTIM1_IRQHandler
-                0x08003bb0                WWDG_IRQHandler
-                0x08003bb0                LPUART1_IRQHandler
-                0x08003bb0                TIM2_IRQHandler
-                0x08003bb0                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
-                0x08003bb0                DMA1_Channel2_3_IRQHandler
-                0x08003bb0                USART2_IRQHandler
-                0x08003bb0                FLASH_IRQHandler
-                0x08003bb0                USART1_IRQHandler
-                0x08003bb0                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x08003b74        0x2 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+                0x08003b74                TIM1_CC_IRQHandler
+                0x08003b74                ADC1_COMP_IRQHandler
+                0x08003b74                PVD_IRQHandler
+                0x08003b74                I2C1_IRQHandler
+                0x08003b74                TIM7_LPTIM2_IRQHandler
+                0x08003b74                SPI1_IRQHandler
+                0x08003b74                EXTI2_3_IRQHandler
+                0x08003b74                I2C2_IRQHandler
+                0x08003b74                TIM17_IRQHandler
+                0x08003b74                TIM16_IRQHandler
+                0x08003b74                TIM3_IRQHandler
+                0x08003b74                RCC_IRQHandler
+                0x08003b74                DMA1_Channel1_IRQHandler
+                0x08003b74                Default_Handler
+                0x08003b74                TIM14_IRQHandler
+                0x08003b74                TIM15_IRQHandler
+                0x08003b74                EXTI0_1_IRQHandler
+                0x08003b74                SPI2_IRQHandler
+                0x08003b74                TIM6_DAC_LPTIM1_IRQHandler
+                0x08003b74                WWDG_IRQHandler
+                0x08003b74                LPUART1_IRQHandler
+                0x08003b74                TIM2_IRQHandler
+                0x08003b74                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
+                0x08003b74                DMA1_Channel2_3_IRQHandler
+                0x08003b74                USART2_IRQHandler
+                0x08003b74                FLASH_IRQHandler
+                0x08003b74                USART1_IRQHandler
+                0x08003b74                TIM1_BRK_UP_TRG_COM_IRQHandler
  .text.ssd1306_Reset
-                0x08003bb2        0xa CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003bb2                ssd1306_Reset
+                0x08003b76        0xa CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003b76                ssd1306_Reset
  .text.ssd1306_WriteCommand
-                0x08003bbc       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003bbc                ssd1306_WriteCommand
+                0x08003b80       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003b80                ssd1306_WriteCommand
  .text.ssd1306_WriteData
-                0x08003bf0       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003bf0                ssd1306_WriteData
+                0x08003bb4       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003bb4                ssd1306_WriteData
  .text.ssd1306_Init
-                0x08003c24       0xd8 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003c24                ssd1306_Init
+                0x08003be8       0xd8 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003be8                ssd1306_Init
  .text.ssd1306_Fill
-                0x08003cfc       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003cfc                ssd1306_Fill
+                0x08003cc0       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003cc0                ssd1306_Fill
  .text.ssd1306_UpdateScreen
-                0x08003d30       0x5c CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003d30                ssd1306_UpdateScreen
+                0x08003cf4       0x5c CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003cf4                ssd1306_UpdateScreen
  .text.ssd1306_DrawPixel
-                0x08003d8c       0xc4 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003d8c                ssd1306_DrawPixel
+                0x08003d50       0xc4 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003d50                ssd1306_DrawPixel
  .text.ssd1306_WriteChar
-                0x08003e50      0x154 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003e50                ssd1306_WriteChar
+                0x08003e14      0x154 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003e14                ssd1306_WriteChar
  .text.ssd1306_WriteString
-                0x08003fa4       0x56 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003fa4                ssd1306_WriteString
- *fill*         0x08003ffa        0x2 
+                0x08003f68       0x56 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003f68                ssd1306_WriteString
+ *fill*         0x08003fbe        0x2 
  .text.ssd1306_SetCursor
-                0x08003ffc       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08003ffc                ssd1306_SetCursor
+                0x08003fc0       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003fc0                ssd1306_SetCursor
  .text.ssd1306_SetContrast
-                0x08004030       0x30 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08004030                ssd1306_SetContrast
+                0x08003ff4       0x30 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08003ff4                ssd1306_SetContrast
  .text.ssd1306_SetDisplayOn
-                0x08004060       0x4c CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
-                0x08004060                ssd1306_SetDisplayOn
- .text.sprintf  0x080040ac       0x44 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
-                0x080040ac                sprintf
-                0x080040ac                siprintf
- .text.memset   0x080040f0       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
-                0x080040f0                memset
- .text.__errno  0x08004100        0xc /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
-                0x08004100                __errno
+                0x08004024       0x4c CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+                0x08004024                ssd1306_SetDisplayOn
+ .text.sprintf  0x08004070       0x44 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
+                0x08004070                sprintf
+                0x08004070                siprintf
+ .text.memset   0x080040b4       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x080040b4                memset
+ .text.__errno  0x080040c4        0xc /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
+                0x080040c4                __errno
  .text.__libc_init_array
-                0x0800410c       0x48 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
-                0x0800410c                __libc_init_array
+                0x080040d0       0x48 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+                0x080040d0                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x08004154        0x2 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08004154                __retarget_lock_acquire_recursive
+                0x08004118        0x2 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x08004118                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08004156        0x2 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
-                0x08004156                __retarget_lock_release_recursive
- .text.memcpy   0x08004158       0x12 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
-                0x08004158                memcpy
- *fill*         0x0800416a        0x2 
- .text._free_r  0x0800416c       0x94 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
-                0x0800416c                _free_r
+                0x0800411a        0x2 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
+                0x0800411a                __retarget_lock_release_recursive
+ .text.memcpy   0x0800411c       0x12 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+                0x0800411c                memcpy
+ *fill*         0x0800412e        0x2 
+ .text._free_r  0x08004130       0x94 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
+                0x08004130                _free_r
  .text.sbrk_aligned
-                0x08004200       0x44 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
+                0x080041c4       0x44 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
  .text._malloc_r
-                0x08004244      0x100 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
-                0x08004244                _malloc_r
+                0x08004208      0x100 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
+                0x08004208                _malloc_r
  .text.__malloc_lock
-                0x08004344       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
-                0x08004344                __malloc_lock
+                0x08004308       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
+                0x08004308                __malloc_lock
  .text.__malloc_unlock
-                0x08004354       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
-                0x08004354                __malloc_unlock
+                0x08004318       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
+                0x08004318                __malloc_unlock
  .text.__ssputs_r
-                0x08004364       0xc0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
-                0x08004364                __ssputs_r
+                0x08004328       0xc0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
+                0x08004328                __ssputs_r
  .text._svfprintf_r
-                0x08004424      0x1fc /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
-                0x08004424                _svfprintf_r
-                0x08004424                _svfiprintf_r
+                0x080043e8      0x1fc /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
+                0x080043e8                _svfprintf_r
+                0x080043e8                _svfiprintf_r
  .text._printf_common
-                0x08004620       0xde /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x08004620                _printf_common
- *fill*         0x080046fe        0x2 
+                0x080045e4       0xde /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080045e4                _printf_common
+ *fill*         0x080046c2        0x2 
  .text._printf_i
-                0x08004700      0x218 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x08004700                _printf_i
- .text.memmove  0x08004918       0x24 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
-                0x08004918                memmove
- .text._sbrk_r  0x0800493c       0x24 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
-                0x0800493c                _sbrk_r
- .text.memchr   0x08004960       0x16 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
-                0x08004960                memchr
+                0x080046c4      0x218 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x080046c4                _printf_i
+ .text.memmove  0x080048dc       0x24 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
+                0x080048dc                memmove
+ .text._sbrk_r  0x08004900       0x24 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+                0x08004900                _sbrk_r
+ .text.memchr   0x08004924       0x16 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+                0x08004924                memchr
  .text._realloc_r
-                0x08004976       0x60 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
-                0x08004976                _realloc_r
+                0x0800493a       0x60 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
+                0x0800493a                _realloc_r
  .text._malloc_usable_size_r
-                0x080049d6       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
-                0x080049d6                _malloc_usable_size_r
+                0x0800499a       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
+                0x0800499a                _malloc_usable_size_r
  *(.glue_7)
- .glue_7        0x080049e6        0x0 linker stubs
+ .glue_7        0x080049aa        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080049e6        0x0 linker stubs
+ .glue_7t       0x080049aa        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x080049e6        0x2 
- .eh_frame      0x080049e8        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ *fill*         0x080049aa        0x2 
+ .eh_frame      0x080049ac        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x080049e8        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x080049e8                _init
- .init          0x080049ec        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x080049ac        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x080049ac                _init
+ .init          0x080049b0        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x080049f4        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x080049f4                _fini
- .fini          0x080049f8        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
-                0x08004a00                        . = ALIGN (0x4)
-                0x08004a00                        _etext = .
+ .fini          0x080049b8        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x080049b8                _fini
+ .fini          0x080049bc        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+                0x080049c4                        . = ALIGN (0x4)
+                0x080049c4                        _etext = .
 
-.vfp11_veneer   0x08004a00        0x0
- .vfp11_veneer  0x08004a00        0x0 linker stubs
+.vfp11_veneer   0x080049c4        0x0
+ .vfp11_veneer  0x080049c4        0x0 linker stubs
 
-.v4_bx          0x08004a00        0x0
- .v4_bx         0x08004a00        0x0 linker stubs
+.v4_bx          0x080049c4        0x0
+ .v4_bx         0x080049c4        0x0 linker stubs
 
-.iplt           0x08004a00        0x0
- .iplt          0x08004a00        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x080049c4        0x0
+ .iplt          0x080049c4        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x08004a00      0x844
-                0x08004a00                        . = ALIGN (0x4)
+.rodata         0x080049c4      0x844
+                0x080049c4                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08004a00       0x57 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .rodata        0x080049c4       0x57 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  *(.rodata*)
- *fill*         0x08004a57        0x1 
+ *fill*         0x08004a1b        0x1 
  .rodata.AHBPrescTable
-                0x08004a58       0x40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
-                0x08004a58                AHBPrescTable
+                0x08004a1c       0x40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
+                0x08004a1c                AHBPrescTable
  .rodata.Font7x10
-                0x08004a98      0x76c CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
+                0x08004a5c      0x76c CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
  .rodata.Font_7x10
-                0x08005204        0xc CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
-                0x08005204                Font_7x10
+                0x080051c8        0xc CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
+                0x080051c8                Font_7x10
  .rodata._svfprintf_r.str1.1
-                0x08005210       0x33 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
+                0x080051d4       0x33 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
                                  0x11 (size before relaxing)
  .rodata._printf_i.str1.1
-                0x08005243        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x08005207        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
                                  0x22 (size before relaxing)
-                0x08005244                        . = ALIGN (0x4)
- *fill*         0x08005243        0x1 
+                0x08005208                        . = ALIGN (0x4)
+ *fill*         0x08005207        0x1 
 
-.ARM.extab      0x08005244        0x0
-                0x08005244                        . = ALIGN (0x4)
+.ARM.extab      0x08005208        0x0
+                0x08005208                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08005244                        . = ALIGN (0x4)
+                0x08005208                        . = ALIGN (0x4)
 
-.ARM            0x08005244        0x0
-                0x08005244                        . = ALIGN (0x4)
-                0x08005244                        __exidx_start = .
+.ARM            0x08005208        0x0
+                0x08005208                        . = ALIGN (0x4)
+                0x08005208                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08005244                        __exidx_end = .
-                0x08005244                        . = ALIGN (0x4)
+                0x08005208                        __exidx_end = .
+                0x08005208                        . = ALIGN (0x4)
 
-.preinit_array  0x08005244        0x0
-                0x08005244                        . = ALIGN (0x4)
-                0x08005244                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08005208        0x0
+                0x08005208                        . = ALIGN (0x4)
+                0x08005208                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08005244                        PROVIDE (__preinit_array_end = .)
-                0x08005244                        . = ALIGN (0x4)
+                0x08005208                        PROVIDE (__preinit_array_end = .)
+                0x08005208                        . = ALIGN (0x4)
 
-.init_array     0x08005244        0x4
-                0x08005244                        . = ALIGN (0x4)
-                0x08005244                        PROVIDE (__init_array_start = .)
+.init_array     0x08005208        0x4
+                0x08005208                        . = ALIGN (0x4)
+                0x08005208                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08005244        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x08005248                        PROVIDE (__init_array_end = .)
-                0x08005248                        . = ALIGN (0x4)
+ .init_array    0x08005208        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0800520c                        PROVIDE (__init_array_end = .)
+                0x0800520c                        . = ALIGN (0x4)
 
-.fini_array     0x08005248        0x4
-                0x08005248                        . = ALIGN (0x4)
+.fini_array     0x0800520c        0x4
+                0x0800520c                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08005248        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ .fini_array    0x0800520c        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0800524c                        . = ALIGN (0x4)
-                0x0800524c                        _sidata = LOADADDR (.data)
+                0x08005210                        . = ALIGN (0x4)
+                0x08005210                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0800524c        0x0
- .rel.iplt      0x0800524c        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x08005210        0x0
+ .rel.iplt      0x08005210        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.data           0x20000000       0x5c load address 0x0800524c
+.data           0x20000000       0x5c load address 0x08005210
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4096,10 +4096,10 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
  *(.RamFunc*)
                 0x2000005c                        . = ALIGN (0x4)
 
-.igot.plt       0x2000005c        0x0 load address 0x080052a8
+.igot.plt       0x2000005c        0x0 load address 0x0800526c
  .igot.plt      0x2000005c        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.tdata          0x2000005c        0x0 load address 0x080052a8
+.tdata          0x2000005c        0x0 load address 0x0800526c
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000005c                        . = ALIGN (0x4)
                 0x2000005c                        _edata = .
@@ -4116,7 +4116,7 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000005c        0x0 load address 0x080052a8
+.tbss           0x2000005c        0x0 load address 0x0800526c
                 0x2000005c                        _sbss = .
                 0x2000005c                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -4133,7 +4133,7 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000005c      0x424 load address 0x080052a8
+.bss            0x2000005c      0x424 load address 0x0800526c
  *(.bss)
  .bss           0x2000005c       0x1c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.bss*)
@@ -4194,7 +4194,7 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x20000480      0x600 load address 0x080052a8
+                0x20000480      0x600 load address 0x0800526c
                 0x20000480                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x20000480                        PROVIDE (_end = .)
@@ -4378,7 +4378,7 @@ LOAD linker stubs
  .comment       0x00000043        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
                                  0x44 (size before relaxing)
 
-.debug_info     0x00000000    0x14efa
+.debug_info     0x00000000    0x14ecd
  .debug_info    0x00000000      0x316 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_info    0x00000316     0x21c0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
  .debug_info    0x000024d6      0x9ff cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
@@ -4391,32 +4391,32 @@ LOAD linker stubs
  .debug_info    0x00005cda      0xa4d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj
  .debug_info    0x00006727      0xc47 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj
  .debug_info    0x0000736e     0x122a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
- .debug_info    0x00008598     0x193a CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_info    0x00009ed2      0x418 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_info    0x0000a2ea      0xf12 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_info    0x0000b1fc      0x168 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_info    0x0000b364       0x30 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
- .debug_info    0x0000b394     0x1378 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
- .debug_info    0x0000c70c      0x1af CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
- .debug_info    0x0000c8bb      0xfb0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_info    0x0000d86b      0x885 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
- .debug_info    0x0000e0f0       0xe0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_info    0x0000e1d0      0x89a /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_info    0x0000ea6a      0x715 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_info    0x0000f17f      0x6fb /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
- .debug_info    0x0000f87a      0x10b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
- .debug_info    0x0000f985      0x218 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
- .debug_info    0x0000fb9d      0x11b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_info    0x0000fcb8      0x84a /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_info    0x00010502      0x9c8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_info    0x00010eca      0x76b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_info    0x00011635     0x10e0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
- .debug_info    0x00012715      0xe0a /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_info    0x0001351f      0x109 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_info    0x00013628      0x782 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
- .debug_info    0x00013daa      0x110 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
- .debug_info    0x00013eba      0x8ac /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_info    0x00014766      0x794 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_info    0x00008598     0x190d CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_info    0x00009ea5      0x418 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_info    0x0000a2bd      0xf12 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_info    0x0000b1cf      0x168 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_info    0x0000b337       0x30 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+ .debug_info    0x0000b367     0x1378 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_info    0x0000c6df      0x1af CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
+ .debug_info    0x0000c88e      0xfb0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_info    0x0000d83e      0x885 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
+ .debug_info    0x0000e0c3       0xe0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_info    0x0000e1a3      0x89a /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_info    0x0000ea3d      0x715 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_info    0x0000f152      0x6fb /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
+ .debug_info    0x0000f84d      0x10b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_info    0x0000f958      0x218 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
+ .debug_info    0x0000fb70      0x11b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_info    0x0000fc8b      0x84a /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_info    0x000104d5      0x9c8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_info    0x00010e9d      0x76b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_info    0x00011608     0x10e0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_info    0x000126e8      0xe0a /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_info    0x000134f2      0x109 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_info    0x000135fb      0x782 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_info    0x00013d7d      0x110 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_info    0x00013e8d      0x8ac /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_info    0x00014739      0x794 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
 
 .debug_abbrev   0x00000000     0x45fc
  .debug_abbrev  0x00000000      0x119 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
@@ -4611,7 +4611,7 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000c14       0x13 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
 
-.debug_macro    0x00000000    0x17f86
+.debug_macro    0x00000000    0x17f8c
  .debug_macro   0x00000000      0x1e9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_macro   0x000001e9      0xaae cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_macro   0x00000c97       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
@@ -4669,43 +4669,43 @@ LOAD linker stubs
  .debug_macro   0x00015c5b      0x1ea cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj
  .debug_macro   0x00015e45      0x1e9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
  .debug_macro   0x0001602e      0x384 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000163b2      0x12a CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000164dc       0x74 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016550       0x24 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016574       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000165b0       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000165e4       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016618       0x46 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x0001665e       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016674       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000166b0      0x370 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016a20       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016a30       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016a46       0x4a CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016a90       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016ac4       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016ad4       0x58 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016b2c      0x1e5 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016d11       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016d27       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016d3d      0x170 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016ead       0xfa CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00016fa7      0x202 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_macro   0x000171a9      0x1f8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_macro   0x000173a1      0x103 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x000174a4       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x000174b4       0x6e CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00017522       0x94 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x000175b6       0x57 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x0001760d      0x23c CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00017849      0x305 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
- .debug_macro   0x00017b4e       0x28 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
- .debug_macro   0x00017b76      0x19b CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
- .debug_macro   0x00017d11       0x16 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
- .debug_macro   0x00017d27       0x20 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
- .debug_macro   0x00017d47      0x23f CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
+ .debug_macro   0x000163b2      0x130 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x000164e2       0x74 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016556       0x24 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001657a       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x000165b6       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x000165ea       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001661e       0x46 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016664       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001667a       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x000166b6      0x370 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016a26       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016a36       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016a4c       0x4a CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016a96       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016aca       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016ada       0x58 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016b32      0x1e5 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016d17       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016d2d       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016d43      0x170 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016eb3       0xfa CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00016fad      0x202 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_macro   0x000171af      0x1f8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_macro   0x000173a7      0x103 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x000174aa       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x000174ba       0x6e CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00017528       0x94 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x000175bc       0x57 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00017613      0x23c CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x0001784f      0x305 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_macro   0x00017b54       0x28 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_macro   0x00017b7c      0x19b CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_macro   0x00017d17       0x16 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_macro   0x00017d2d       0x20 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_macro   0x00017d4d      0x23f CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
 
-.debug_line     0x00000000    0x140a3
+.debug_line     0x00000000    0x140af
  .debug_line    0x00000000      0x899 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_line    0x00000899     0x37ef cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
  .debug_line    0x00004088      0x98c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
@@ -4718,109 +4718,109 @@ LOAD linker stubs
  .debug_line    0x00009636      0xbf7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj
  .debug_line    0x0000a22d     0x12b6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj
  .debug_line    0x0000b4e3     0x1495 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
- .debug_line    0x0000c978      0xded CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_line    0x0000d765      0x8b6 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_line    0x0000e01b      0x8e1 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_line    0x0000e8fc      0x366 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
- .debug_line    0x0000ec62       0x7b CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
- .debug_line    0x0000ecdd     0x11d2 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
- .debug_line    0x0000feaf      0x868 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
- .debug_line    0x00010717      0x634 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-findfp.o)
- .debug_line    0x00010d4b      0x2bd /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
- .debug_line    0x00011008      0x178 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_line    0x00011180      0x2ef /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reent.o)
- .debug_line    0x0001146f      0x163 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-impure.o)
- .debug_line    0x000115d2      0x192 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
- .debug_line    0x00011764      0x16c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
- .debug_line    0x000118d0      0x19b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
- .debug_line    0x00011a6b      0x201 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
- .debug_line    0x00011c6c      0x313 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
- .debug_line    0x00011f7f      0x506 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
- .debug_line    0x00012485      0x1ff /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
- .debug_line    0x00012684      0x90d /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
- .debug_line    0x00012f91      0x6c9 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_line    0x0001365a      0x1a4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
- .debug_line    0x000137fe      0x21f /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
- .debug_line    0x00013a1d      0x202 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
- .debug_line    0x00013c1f      0x27e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
- .debug_line    0x00013e9d      0x206 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_line    0x0000c978      0xdf9 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_line    0x0000d771      0x8b6 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_line    0x0000e027      0x8e1 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_line    0x0000e908      0x366 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x0000ec6e       0x7b CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+ .debug_line    0x0000ece9     0x11d2 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_line    0x0000febb      0x868 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
+ .debug_line    0x00010723      0x634 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_line    0x00010d57      0x2bd /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
+ .debug_line    0x00011014      0x178 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_line    0x0001118c      0x2ef /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_line    0x0001147b      0x163 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_line    0x000115de      0x192 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
+ .debug_line    0x00011770      0x16c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_line    0x000118dc      0x19b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
+ .debug_line    0x00011a77      0x201 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_line    0x00011c78      0x313 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_line    0x00011f8b      0x506 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_line    0x00012491      0x1ff /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_line    0x00012690      0x90d /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_line    0x00012f9d      0x6c9 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_line    0x00013666      0x1a4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_line    0x0001380a      0x21f /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_line    0x00013a29      0x202 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_line    0x00013c2b      0x27e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_line    0x00013ea9      0x206 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
 
-.debug_str      0x00000000    0x95369
- .debug_str     0x00000000    0x95369 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
+.debug_str      0x00000000    0x9535f
+ .debug_str     0x00000000    0x9535f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
                               0x8b441 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
                               0x8c804 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
                               0x8ba80 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c.obj
                               0x8bb97 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c.obj
                               0x8b7e4 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c.obj
                               0x8b576 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c.obj
                               0x8b636 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c.obj
                               0x8b8ba (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c.obj
                               0x8b8e9 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj
                               0x8bc35 (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj
                               0x8b90b (size before relaxing)
- .debug_str     0x00095369        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
+ .debug_str     0x0009535f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
                               0x8bd58 (size before relaxing)
- .debug_str     0x00095369        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                              0x901f8 (size before relaxing)
- .debug_str     0x00095369        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                              0x8ba57 (size before relaxing)
- .debug_str     0x00095369        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                              0x8c376 (size before relaxing)
- .debug_str     0x00095369        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x0009535f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                              0x901e0 (size before relaxing)
+ .debug_str     0x0009535f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                              0x8ba67 (size before relaxing)
+ .debug_str     0x0009535f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                              0x8c386 (size before relaxing)
+ .debug_str     0x0009535f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
                                0x708e (size before relaxing)
- .debug_str     0x00095369        0x0 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+ .debug_str     0x0009535f        0x0 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
                                  0xde (size before relaxing)
- .debug_str     0x00095369        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
+ .debug_str     0x0009535f        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj
                               0x8f3a5 (size before relaxing)
- .debug_str     0x00095369        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
+ .debug_str     0x0009535f        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj
                               0x8b8ba (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-findfp.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-findfp.o)
                                 0x7ad (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sprintf.o)
                                 0x569 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
                                 0x20a (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reent.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reent.o)
                                 0x549 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-impure.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-impure.o)
                                 0x52a (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-errno.o)
                                 0x524 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
                                 0x26b (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-lock.o)
                                 0x3a1 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memcpy-stub.o)
                                 0x228 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-freer.o)
                                 0x5aa (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mallocr.o)
                                 0x60b (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-mlock.o)
                                 0x5ac (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-svfprintf.o)
                                 0x873 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-nano-vfprintf_i.o)
                                 0x81a (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memmove.o)
                                 0x225 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-sbrkr.o)
                                 0x533 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memchr-stub.o)
                                 0x224 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-reallocr.o)
                                 0x5a0 (size before relaxing)
- .debug_str     0x00095369        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
+ .debug_str     0x0009535f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-msizer.o)
                                 0x573 (size before relaxing)
 
 .debug_frame    0x00000000     0x30e0

@@ -103,11 +103,13 @@ volatile uint8_t update_flag = isNotSet;
 volatile int8_t btn_flag = 0;
 uint8_t btn_pressed_flag = isNotPressed;
 
+#if DEBUG_DISPLAY
 /**
  * Char arrays to use strings directly on oled, could be omitted on final device.
  */
 char timeData[15];
 char dateData[15];
+#endif
 
 /**
  * DataDigital struct to hold digital values of the time from RTC
@@ -137,13 +139,16 @@ HAL_StatusTypeDef setTime(uint8_t hour, uint8_t minute, uint8_t second);
 HAL_StatusTypeDef setDate(uint8_t year, uint8_t month, uint8_t weekday, uint8_t date);
 HAL_StatusTypeDef getTimeDate(char* time, char* date, struct time_date_DataDigital* dTime);
 
-void set_tube_bcdToDecimal(struct time_date_DataDigital* _time_date_data);
-uint16_t combine_4bit_numbers(uint8_t zahl0, uint8_t zahl1, uint8_t zahl2, uint8_t zahl3);
+void set_tube_numbers(struct time_date_DataDigital* _time_date_data);
+uint16_t combine_4bit_numbers(uint8_t num0, uint8_t num1, uint8_t num2, uint8_t num3);
 
+#if DEBUG_DISPLAY
 void ssd1306_writeTime(char* time);
 void ssd1306_writeDate(char* date);
 void ssd1306_writeTimeDate(char* time, char* date);
 void ssd1306_writeMisc(int8_t data);
+#endif
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -207,13 +212,14 @@ int main(void)
     }
   }
 
-  set_tube_bcdToDecimal(&TD_data);
+  set_tube_numbers(&TD_data);
   
+  #if DEBUG_DISPLAY
   /**
    * Constructor for the basic oled menu with predeceeding welcome message
-   * // TODO Hide behind a Debug check or a module check 
-   * // TODO create a module check and modules (e.g. WIFI time sync, smart home features, etc.)
+   * // TODO LATER create a module check and modules (e.g. WIFI time sync, smart home features, etc.)
    */
+  
   ssd1306_Init();
   ssd1306_SetCursor(10, 10);
   ssd1306_WriteString("Nixie Clock V2", Font_7x10, White);
@@ -230,6 +236,7 @@ int main(void)
   ssd1306_WriteString("Button pressed: ", Font_7x10, White);
   ssd1306_writeMisc(0);
   ssd1306_UpdateScreen();
+  #endif
 
   /* USER CODE END 2 */
 
@@ -240,7 +247,15 @@ int main(void)
     if(update_flag == isSet) { //flag set by interrupt by RTC on 1Hz
 
       getTimeDate(timeData, dateData, &TD_data);      //Get tiome from RTC registers
+
+      #if DEBUG_DISPLAY
       ssd1306_writeTimeDate(timeData, dateData);
+      #endif
+
+      //Update Nixies, they dont have seconds!
+      if(TD_data.seconds == 0) {
+        set_tube_numbers(&TD_data);
+      }
 
       update_flag = reset; //reset update flag
     }
@@ -277,13 +292,6 @@ int main(void)
       }
     }
 
-    /**
-     * //TODO Whole nixie switching
-     * Update Nixies, they dont have seconds!
-     */
-    if(TD_data.seconds == 0) {
-      
-    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -631,11 +639,13 @@ HAL_StatusTypeDef getTimeDate(char* time, char* date, struct time_date_DataDigit
   dTime->month = gDate.Month;
   dTime->year = gDate.Year;
 
+  #if DEBUG_DISPLAY
   /* Display time Format: hh:mm:ss */
   sprintf(time,"%02d:%02d:%02d",gTime.Hours, gTime.Minutes, gTime.Seconds);
 
   /* Display date Format: dd-mm-yyyy */
   sprintf(date,"%02d-%02d-%2d",gDate.Date, gDate.Month, 2000 + gDate.Year);
+  #endif
 
   if(_error_count != 0) return HAL_ERROR;
   return HAL_OK;
@@ -688,100 +698,76 @@ void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc) {
 }
 
 /** Function for changing the tubes to the corresponding time values
- *  For now it just dispalys test times
- * //TODO: Implement fully#
- * //TODO: Implement just by changing registers
- * //TODO: Just change corresponding tubes, e.g. not the hours when they are not changing
  */
-void set_tube_bcdToDecimal(struct time_date_DataDigital* _time_date_data) {
-  uint8_t _minutes = _time_date_data->minutes;
-  uint8_t _hours   = _time_date_data->hours;
+void set_tube_numbers(struct time_date_DataDigital* _time_date_data) {
+
+  //Start by extracting the single numbers out of the time struct to fuse them to a 16-Bit number later
 
   //Hours
   //calculate the tens
-  uint8_t hours_tens = _hours / 10;
+  uint8_t hours_tens = _time_date_data->hours / 10;
   //calculate the ones
-  uint8_t hours_ones = _hours % 10;
+  uint8_t hours_ones = _time_date_data->hours % 10;
 
   //Minutes
   //calculate the tens
-  uint8_t minutes_tens = _minutes / 10;
+  uint8_t minutes_tens = _time_date_data->minutes / 10;
   //calculate the ones
-  uint8_t minutes_ones = _minutes % 10;
+  uint8_t minutes_ones = _time_date_data->minutes % 10;
 
-  //works miracilously perfectly :)
+  /*Works miracilously perfectly :) but useless unless the PCB changes to accomondate for the correct pin order
   uint16_t _timeData_port = (hours_tens << 12) | (hours_ones << 8) | 
                             (minutes_tens << 4) | minutes_ones;
+  */
 
+  //Use variable in between the output and the bit sets for easy debugging. Speed does'nt matter
   uint16_t _timeData_port_temp = combine_4bit_numbers(hours_tens, hours_ones, minutes_tens, minutes_ones);
   
+  //Output on the whole PORTB via the ODR (Output Data Register)
   GPIOB->ODR = _timeData_port_temp;
-  /*
-  //Hours Tens bit setting
-  switch(hours_tens) {
-    case 0: 
-      _timeData_port_temp |= 0b0000000000000000;
-      break;
-    case 1:
-      _timeData_port_temp |= 0b0100000000000000;
-      break;
-    case 2:
-      _timeData_port_temp |= 0b0010000000000000;
-      break;   
-    default:
-      _timeData_port_temp |= 0b0000000000000000;
-      break;   
-  }
 
-  //Minutes Tens bit setting
-  _timeData_port_temp |= (minutes_tens << 2);                       //Shift the number by 2 into the register (see Mask Tube 2)
-  _timeData_port_temp &= ~(1 << 2);                                 //Clear the second bit of the register (belongs to diffrent number)
-  if((minutes_tens/10) % 2 == 1) _timeData_port_temp |= (1 << 15);   //If the Minutes_Tens is an odd number (10/30/50) set the last bit (see Mask Tube 2)
-
-  //Minutes ones bit setting
-  _timeData_port_temp |= (minutes_ones << 6);
-
-  GPIOB->ODR = _timeData_port_temp;
-  */
   return;
 }
 
-uint16_t combine_4bit_numbers(uint8_t zahl0, uint8_t zahl1, uint8_t zahl2, uint8_t zahl3) {
+/**
+ * Sorts the bits to the correct spot for the output register 
+ */
+uint16_t combine_4bit_numbers(uint8_t num0, uint8_t num1, uint8_t num2, uint8_t num3) {
 
   uint16_t result = 0;
 
-  // Bit 0: bit 3 von zahl1
-  result |= ((zahl1 >> 3) & 0x1) << 0;
-  // Bit 1: bit 2 von zahl1
-  result |= ((zahl1 >> 2) & 0x1) << 1;
-  // Bit 2: bit 1 von zahl1
-  result |= ((zahl1 >> 1) & 0x1) << 2;
-  // Bit 3: bit 1 von zahl2
-  result |= ((zahl2 >> 2) & 0x1) << 3;
-  // Bit 4: bit 2 von zahl2
-  result |= ((zahl2 >> 1) & 0x1) << 4;
-  // Bit 5: bit 3 von zahl2
-  result |= ((zahl2 >> 0) & 0x1) << 5;
-  // Bit 6: bit 0 von zahl3
-  result |= ((zahl3 >> 0) & 0x1) << 6;
-  // Bit 7: bit 1 von zahl3
-  result |= ((zahl3 >> 1) & 0x1) << 7;
-  // Bit 8: bit 2 von zahl3
-  result |= ((zahl3 >> 2) & 0x1) << 8;
-  // Bit 9: bit 3 von zahl3
-  result |= ((zahl3 >> 3) & 0x1) << 9;
-  // Bit 10: bit 0 von zahl1
-  result |= ((zahl1 >> 0) & 0x1) << 10;
-  // Bit 11: bit 3 von zahl0
-  result |= ((zahl0 >> 3) & 0x1) << 11;
-  // Bit 12: bit 2 von zahl0
-  result |= ((zahl0 >> 2) & 0x1) << 12;
-  // Bit 13: bit 1 von zahl0
-  result |= ((zahl0 >> 1) & 0x1) << 13;
-  // Bit 14: bit 0 von zahl0
-  result |= ((zahl0 >> 0) & 0x1) << 14;
-  // Bit 15: bit 0 von zahl2
-  result |= ((zahl2 >> 3) & 0x1) << 15;
+  // Bit 0: bit 3 von num1
+  result |= ((num1 >> 3) & 0x1) << 0;
+  // Bit 1: bit 2 von num1
+  result |= ((num1 >> 2) & 0x1) << 1;
+  // Bit 2: bit 1 von num1
+  result |= ((num1 >> 1) & 0x1) << 2;
+  // Bit 3: bit 1 von num2
+  result |= ((num2 >> 1) & 0x1) << 3;
+  // Bit 4: bit 2 von num2
+  result |= ((num2 >> 2) & 0x1) << 4;
+  // Bit 5: bit 3 von num2
+  result |= ((num2 >> 3) & 0x1) << 5;
+  // Bit 6: bit 0 von num3
+  result |= ((num3 >> 0) & 0x1) << 6;
+  // Bit 7: bit 1 von num3
+  result |= ((num3 >> 1) & 0x1) << 7;
+  // Bit 8: bit 2 von num3
+  result |= ((num3 >> 2) & 0x1) << 8;
+  // Bit 9: bit 3 von num3
+  result |= ((num3 >> 3) & 0x1) << 9;
+  // Bit 10: bit 0 von num1
+  result |= ((num1 >> 0) & 0x1) << 10;
+  // Bit 11: bit 3 von num0
+  result |= ((num0 >> 3) & 0x1) << 11;
+  // Bit 12: bit 2 von num0
+  result |= ((num0 >> 2) & 0x1) << 12;
+  // Bit 13: bit 1 von num0
+  result |= ((num0 >> 1) & 0x1) << 13;
+  // Bit 14: bit 0 von num0
+  result |= ((num0 >> 0) & 0x1) << 14;
+  // Bit 15: bit 0 von num2
+  result |= ((num2 >> 0) & 0x1) << 15;
 
   return result;
 
