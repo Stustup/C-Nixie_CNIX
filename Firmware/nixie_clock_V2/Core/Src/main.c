@@ -21,10 +21,9 @@
  */
 
  /** TO DO LIST
-  * TODO: Implement indicator LEDS on the front
-  * TODO: Implement manual time setting via buttons
-  * TODO: Implement On/Off automatic
-  * TODO: 
+  * //TODO: Implement indicator LEDS on the front and their function
+  * //TODO: Implement manual time setting via buttons
+  * //TODO: Implement On/Off automatic
  */
 
 /* USER CODE END Header */
@@ -219,6 +218,11 @@ int main(void)
       tries++;
     }
   }
+
+  //Set the Front LEDs On
+  GPIOA->BSRR = GPIO_BSRR_BS11;
+  GPIOA->BSRR = GPIO_BSRR_BS12;
+
 
   set_tube_numbers(&TD_data);
   
@@ -596,7 +600,7 @@ HAL_StatusTypeDef setTime(uint8_t hour, uint8_t minute, uint8_t second) {
   {
     return HAL_ERROR;
   }
-  HAL_RTC_DST_Sub1Hour(&hrtc);  // TODO check for last sunday of march and last sunday in october to set opr unset DST. 
+  HAL_RTC_DST_Sub1Hour(&hrtc);  // TODO Daylight Saving Time,check for last sunday of march and last sunday in october to set opr unset DST. 
   return HAL_OK;
 }
 
