@@ -138,6 +138,7 @@ HAL_StatusTypeDef setDate(uint8_t year, uint8_t month, uint8_t weekday, uint8_t 
 HAL_StatusTypeDef getTimeDate(char* time, char* date, struct time_date_DataDigital* dTime);
 
 void set_tube_bcdToDecimal(struct time_date_DataDigital* _time_date_data);
+uint16_t combine_4bit_numbers(uint8_t zahl0, uint8_t zahl1, uint8_t zahl2, uint8_t zahl3);
 
 void ssd1306_writeTime(char* time);
 void ssd1306_writeDate(char* date);
@@ -712,16 +713,78 @@ void set_tube_bcdToDecimal(struct time_date_DataDigital* _time_date_data) {
   uint16_t _timeData_port = (hours_tens << 12) | (hours_ones << 8) | 
                             (minutes_tens << 4) | minutes_ones;
 
-  /*
-  //Test for Decimal 3 on pin 3.
-  GPIOB->BSRR = GPIO_BSRR_BS6;
-  GPIOB->BSRR = GPIO_BSRR_BS7;
-  */
-
-  //16Bit Data gets shifted in, LSB in on B0
-  GPIOB->ODR = _timeData_port;
+  uint16_t _timeData_port_temp = combine_4bit_numbers(hours_tens, hours_ones, minutes_tens, minutes_ones);
   
+  GPIOB->ODR = _timeData_port_temp;
+  /*
+  //Hours Tens bit setting
+  switch(hours_tens) {
+    case 0: 
+      _timeData_port_temp |= 0b0000000000000000;
+      break;
+    case 1:
+      _timeData_port_temp |= 0b0100000000000000;
+      break;
+    case 2:
+      _timeData_port_temp |= 0b0010000000000000;
+      break;   
+    default:
+      _timeData_port_temp |= 0b0000000000000000;
+      break;   
+  }
+
+  //Minutes Tens bit setting
+  _timeData_port_temp |= (minutes_tens << 2);                       //Shift the number by 2 into the register (see Mask Tube 2)
+  _timeData_port_temp &= ~(1 << 2);                                 //Clear the second bit of the register (belongs to diffrent number)
+  if((minutes_tens/10) % 2 == 1) _timeData_port_temp |= (1 << 15);   //If the Minutes_Tens is an odd number (10/30/50) set the last bit (see Mask Tube 2)
+
+  //Minutes ones bit setting
+  _timeData_port_temp |= (minutes_ones << 6);
+
+  GPIOB->ODR = _timeData_port_temp;
+  */
   return;
+}
+
+uint16_t combine_4bit_numbers(uint8_t zahl0, uint8_t zahl1, uint8_t zahl2, uint8_t zahl3) {
+
+  uint16_t result = 0;
+
+  // Bit 0: bit 3 von zahl1
+  result |= ((zahl1 >> 3) & 0x1) << 0;
+  // Bit 1: bit 2 von zahl1
+  result |= ((zahl1 >> 2) & 0x1) << 1;
+  // Bit 2: bit 1 von zahl1
+  result |= ((zahl1 >> 1) & 0x1) << 2;
+  // Bit 3: bit 1 von zahl2
+  result |= ((zahl2 >> 2) & 0x1) << 3;
+  // Bit 4: bit 2 von zahl2
+  result |= ((zahl2 >> 1) & 0x1) << 4;
+  // Bit 5: bit 3 von zahl2
+  result |= ((zahl2 >> 0) & 0x1) << 5;
+  // Bit 6: bit 0 von zahl3
+  result |= ((zahl3 >> 0) & 0x1) << 6;
+  // Bit 7: bit 1 von zahl3
+  result |= ((zahl3 >> 1) & 0x1) << 7;
+  // Bit 8: bit 2 von zahl3
+  result |= ((zahl3 >> 2) & 0x1) << 8;
+  // Bit 9: bit 3 von zahl3
+  result |= ((zahl3 >> 3) & 0x1) << 9;
+  // Bit 10: bit 0 von zahl1
+  result |= ((zahl1 >> 0) & 0x1) << 10;
+  // Bit 11: bit 3 von zahl0
+  result |= ((zahl0 >> 3) & 0x1) << 11;
+  // Bit 12: bit 2 von zahl0
+  result |= ((zahl0 >> 2) & 0x1) << 12;
+  // Bit 13: bit 1 von zahl0
+  result |= ((zahl0 >> 1) & 0x1) << 13;
+  // Bit 14: bit 0 von zahl0
+  result |= ((zahl0 >> 0) & 0x1) << 14;
+  // Bit 15: bit 0 von zahl2
+  result |= ((zahl2 >> 3) & 0x1) << 15;
+
+  return result;
+
 }
 
 /**

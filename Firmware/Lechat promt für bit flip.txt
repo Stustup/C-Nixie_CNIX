@@ -1,0 +1,20 @@
+
+Schreibe mir code in C, mit dem ich eine 16 bit zahl bekomme, die aus 4 einzelnen 4 bit zahlen besteht (zahl0, zahl1, zahl2, zahl3). Diese sollen aber wie folgt angeordnet werden (DCBA bit schreibweise):
+bit 0 -> bit 3 von Zahl 1
+bit 1 -> bit 2 von Zahl 1
+bit 2 -> bit 1 von Zahl 1
+bit 3 -> bit 1 von Zahl 2
+bit 4 -> bit 2 von Zahl 2
+bit 5 -> bit 3 von Zahl 2
+bit 6 -> bit 0 von Zahl 3
+bit 7 -> bit 1 von Zahl 3
+bit 8 -> bit 2 von Zahl 3
+bit 9 -> bit 3 von Zahl 3
+bit 10 -> bit 0 von Zahl 1
+bit 11 -> bit 3 von Zahl 0
+bit 12 -> bit 2 von Zahl 0
+bit 13 -> bit 1 von Zahl 0
+bit 14 -> bit 0 von Zahl 0
+bit 15 -> bit 0 von Zahl 2
+
+-> Musste noch von zahl 2 die bits einmal umdrehen

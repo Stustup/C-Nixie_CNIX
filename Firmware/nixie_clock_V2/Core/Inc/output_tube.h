@@ -90,10 +90,20 @@
 #define uC_PB7  CO3_1 //Tube 3 B
 #define uC_PB6  CO3_0 //Tube 3 A
 
-//Mask Tube 0
-#define tube0mask 0b000000000011110
-#define tube1mask 0b111000000100000
-#define tube2mask 0b001110000000001
-#define tube3mask 0b000001111000000
+//Mask Tube 0 -> Hours Tens
+//                   ABCD           
+#define tube0mask 0b0111100000000000
+
+//Mask Tube 1 -> Hours Ones
+//                       A       BCD
+#define tube1mask 0b0000010000000111
+
+//Mask Tube 2 -> Minutes Tens
+//                  A         DCB
+#define tube2mask 0b1000000000111000
+
+//Mask Tube 3 -> Minutes Ones
+//                        DCBA
+#define tube3mask 0b0000001111000000
 
 #endif
