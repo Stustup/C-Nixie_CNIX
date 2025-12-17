@@ -15,7 +15,7 @@
 19	185	1765971535437747005	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c.obj	2fe5a23a86c719ca
 3	181	1765971535422848249	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c.obj	56d740d9b8c4c767
 5	210	1765971535424242532	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c.obj	1aefd8f3acfa9c5e
-1	121	1765988250975095235	CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj	e46bd655679ea26
+1	115	1765994700868894066	CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj	e46bd655679ea26
 4	223	1765971535423525678	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c.obj	8d5bf38966700de7
 147	272	1765971535566318995	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c.obj	6957ababde674373
 58	218	1765971535476747528	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c.obj	6ebd0b0f871750fe
@@ -23,11 +23,9 @@
 149	294	1765971535568838674	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj	cb5390aff65cc787
 153	304	1765971535571748802	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj	ad8d9fb3c71d9dae
 2	320	1765971535422260689	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj	b90c8480d5da2f5d
-121	189	1765988251095095998	nixie_clock_V2.elf	be4bbd0df54618c5
-0	30	1765993409996560362	build.ninja	85c3854e50a49c64
+115	177	1765994700982894794	nixie_clock_V2.elf	be4bbd0df54618c5
+0	30	1766000989741370129	build.ninja	85c3854e50a49c64
 0	30	1765969341692133892	/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/build/Debug/cmake_install.cmake	85c3854e50a49c64
 0	30	1765969341693798494	/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/build/Debug/cmake/stm32cubemx/cmake_install.cmake	85c3854e50a49c64
 2	192	1765971535421740016	CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306.c.obj	a1140ba33dc172aa
 2	149	1765971535421887064	CMakeFiles/nixie_clock_V2.dir/Drivers/ssd1306/ssd1306_fonts.c.obj	4e6f0f165e585af0
-1	115	1765994700868894066	CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj	e46bd655679ea26
-115	177	1765994700982894794	nixie_clock_V2.elf	be4bbd0df54618c5

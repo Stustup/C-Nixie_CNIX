@@ -1,5 +1,7 @@
 # CNIX - Nixie Tube Clock ->WORK IN PROGRESS
 
+DO NOT BUILD THE TUBE BOARD, THE PIN NUMBERS ARE MIRRORED
+
 CNIX is a nixie tube clock which accepts many diffrent nixie tubes with only slight modifications to the tube carrier board. 
 
 ![Nixie Clock tube board](./Docs/CNIX%20V2%20tube%20board%20side.png)

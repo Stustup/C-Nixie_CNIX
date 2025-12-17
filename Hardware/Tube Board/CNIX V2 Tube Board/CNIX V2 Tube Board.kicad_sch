@@ -54214,16 +54214,16 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 274.32 45.72 0)
+		(at 274.32 48.26 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e83fc7b3-35b9-4c98-8495-b6c858bce6f2")
 		(property "Reference" "J1"
-			(at 275.59 45.7199 0)
+			(at 275.59 48.2601 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54232,7 +54232,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 275.59 48.2599 0)
+			(at 275.59 45.7201 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54241,7 +54241,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 274.32 45.72 0)
+			(at 274.32 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54250,7 +54250,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 274.32 45.72 0)
+			(at 274.32 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54259,7 +54259,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 274.32 45.72 0)
+			(at 274.32 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54268,7 +54268,7 @@
 			)
 		)
 		(property "Mouser URL" ""
-			(at 274.32 45.72 0)
+			(at 274.32 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54277,7 +54277,7 @@
 			)
 		)
 		(property "Mouser Nr." ""
-			(at 274.32 45.72 0)
+			(at 274.32 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
