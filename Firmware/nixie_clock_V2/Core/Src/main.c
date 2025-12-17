@@ -19,6 +19,14 @@
 /**
  * WHEN GENERATING NEW CODE VIA CUBEMX ------> COMMENT OUT THE TIME SETTING IN RTC INIT
  */
+
+ /** TO DO LIST
+  * TODO: Implement indicator LEDS on the front
+  * TODO: Implement manual time setting via buttons
+  * TODO: Implement On/Off automatic
+  * TODO: 
+ */
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"

@@ -2206,6 +2206,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "FIXED: 	New inductor, new output cap and diffrent frequency resistor"
+		(exclude_from_sim no)
+		(at 209.042 156.464 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "34986e62-14de-4422-9bb4-61732a5e99fc")
+	)
 	(text "fsw = 50kHz"
 		(exclude_from_sim no)
 		(at 118.872 110.236 0)
@@ -2235,6 +2245,12 @@
 			)
 		)
 		(uuid "6be2f6ac-d752-4d40-86e8-f204b3c64cca")
+	)
+	(junction
+		(at 222.25 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "046569a6-5eca-4c51-8398-bf8d4c61994c")
 	)
 	(junction
 		(at 176.53 81.28)
@@ -2303,22 +2319,16 @@
 		(uuid "3e12f8d1-76d7-4d85-acaf-16607afcd676")
 	)
 	(junction
-		(at 210.82 71.12)
+		(at 218.44 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3e733e54-ecba-4b53-9e7d-6f3bdd721c72")
+		(uuid "4086f38e-0ad3-4195-ac8a-ea0589576d97")
 	)
 	(junction
 		(at 189.23 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "44f03f04-3074-4f29-b83a-3c46937fb243")
-	)
-	(junction
-		(at 214.63 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "46f6bfb3-977b-4e3f-b9a9-2748c6f64757")
 	)
 	(junction
 		(at 198.12 80.01)
@@ -2397,6 +2407,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7b191e96-9564-49de-8dfb-a93895123159")
+	)
+	(junction
+		(at 218.44 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7d51ab4a-f4fc-466d-a74a-8d14bae72796")
 	)
 	(junction
 		(at 233.68 80.01)
@@ -2724,16 +2740,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 71.12) (xy 231.14 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "52beb36b-e4d2-4ae6-b17f-c516da697ec0")
-	)
-	(wire
-		(pts
 			(xy 127 88.9) (xy 127 86.36)
 		)
 		(stroke
@@ -2751,6 +2757,16 @@
 			(type default)
 		)
 		(uuid "58525874-af77-43fb-9d33-23cb5b94d51d")
+	)
+	(wire
+		(pts
+			(xy 218.44 71.12) (xy 222.25 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a33ae60-8d13-4f7e-b219-83173720f01b")
 	)
 	(wire
 		(pts
@@ -2824,7 +2840,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 71.12) (xy 210.82 71.12)
+			(xy 207.01 71.12) (xy 218.44 71.12)
 		)
 		(stroke
 			(width 0)
@@ -2964,7 +2980,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 71.12) (xy 210.82 72.39)
+			(xy 218.44 71.12) (xy 218.44 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2994,7 +3010,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 71.12) (xy 214.63 72.39)
+			(xy 222.25 71.12) (xy 222.25 72.39)
 		)
 		(stroke
 			(width 0)
@@ -3214,6 +3230,16 @@
 	)
 	(wire
 		(pts
+			(xy 222.25 71.12) (xy 231.14 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b321f9c6-8d82-4e50-8bc0-8927a570246d")
+	)
+	(wire
+		(pts
 			(xy 120.65 102.87) (xy 120.65 105.41)
 		)
 		(stroke
@@ -3251,6 +3277,16 @@
 			(type default)
 		)
 		(uuid "bb62f0d7-0356-42fe-9b9b-919f210faaca")
+	)
+	(wire
+		(pts
+			(xy 218.44 80.01) (xy 210.82 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbebdffc-2dfb-4743-b596-c7d2cfa699dd")
 	)
 	(wire
 		(pts
@@ -3294,7 +3330,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 77.47) (xy 214.63 80.01)
+			(xy 222.25 77.47) (xy 222.25 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3474,7 +3510,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 80.01) (xy 210.82 80.01)
+			(xy 222.25 80.01) (xy 218.44 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3501,16 +3537,6 @@
 			(type default)
 		)
 		(uuid "dfd7912f-f8a7-4bda-bc0a-ede0a12776ba")
-	)
-	(wire
-		(pts
-			(xy 210.82 71.12) (xy 214.63 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1099804-f23f-4820-90e5-28149686dff1")
 	)
 	(wire
 		(pts
@@ -3594,7 +3620,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 77.47) (xy 210.82 80.01)
+			(xy 218.44 77.47) (xy 218.44 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3807,7 +3833,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 210.82 74.93 0)
+		(at 218.44 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3815,7 +3841,7 @@
 		(dnp no)
 		(uuid "039309c7-0bc9-4192-adf7-6c791da0d960")
 		(property "Reference" "C111"
-			(at 209.55 67.31 0)
+			(at 214.376 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3823,17 +3849,18 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u 250V"
-			(at 204.216 69.088 0)
+		(property "Value" "100nf 250V"
+			(at 211.836 69.088 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 210.82 74.93 0)
+			(at 218.44 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3842,7 +3869,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 210.82 74.93 0)
+			(at 218.44 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3851,7 +3878,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 210.82 74.93 0)
+			(at 218.44 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3860,7 +3887,7 @@
 			)
 		)
 		(property "Mouser URL" ""
-			(at 210.82 74.93 0)
+			(at 218.44 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3869,7 +3896,7 @@
 			)
 		)
 		(property "Mouser Nr." " 810-CGA4J3X7T2E104MA "
-			(at 210.82 74.93 0)
+			(at 218.44 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3878,7 +3905,7 @@
 			)
 		)
 		(property "Mouser-Nr." ""
-			(at 210.82 74.93 0)
+			(at 218.44 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3886,7 +3913,7 @@
 			)
 		)
 		(property "Reichelt-Nr." ""
-			(at 210.82 74.93 0)
+			(at 218.44 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4865,7 +4892,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 214.63 74.93 0)
+		(at 222.25 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4873,7 +4900,7 @@
 		(dnp no)
 		(uuid "20a43c46-3136-4181-9912-15438956002c")
 		(property "Reference" "C112"
-			(at 217.424 73.66 0)
+			(at 219.964 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4882,7 +4909,7 @@
 			)
 		)
 		(property "Value" "100n 250V"
-			(at 217.424 75.438 0)
+			(at 214.63 69.342 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4891,7 +4918,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 214.63 74.93 0)
+			(at 222.25 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4900,7 +4927,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 214.63 74.93 0)
+			(at 222.25 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4909,7 +4936,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 214.63 74.93 0)
+			(at 222.25 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4918,7 +4945,7 @@
 			)
 		)
 		(property "Mouser URL" ""
-			(at 214.63 74.93 0)
+			(at 222.25 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4927,7 +4954,7 @@
 			)
 		)
 		(property "Mouser Nr." " 810-CGA4J3X7T2E104MA "
-			(at 214.63 74.93 0)
+			(at 222.25 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4936,7 +4963,7 @@
 			)
 		)
 		(property "Mouser-Nr." ""
-			(at 214.63 74.93 0)
+			(at 222.25 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4944,7 +4971,7 @@
 			)
 		)
 		(property "Reichelt-Nr." ""
-			(at 214.63 74.93 0)
+			(at 222.25 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5830,7 +5857,7 @@
 				)
 			)
 		)
-		(property "Value" "68u, 2.8A"
+		(property "Value" "33u, 4.2A"
 			(at 166.37 68.58 90)
 			(effects
 				(font
@@ -5874,7 +5901,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Nr." " 871-B82477R4683M100 "
+		(property "Mouser Nr." "7447709330"
 			(at 167.64 71.12 0)
 			(effects
 				(font
@@ -6349,7 +6376,7 @@
 		(dnp no)
 		(uuid "70d0c0fc-1ff9-4e75-b64d-83978109ee27")
 		(property "Reference" "C110"
-			(at 204.216 67.31 0)
+			(at 205.994 67.564 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6357,17 +6384,16 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u 250V"
-			(at 209.55 76.2062 0)
+		(property "Value" "2u2 250V"
+			(at 204.216 69.596 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_2220_5750Metric_Pad1.97x5.40mm_HandSolder"
 			(at 207.01 74.93 0)
 			(effects
 				(font
@@ -6932,7 +6958,7 @@
 				)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "60k4"
 			(at 116.078 93.726 0)
 			(effects
 				(font
