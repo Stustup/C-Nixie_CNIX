@@ -90,4 +90,10 @@
 #define uC_PB7  CO3_1 //Tube 3 B
 #define uC_PB6  CO3_0 //Tube 3 A
 
+//Mask Tube 0
+#define tube0mask 0b000000000011110
+#define tube1mask 0b111000000100000
+#define tube2mask 0b001110000000001
+#define tube3mask 0b000001111000000
+
 #endif

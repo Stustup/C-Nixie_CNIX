@@ -712,9 +712,14 @@ void set_tube_bcdToDecimal(struct time_date_DataDigital* _time_date_data) {
   uint16_t _timeData_port = (hours_tens << 12) | (hours_ones << 8) | 
                             (minutes_tens << 4) | minutes_ones;
 
+  /*
   //Test for Decimal 3 on pin 3.
   GPIOB->BSRR = GPIO_BSRR_BS6;
   GPIOB->BSRR = GPIO_BSRR_BS7;
+  */
+
+  //16Bit Data gets shifted in, LSB in on B0
+  GPIOB->ODR = _timeData_port;
   
   return;
 }

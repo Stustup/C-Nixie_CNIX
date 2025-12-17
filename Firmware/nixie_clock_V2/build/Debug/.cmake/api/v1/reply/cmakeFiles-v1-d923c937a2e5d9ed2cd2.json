@@ -160,8 +160,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/build/Debug",
-		"source" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2"
+		"build" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/build/Debug",
+		"source" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2"
 	},
 	"version" : 
 	{

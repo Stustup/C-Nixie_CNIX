@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Linux")
 set(CMAKE_HOST_SYSTEM_VERSION "6.17.11-300.fc43.x86_64")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/gcc-arm-none-eabi.cmake")
+include("/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/gcc-arm-none-eabi.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

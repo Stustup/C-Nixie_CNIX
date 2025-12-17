@@ -1,4 +1,4 @@
-# Install script for directory: /home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2
+# Install script for directory: /home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/build/Debug/cmake/stm32cubemx/cmake_install.cmake")
+  include("/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/build/Debug/cmake/stm32cubemx/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/build/Debug/install_local_manifest.txt"
+  file(WRITE "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/build/Debug/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -61,6 +61,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/build/Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/build/Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

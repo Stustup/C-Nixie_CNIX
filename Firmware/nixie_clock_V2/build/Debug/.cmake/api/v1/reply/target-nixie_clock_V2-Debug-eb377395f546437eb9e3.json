@@ -95,27 +95,27 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/Drivers/ssd1306"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/Drivers/ssd1306"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Core/Inc"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Core/Inc"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G0xx/Include"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G0xx/Include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",
@@ -164,27 +164,27 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/Drivers/ssd1306"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/Drivers/ssd1306"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Core/Inc"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Core/Inc"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G0xx/Include"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G0xx/Include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+					"path" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/stm32cubemx/../../Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "ASM",
@@ -211,12 +211,12 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-mcpu=cortex-m0plus  -T \"/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/STM32G051XX_FLASH.ld\" --specs=nano.specs -Wl,-Map=nixie_clock_V2.map -Wl,--gc-sections -Wl,--print-memory-usage",
+				"fragment" : "-mcpu=cortex-m0plus  -T \"/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/STM32G051XX_FLASH.ld\" --specs=nano.specs -Wl,-Map=nixie_clock_V2.map -Wl,--gc-sections -Wl,--print-memory-usage",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/home/nielscron/Dokumente/VSCode/STM32/nixie_clock_V2/Drivers",
+				"fragment" : "-L\"/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/Drivers\"",
 				"role" : "libraryPath"
 			},
 			{
