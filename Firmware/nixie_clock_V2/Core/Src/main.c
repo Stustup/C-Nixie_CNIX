@@ -35,21 +35,20 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "cmsis_gcc.h"
-#include "ssd1306_fonts.h"
 #include "stm32g051xx.h"
 #include "stm32g0xx_hal.h"
 #include "stm32g0xx_hal_def.h"
 #include "stm32g0xx_hal_gpio.h"
 #include "stm32g0xx_hal_rtc.h"
 #include "stm32g0xx_hal_rtc_ex.h"
+#include "stm32g0xx_hal_tim.h"
 
 #include <stdint.h>
 #include "stdio.h"
 #include "ssd1306.h"
+#include "ssd1306_fonts.h"
 #include "output_tube.h"
 #include "menu.h"
-#include "stm32g0xx_hal_tim.h"
-#include "dht22.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -83,16 +82,16 @@ struct time_date_DataDigital {
  * These should only be used one time at the first programming of the mcu. When you do have to manually set the time, just 
  * put the right data here and change the RANDOM_SEED_OFFSET to something diffrent than the current value (16bit)
  */
-#define RANDOM_SEED_UPDATE 0x2344
+#define RANDOM_SEED_UPDATE 0x2340
 
-#define CURRENT_TIME_HOURS   13
-#define CURRENT_TIME_MINUTES 13
-#define CURRENT_TIME_SECONDS  0
+#define CURRENT_TIME_HOURS   23
+#define CURRENT_TIME_MINUTES  52
+#define CURRENT_TIME_SECONDS  30
 
-#define CURRENT_DATE_YEAR    25
-#define CURRENT_DATE_MONTH   12
-#define CURRENT_DATE_DAY     16
-#define CURRENT_DATE_WEEKDAY  2
+#define CURRENT_DATE_YEAR    26
+#define CURRENT_DATE_MONTH   9
+#define CURRENT_DATE_DAY     18
+#define CURRENT_DATE_WEEKDAY  5
 
 //Interval in which the time updates. 1s for oled screen and second accuracy, 60 for nixie display
 #define UPDATE_INTERVAL 60  
@@ -118,17 +117,6 @@ struct time_date_DataDigital {
 
 #define menu_size 8
 
-/**
- * @brief: Main menu structure for the whole clock
- * @param 0 -> normal time display
- * @param 1 -> Temperature and humidity sensor (Timeout 5s)
- * @param 2 -> Start/stop Time (time setting like above, but for start AND stop time) (Maybe multiple ones for morning and evening times?) (Timeout 30s) (Override with long press till next shutoff?)
- * @param 3 -> Time set (GETS DISABLED WHEN DCF77 PLUGIN BOARD ARE USED) (1. hours tens; 2. hours ones; 3. minutes tens; 4. minutes ones) (Timeout 30s)
- */
-uint8_t menu_pos = 0;
-uint8_t menu_pos_old = 0;
-
-uint16_t menu_time_set[4] = {1010,110,101,11};
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -162,21 +150,18 @@ uint8_t btn_pressed_flag = isNotPressed;
 volatile uint8_t sensor_flag = 0;
 
 uint8_t id_read = 0b0011;
+//IDs for all available driver boards
+uint8_t addon_dcf77 = 0;
 
-#if DEBUG_DISPLAY
-/**
- * Char arrays to use strings directly on oled, could be omitted on final device.
- */
 char timeData[15];
 char dateData[15];
 char miscData[2];
-#endif
-
-uint8_t check_if_addon();
 
 HAL_StatusTypeDef setTime(uint8_t hour, uint8_t minute, uint8_t second);
 HAL_StatusTypeDef setDate(uint8_t year, uint8_t month, uint8_t weekday, uint8_t date);
 HAL_StatusTypeDef getTimeDate(char* time, char* date, struct time_date_DataDigital* dTime);
+
+void check_for_addons(void);
 
 void set_tube_numbers(struct time_date_DataDigital* _time_date_data);
 uint16_t combine_4bit_numbers(uint8_t num0, uint8_t num1, uint8_t num2, uint8_t num3);
@@ -184,11 +169,25 @@ void output_to_tubes(uint16_t _data);
 
 void output_front_led(uint8_t led0, uint8_t led1);
 void output_blink_front_leds(uint8_t _mode);
+uint8_t ht_supply_state(uint8_t _state);
 
-void menu1();
-void menu_startStop();
+/**
+ * @brief: Main menu structure for the whole clock
+ * @param 0 -> normal time display
+ * @param 1 -> Temperature and humidity sensor (Timeout 5s)
+ * @param 2 -> Start/stop Time (time setting like above, but for start AND stop time) (Maybe multiple ones for morning and evening times?) (Timeout 30s) (Override with long press till next shutoff?)
+ * @param 3 -> Time set (GETS DISABLED WHEN DCF77 PLUGIN BOARD IS USED) (1. hours tens; 2. hours ones; 3. minutes tens; 4. minutes ones) (Timeout 30s)
+ */
+uint8_t menu_pos = 0;
+uint8_t menu_pos_old = 0;
+
+uint16_t menu_time_set[4] = {1010,110,101,11};
+
+void menuSensor();
+uint8_t menu_startStop();
 void menu_timeSet();
 void menu_timeout(uint8_t _menu_pos);
+
 
 /**
  * main counter for getTick function
@@ -288,6 +287,8 @@ int main(void)
   //Output current time to tubes
   set_tube_numbers(&TD_data);
   
+  miscData[0] = '0';
+
   #if DEBUG_DISPLAY
   /**
    * Constructor for the basic oled menu with predeceeding welcome message
@@ -308,13 +309,14 @@ int main(void)
   ssd1306_writeDate(dateData);
   ssd1306_SetCursor(0, 22);
   ssd1306_WriteString("Menu Position: ", Font_7x10, White);
-  miscData[0] = '0';
   ssd1306_writeMisc(miscData);
   ssd1306_UpdateScreen();
   #endif
 
-  //check for installed submodules
-  id_read = check_if_addon();
+  check_for_addons();
+
+  //Turn On HT PSU
+  ht_supply_state(0);
 
   /* USER CODE END 2 */
 
@@ -324,7 +326,7 @@ int main(void)
   {
     if(tick_flag == isSet) { //flag set by interrupt by RTC on 1Hz
 
-      getTimeDate(timeData, dateData, &TD_data);      //Get tiome from RTC registers
+      getTimeDate(timeData, dateData, &TD_data);      //Get time from RTC registers
 
       #if DEBUG_DISPLAY
       ssd1306_writeTimeDate(timeData, dateData);
@@ -346,6 +348,7 @@ int main(void)
       tick_flag = reset; //reset update flag
     }
 
+    #if DEBUG_DISPLAY
     /**
      * Reset button number after some time (defined in DISPLAY_MENU_RESET_TIME)
      */
@@ -355,6 +358,7 @@ int main(void)
       ssd1306_writeMisc(miscData);
       btn_pressed_flag = isNotPressed;
     }
+    #endif
 
     //only start one time per menu change
     if(menu_pos != menu_pos_old)  { 
@@ -366,28 +370,32 @@ int main(void)
     if(menu_pos != 0) {
 
       switch(menu_pos) {
+        case 0:
+          output_blink_front_leds(0);
+
+
         case 1: //Display Temp and Hmd on nixie tubes. Left Temp, right hmd. TIMEOUT = 10s
-          if(id_read != 0x0) {
+          if(!addon_dcf77) {
             menu_pos++;
             break;  //Skips this menu when no DCF77 addon board is connected
           }
           
           menu_timeout(1);
-          menu1();
+          menuSensor();
           output_blink_front_leds(0);
 
           break; 
 
         case 2: case 3: //Set start time of the clock. Can be set multiple times for a morning and evening routine TIMEOUT = 60s         
           menu_timeout(2);
-          menu_startStop();
+          menu_startStop(0);
           output_blink_front_leds(2);
           
           break;  
 
         case 4: case 5: //Set stop time of the clock.
           menu_timeout(2);
-          menu_startStop();
+          menu_startStop(1);
           output_blink_front_leds(3);
 
           break;
@@ -406,9 +414,12 @@ int main(void)
       btn_flag_plus =  reset;   
     } else if(menu_pos == 0) output_front_led(1, 1);
     
-    #ifdef DEBUG
+    #if DEBUG_BOARD
     sprintf(miscData, "%01d", menu_pos);
-    ssd1306_writeMisc(miscData);
+    #endif
+
+    #if DEBUG_DISPLAY
+    ssd1306_writeMisc(miscData);    
     #endif
     
     /**
@@ -570,8 +581,8 @@ static void MX_RTC_Init(void)
 
   /* USER CODE END RTC_Init 0 */
 
-  //RTC_TimeTypeDef sTime = {0};
-  //RTC_DateTypeDef sDate = {0};
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
   RTC_AlarmTypeDef sAlarm = {0};
 
   /* USER CODE BEGIN RTC_Init 1 */
@@ -600,28 +611,25 @@ static void MX_RTC_Init(void)
 
   /** Initialize RTC and set the Time and Date
   */
-  /*
-  sTime.Hours = 0x14;
-  sTime.Minutes = 0x10;
+  sTime.Hours = 0x0;
+  sTime.Minutes = 0x5;
   sTime.Seconds = 0x0;
   sTime.SubSeconds = 0x0;
-  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_ADD1H;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
   sTime.StoreOperation = RTC_STOREOPERATION_RESET;
   if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
   {
     Error_Handler();
   }
-  sDate.WeekDay = RTC_WEEKDAY_WEDNESDAY;
-  sDate.Month = RTC_MONTH_OCTOBER;
-  sDate.Date = 0x15;
+  sDate.WeekDay = RTC_WEEKDAY_SATURDAY;
+  sDate.Month = RTC_MONTH_SEPTEMBER;
+  sDate.Date = 0x19;
   sDate.Year = 0x0;
-  
 
   if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
   {
     Error_Handler();
   }
-  */
 
   /** Enable the Alarm A
   */
@@ -629,7 +637,7 @@ static void MX_RTC_Init(void)
   sAlarm.AlarmTime.Minutes = 0x0;
   sAlarm.AlarmTime.Seconds = 0x0;
   sAlarm.AlarmTime.SubSeconds = 0x0;
-  sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_ADD1H;
+  sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
   sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
   sAlarm.AlarmMask = RTC_ALARMMASK_NONE;
   sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
@@ -744,11 +752,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(ht_EN_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : dht22_pin_Pin */
-  GPIO_InitStruct.Pin = dht22_pin_Pin;
+  /*Configure GPIO pins : addon_data_Pin addon_en_Pin */
+  GPIO_InitStruct.Pin = addon_data_Pin|addon_en_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(dht22_pin_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : btn_minus_Pin btn_menu_Pin btn_plus_Pin */
   GPIO_InitStruct.Pin = btn_minus_Pin|btn_menu_Pin|btn_plus_Pin;
@@ -792,11 +800,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-uint8_t check_if_addon() {
-  //Checks both id_bit0 and id_bit1 and combines them.
-  return (((GPIOD->IDR & GPIO_IDR_ID3) << 1) | (GPIOD->IDR & GPIO_IDR_ID2));
-}
 
 /**
  * Sets the Time of the RTC. IMPORTANT: When regenerating the code through CubeMX comment out the time setting in the predefined function.
@@ -877,6 +880,7 @@ HAL_StatusTypeDef getTimeDate(char* time, char* date, struct time_date_DataDigit
   return HAL_OK;
 }
 
+#if DEBUG_DISPLAY
 /**
  * Combined oled writing function
  */
@@ -915,6 +919,7 @@ void ssd1306_writeMisc(char* _data) {
   ssd1306_WriteString(_data, Font_7x10, White);
   ssd1306_UpdateScreen();
 }
+#endif
 
 /** Function for changing the tubes to the corresponding time values
  */
@@ -997,21 +1002,15 @@ void output_to_tubes(uint16_t _data) {
   GPIOB->ODR = _data;
 }
 
-void menu1() {
-  if(sensor_flag) {
-    uint8_t tempData_tens;
-    uint8_t tempData_ones;
-    uint8_t hmdData_tens;
-    uint8_t hmdData_ones;
-    
-    DHT22_ReadData(&tempData_tens, &tempData_ones, &hmdData_tens, &hmdData_ones);
-    output_to_tubes(combine_4bit_numbers(tempData_tens, tempData_ones, hmdData_tens, hmdData_ones));
-
-    sensor_flag = 0;
+void menuSensor() {
+  if(btn_flag_plus) {
+    ht_supply_state(1);
+  } if(btn_flag_minus) {
+    ht_supply_state(0);
   }
 }
 
-void menu_startStop() {
+uint8_t menu_startStop() {
   
 }
 
@@ -1083,6 +1082,38 @@ void output_front_led(uint8_t led0, uint8_t led1) {
   if(!led1) GPIOA->BSRR = GPIO_BSRR_BR12;
 }
 
+/**
+ * @brief: Function to turn on or off the HT supply
+ * @param: state: 1 on, 0 off
+ * @return: 1->Error, 0-> OK
+ */
+uint8_t ht_supply_state(uint8_t _state) {
+  if(_state != 1 && _state != 0) return 1;
+  HAL_GPIO_WritePin(ht_EN_GPIO_Port, ht_EN_Pin, !_state);
+  return 0;
+}
+
+/**
+ * @brief: Check for installed addons via ID pins D2 and D3
+ * Addons:
+ * 0 -> DCF77
+ */
+void check_for_addons(void) {
+    
+  uint8_t addon_id = ((GPIOD->IDR & GPIO_IDR_ID3) << 1) | (GPIOD->IDR & GPIO_IDR_ID2);
+
+  switch(addon_id) {
+  case 0b0000: 
+      addon_dcf77 = 1;
+      break;
+  case 0b0001: 
+      break;
+  default:
+      break;
+  }
+}
+
+//Blinking timer for front LEDs for example
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
   tick_blink = !tick_blink;
 }
@@ -1093,7 +1124,6 @@ void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc) {
 
   //counter_seconds++;
 }
-
 
 /**
  * Interrupt Handler for the buttons

@@ -48,7 +48,9 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     "Drivers/ssd1306/ssd1306.c"
     "Drivers/ssd1306/ssd1306_fonts.c"
 
-    "Drivers/DHT22/dht22.c"
+    "Drivers/dcf77/dcf77.c"
+
+    "Drivers/HTU21D/htu21d.c"
     # Add user sources here
 )
 
@@ -56,7 +58,9 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     "Drivers/ssd1306"
     
-    "Drivers/DHT22"
+    "Drivers/dcf77"
+
+    "Drivers/HTU21D"
     # Add user defined include paths
 )
 
