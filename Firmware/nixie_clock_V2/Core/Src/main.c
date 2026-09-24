@@ -1035,6 +1035,8 @@ void output_to_tubes(uint16_t _data) {
 }
 */
 
+// TODO: FIX BUG WITH MENU_POSITION AND MENU_POSITION_OLD!!!!!!!!!!!!! 
+
 void menu_mainTime() {
   output_blink_front_leds(solid);
 
