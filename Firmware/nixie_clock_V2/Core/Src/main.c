@@ -148,7 +148,7 @@ uint16_t menu_time_set[4] = {1010,110,101,11};
 //Menu subfunctions
 void menu_mainTime();
 void menu_mainDate();
-void menuSensor();
+void menu_Sensor();
 void menu_startStop(uint8_t _submenu_pos, time_date_DataDigital* _Tdata_start);
 void menu_timeSet(uint8_t _submenu_pos);
 void menu_timeout(uint8_t _timeoutValue);
@@ -328,7 +328,7 @@ int main(void)
         menu_timeout(DISPLAY_MENU_TimeDateSensor_TIMEOUT);
         break;
       case menuSENSOR:
-        menuSensor();
+        menu_Sensor();
         menu_timeout(DISPLAY_MENU_TimeDateSensor_TIMEOUT);
         break;
       case menuStartStop:
@@ -347,9 +347,7 @@ int main(void)
         break;
     }
 
-    if(btn_pressed_flag) {
-      resetBtnFlags();
-    }
+   
 
     if(nixieDisplay.displayStatus != nixieDisplay.displayStatus_old) {
       ht_supply_state(&nixieDisplay);
@@ -357,6 +355,11 @@ int main(void)
     }
 
     output_to_tubesNEW(&nixieDisplay);  //Updates the tube display
+
+    if(btn_pressed_flag) {
+      resetBtnFlags();
+    }
+
     /*
     switch(menu_pos) {
       case 0: //Main time display menu, always is the fallback for timeouts!
@@ -390,7 +393,7 @@ int main(void)
         }
         
         menu_timeout(1);
-        menuSensor();
+        menu_Sensor();
         output_blink_front_leds(blinkBoth);
 
         break; 
@@ -1077,7 +1080,7 @@ void menu_mainDate() {
   }
 }
 
-void menuSensor() {
+void menu_Sensor() {
   output_blink_front_leds(blinkBoth);
 
   if(menu_position != menu_position_old) {
