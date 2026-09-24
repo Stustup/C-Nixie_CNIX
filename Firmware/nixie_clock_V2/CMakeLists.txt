@@ -51,6 +51,12 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     "Drivers/dcf77/dcf77.c"
 
     "Drivers/HTU21D/htu21d.c"
+
+    "Core/Src/display.c"
+
+    "Core/Src/timeStuff.c"
+    
+    "Core/Src/menu.c"
     # Add user sources here
 )
 
@@ -61,6 +67,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     "Drivers/dcf77"
 
     "Drivers/HTU21D"
+
     # Add user defined include paths
 )
 

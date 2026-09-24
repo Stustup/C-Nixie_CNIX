@@ -47,6 +47,45 @@ extern "C" {
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
+/**
+ * These should only be used one time at the first programming of the mcu. When you do have to manually set the time, just 
+ * put the right data here and change the RANDOM_SEED_OFFSET to something diffrent than the current value (16bit)
+ */
+#define RANDOM_SEED_UPDATE 0x2341
+
+#define CURRENT_TIME_HOURS   9
+#define CURRENT_TIME_MINUTES  42
+#define CURRENT_TIME_SECONDS  0
+
+#define CURRENT_DATE_YEAR    26
+#define CURRENT_DATE_MONTH   9
+#define CURRENT_DATE_DAY     19
+#define CURRENT_DATE_WEEKDAY  6
+
+//Reset time for the display of the menu button on the oled
+#define DISPLAY_MENU_RESET_TIME 750
+
+//blink interval for leds and other
+#define TICK_INTERVAL 500
+
+//Timeouts for the menus. 10s for temp and hmd, 60s for everything else
+#define DISPLAY_MENU_TimeDateSensor_TIMEOUT 10
+#define DISPLAY_MENU_X_TIMEOUT 30
+
+#define set 1
+#define true 1
+#define isSet 1
+#define isPressed 1
+
+#define reset 0
+#define false 0
+#define isNotSet 0
+#define isNotPressed 0
+
+//--------------------------------------------------------- Menu stuff makros and variables
+
+#define menu_size 8
+
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/

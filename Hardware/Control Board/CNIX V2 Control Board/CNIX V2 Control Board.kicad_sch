@@ -12558,7 +12558,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7"
+		(property "Value" "18k"
 			(at 138.43 150.876 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13740,7 +13740,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7"
+		(property "Value" "18k"
 			(at 138.43 159.766 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15825,7 +15825,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7"
+		(property "Value" "18k"
 			(at 138.43 168.656 90)
 			(show_name no)
 			(do_not_autoplace no)
