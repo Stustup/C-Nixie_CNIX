@@ -12,9 +12,9 @@
 typedef enum {
   menuTIME = 0,
   menuDATE,
+  menuSENSOR,
   menuStartStop,
   menuTimeEdit,
-  menuSENSOR,
   menuOVERFLOW
 } menu;
 

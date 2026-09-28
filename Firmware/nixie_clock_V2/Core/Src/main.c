@@ -86,7 +86,7 @@ TIM_HandleTypeDef htim1;
 
 time_date_DataDigital TD_data;
 
-volatile menu menu_position = menuTIME;
+menu menu_position = menuTIME;
 menu menu_position_old = menuTIME;
 
 tubeDisplay nixieDisplay;
@@ -106,6 +106,12 @@ volatile int8_t btn_flag_plus  = 0;
 volatile int8_t btn_flag_minus = 0;
 
 uint8_t time_update_flag = 0;
+
+/**
+ * @brief Flag to signal a change in the system via I/O or Timeout
+ *  gets set whenever a button is pressed and should be reset when it is used inside a function, not everytime the loop repeats
+ */
+volatile uint8_t sys_update_flag = 0;
 
 uint8_t btn_pressed_flag = isNotPressed;
 
@@ -154,6 +160,11 @@ void menu_timeSet(uint8_t _submenu_pos);
 void menu_timeout(uint8_t _timeoutValue);
 uint8_t blinkState(void);
 void resetBtnFlags();
+
+void handle_btn (menu* _pos);
+void handle_btnPlus (menu* _pos);
+void handle_btnMinus (menu* _pos);
+void handle_btnMenu (menu* _pos);
 
 /**
  * main counter for getTick function
@@ -357,7 +368,7 @@ int main(void)
     output_to_tubesNEW(&nixieDisplay);  //Updates the tube display
 
     if(btn_pressed_flag) {
-      resetBtnFlags();
+      //resetBtnFlags();
     }
 
     /*
@@ -1040,11 +1051,11 @@ void output_to_tubes(uint16_t _data) {
 void menu_mainTime() {
   output_blink_front_leds(solid);
 
-  if(menu_position != menu_position_old) {
+  if(sys_update_flag) {
     getTimeDate(timeData, dateData, &TD_data);
     nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
 
-    menu_position_old = menu_position;
+    sys_update_flag = 0;
   }
 
   if(tick_flag == isSet) { //flag set by interrupt by RTC on 1Hz
@@ -1059,17 +1070,17 @@ void menu_mainTime() {
     tick_flag = reset; //reset update flag
   }
 
-  
+  handle_btn(&menu_position);
 }
 
 void menu_mainDate() {
   output_blink_front_leds(solidBot);
 
-  if(menu_position != menu_position_old) {
+  if(sys_update_flag) {
     getTimeDate(timeData, dateData, &TD_data);
     nixieDisplay.displayDigitOutput = set_tube_numbers_date(&TD_data);
 
-    menu_position_old = menu_position;
+    sys_update_flag = 0;
   }
 
   if(tick_flag == isSet) {
@@ -1080,30 +1091,136 @@ void menu_mainDate() {
 
     tick_flag = reset;
   }
+
+  handle_btn(&menu_position);
 }
 
 void menu_Sensor() {
   output_blink_front_leds(blinkBoth);
 
-  if(menu_position != menu_position_old) {
-    nixieDisplay.displayDigitOutput = combine_4bit_numbers(9, 9, 9, 9); //PLACEHOLDER
+  if(sys_update_flag) {
+    nixieDisplay.displayDigitOutput = combine_4bit_numbers(9, BLANK, 9, BLANK); //PLACEHOLDER
 
     nixieDisplay.displayStatus = 1;
 
-    menu_position_old = menu_position;
+    if(nixieDisplay.displayStatus != nixieDisplay.displayStatus_old) {
+      ht_supply_state(&nixieDisplay);
+      nixieDisplay.displayStatus_old = nixieDisplay.displayStatus;
+    }
+
+    sys_update_flag = 0;
   }
 
   if(tick_flag == isSet) {
 
     tick_flag = reset;
   }
+
+  handle_btn(&menu_position);
 }
 
 void menu_startStop(uint8_t _submenu_pos, time_date_DataDigital* _Tdata_start) {
 
   output_blink_front_leds(blinkTop);
+
+  sys_update_flag = 0;
+
+  handle_btn(&menu_position);
   //uint8_t _hours_tens, _hours_ones, _minutes_tens, _minutes_ones;
   
+}
+
+void menu_timeSet(uint8_t _submenu_pos) {  
+
+  output_blink_front_leds(blinkBot);
+
+  sys_update_flag = 0;
+
+  handle_btn(&menu_position);
+}
+
+void handle_btn (menu* _pos) {
+  if(btn_flag_plus)  handle_btnPlus(_pos);
+  if(btn_flag_minus) handle_btnMinus(_pos);
+  if(btn_flag_menu)  handle_btnMenu(_pos);
+}
+
+void handle_btnPlus (menu* _pos) {
+  switch (*_pos) {
+    case (menuTIME):
+      menu_position = menuDATE;
+      sys_update_flag = 1;
+      break;
+    case (menuDATE):
+      menu_position = menuSENSOR;
+      sys_update_flag = 1;
+      break;
+    case (menuSENSOR):
+      menu_position = menuTIME;
+      sys_update_flag = 1;
+      break;
+    case(menuStartStop):
+
+      break;
+    case(menuTimeEdit):
+
+      break;
+    default:
+      break;
+  }
+  btn_flag_plus = 0;
+}
+
+void handle_btnMinus (menu* _pos) {
+  switch (*_pos) {
+    case (menuTIME):
+      menu_position = menuSENSOR;
+      sys_update_flag = 1;
+      break;
+    case (menuDATE):
+      menu_position = menuTIME;
+      sys_update_flag = 1;
+      break;
+    case (menuSENSOR):
+      menu_position = menuDATE;
+      sys_update_flag = 1;
+      break;
+    case(menuStartStop):
+
+      break;
+    case(menuTimeEdit):
+
+      break;
+    default:
+      break;
+  }
+  btn_flag_minus = 0;
+}
+
+void handle_btnMenu (menu* _pos) {
+  switch (*_pos) {
+    case (menuTIME):
+      menu_position = menuStartStop;
+      break;
+    case (menuDATE):
+
+      break;
+    case (menuSENSOR):
+
+      break;
+    case(menuStartStop):
+      menu_position++;
+      break;
+    case(menuTimeEdit):
+      menu_position++;
+      break;
+    case(menuOVERFLOW):
+      menu_position = menuTIME;
+      break;
+    default:
+      break;
+  }
+  btn_flag_menu = 0;
 }
 
 /**
@@ -1142,14 +1259,11 @@ uint8_t circleNumbers(uint8_t _number, uint8_t _mode) {
   return _number;
 }
 
-void menu_timeSet(uint8_t _submenu_pos) {  
-  output_blink_front_leds(blinkBot);
-}
-
 void menu_timeout(uint8_t _timeoutValue) {
 
   if(tick_count >= _timeoutValue) {
     menu_position = menuTIME;
+    sys_update_flag = 1;
   }
 
   time_update_flag = 1;
@@ -1263,6 +1377,7 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
 
       tick_count = 0;
 
+      /*
       switch(menu_position) {
         case menuTIME:
           menu_position = menuDATE;
@@ -1275,6 +1390,7 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
           break;
         default: break;
       }
+        */
 
       break;
     
@@ -1283,6 +1399,7 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
 
       tick_count = 0;
 
+      /*
       switch(menu_position) {
         case menuTIME:
           menu_position = menuSENSOR;
@@ -1295,6 +1412,7 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
           break;
         default: break;
       }
+        */
 
       break;
 
@@ -1303,9 +1421,13 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
 
       tick_count = 0;
 
+      /*
       if(menu_position == menuTIME) {
-        menu_position = menuStartStop;
+        
+      } else if(menu_position == menuStartStop || menu_position == menuTimeEdit) {
+        ;
       }
+        */
       break;
 
     default:

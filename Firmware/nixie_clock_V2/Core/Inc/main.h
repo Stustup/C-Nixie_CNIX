@@ -82,6 +82,8 @@ extern "C" {
 #define isNotSet 0
 #define isNotPressed 0
 
+#define BLANK 0b1010
+
 //--------------------------------------------------------- Menu stuff makros and variables
 
 #define menu_size 8
