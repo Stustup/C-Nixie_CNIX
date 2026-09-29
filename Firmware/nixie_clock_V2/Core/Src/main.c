@@ -84,12 +84,12 @@ TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN PV */
 
-time_date_DataDigital TD_data;
+time_date_DataDigital TD_data = {0};
 
 menu menu_position = menuTIME;
 menu menu_position_old = menuTIME;
 
-tubeDisplay nixieDisplay;
+tubeDisplay nixieDisplay = {0};
 
 volatile uint8_t tick_flag = isNotSet;
 volatile uint8_t counter_seconds = 0;
@@ -145,26 +145,101 @@ uint16_t set_tube_numbers_date(time_date_DataDigital* _time_date_data);
  * @param 3 -> Time set (GETS DISABLED WHEN DCF77 PLUGIN BOARD IS USED) (1. hours tens; 2. hours ones; 3. minutes tens; 4. minutes ones) (Timeout 30s)
  */
 uint8_t menu_pos = 0;
-uint8_t submenu_pos = 0;
+static uint8_t submenu_pos = 0;
 uint8_t menu_pos_old = 0;
 uint8_t menu_0_submenu_flag = 0;
 
 uint16_t menu_time_set[4] = {1010,110,101,11};
 
-//Menu subfunctions
+/**
+ * Menu subfunctions TODO: Button press illuminates the nixies for 10s if in stop mode.
+ */
+
+/**
+ * @brief: Dispalys the current time on the nixies. Nixie illumination is based upon start and stop times. 
+ */
 void menu_mainTime();
+
+/**
+ * @brief: Dispalys the current date on the nixies. Nixie illumination is based upon start and stop times.
+ */
 void menu_mainDate();
+
+/**
+ * @brief: TODO: Dispalys the current temperaturee (left) and humidity (right) on the nixies. Nixie illumination is based upon start and stop times.
+ */
 void menu_Sensor();
-void menu_startStop(uint8_t _submenu_pos, time_date_DataDigital* _Tdata_start);
-void menu_timeSet(uint8_t _submenu_pos);
+
+/**
+ * @brief: When out of timeframe for on times, display current time. Should have a timeout of 10s
+ */
+void menu_peekTime();
+
+/**
+ * @brief: Lets one manually set start and stop times. There are 2 sets of Start/Stop times, one for the morning, one for the evening.
+ * @param: _submenu_pos -> pointer to the global variable submenu_pos to cicle through the numbers.
+ * @param: _Tdata_startStop -> pointer to main time containing struct.
+ */
+void menu_startStop(uint8_t* _submenu_pos, time_date_DataDigital* _Tdata_startStop);
+
+/**
+ * @brief: Lets one manually set the time. TODO: Gets disabled when DCF77 module is used.
+ * @param: _submenu_pos -> pointer to the global variable submenu_pos to cicle through the numbers.
+ * @param: _Tdata -> pointer to main time containing struct.
+ */
+void menu_timeSet(uint8_t* _submenu_pos, time_date_DataDigital* _Tdata);
+
+/**
+ * @brief: Timeout function to return to menuTIME after a set amount of seconds. Depends on the tick_count global variable (increased by RTC 1Hz out, reset every time a button is pressed via IRQ)
+ * @param: _timeoutValue -> timeout value in seconds
+ */
 void menu_timeout(uint8_t _timeoutValue);
+
+/**
+ * @brief: Handles blinking of display elements
+ * @retval: 1 or 0, alternating every BLINK_TIME
+ */
 uint8_t blinkState(void);
+
+/**
+ * @brief: Handles blinking of display elements
+ * @retval: 1 or 0, alternating every _blink_time
+ */
+uint8_t blinkState_custom(uint16_t _blink_time);
+
+/**
+ * @brief Checks if current time is in the range of on hours. If no, turn display off. Has to be called after restoring backed up start stop data
+ * @param _TD_data -> Main struct for time data to check for start and stop hours
+ * @param _nixieDisplay -> Main struct for display data to change status state. 
+ * @retval 0 if current state should be off, 1 if current state should be on.
+ */
+uint8_t startStop_check(time_date_DataDigital* _TD_data, tubeDisplay* _nixieDisplay);
+
+/**
+ * @brief Checks for triggers of daylight saving time (last sunday in march or october ect.) and sets the RTC flags correspondingly
+ * @param _DST      -> value from check_for_DST or 0 for summertime and 1 for wintertime. 2 for Error (does nothing)
+ * @param hrtc      -> RTC Struct from HAL
+ */
+void set_for_DST(RTC_HandleTypeDef* hrtc, uint8_t _DST);
+
+/**
+ * @brief Checks for triggers of daylight saving time (last sunday in march or october ect.)
+ * @param _TD_data  -> Main struct for time data
+ * @param hrtc      -> RTC Struct from HAL
+ * @retval 0 if sumemrtime trigger, 1 if wintertime trigger
+ */
+uint8_t check_for_DST(RTC_HandleTypeDef* hrtc, time_date_DataDigital* _TD_data);
+
 void resetBtnFlags();
 
 void handle_btn (menu* _pos);
 void handle_btnPlus (menu* _pos);
 void handle_btnMinus (menu* _pos);
 void handle_btnMenu (menu* _pos);
+
+//RTC related functions
+void time_read_startStop_bkp  (time_date_DataDigital* _TD_data);
+void time_write_startStop_bkp (time_date_DataDigital* _TD_data);
 
 /**
  * main counter for getTick function
@@ -242,7 +317,7 @@ int main(void)
    * If the random number stored in the backup register is diffrent from the current value, its not updating the Time and Date. 
    * Seed, Time and Date are stored in makros 
    */
-   if(HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR1) != RANDOM_SEED_UPDATE) {
+   if(HAL_RTCEx_BKUPRead(&hrtc, RTC_SEED_BKP_REGISTER) != RANDOM_SEED_UPDATE) {
     setTime(CURRENT_TIME_HOURS, CURRENT_TIME_MINUTES, CURRENT_TIME_SECONDS);
     setDate(CURRENT_DATE_YEAR, CURRENT_DATE_MONTH, CURRENT_DATE_WEEKDAY, CURRENT_DATE_DAY);
   }
@@ -265,13 +340,29 @@ int main(void)
   }
   __enable_irq();
 
+  //Check the D2 and D3 bits for addon boards. No board -> 0b11
+  check_for_addons();
 
   //Set the Front LEDs On
   output_front_led(1, 1);
 
-  //Output current time to tubes TODO: CHECK FOR WEEKEND MODE AND START STOP TIME.
+  //Check for daylight saving time
+  set_for_DST(&hrtc, check_for_DST(&hrtc, &TD_data));
+
+  //Retrieve start and stop time from RTC backup register and push them to the main time struct
+  time_read_startStop_bkp(&TD_data);
+
+  //Check if start stop times are reached and change the corresponding bit in the nixieDisplay struct
+  startStop_check(&TD_data, &nixieDisplay);
+
+  //Output current time to main time struct
   nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
+
+  //output time data to the display struct
   output_to_tubesNEW(&nixieDisplay);
+
+  //Set the HT supply state to the corresponding state in display struct
+  ht_supply_state(&nixieDisplay);
   
   miscData[0] = '0';
 
@@ -299,11 +390,6 @@ int main(void)
   ssd1306_UpdateScreen();
   #endif
 
-  check_for_addons();
-
-  //Turn On HT PSU
-  ht_supply_state(&nixieDisplay);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -322,14 +408,6 @@ int main(void)
     }
     #endif
 
-    //only start one time per menu change
-    /*
-    if(menu_pos != menu_pos_old)  { 
-      start_ms_counter_menuTimeout = HAL_GetTick();
-      menu_pos_old = menu_pos;
-    }
-    */
-
     switch(menu_position) {
       case menuTIME:
         menu_mainTime();
@@ -342,12 +420,16 @@ int main(void)
         menu_Sensor();
         menu_timeout(DISPLAY_MENU_TimeDateSensor_TIMEOUT);
         break;
+      case menuPEEKTIME:
+        menu_peekTime();
+        menu_timeout(10);
+        break;
       case menuStartStop:
-        menu_startStop(submenu_pos, &TD_data);
+        menu_startStop(&submenu_pos, &TD_data);
         menu_timeout(DISPLAY_MENU_X_TIMEOUT);
         break;
       case menuTimeEdit:
-        menu_timeSet(submenu_pos);
+        menu_timeSet(&submenu_pos, &TD_data);
         menu_timeout(DISPLAY_MENU_X_TIMEOUT);
         break;
       case menuOVERFLOW:
@@ -358,86 +440,25 @@ int main(void)
         break;
     }
 
-   
-
-    if(nixieDisplay.displayStatus != nixieDisplay.displayStatus_old) {
-      ht_supply_state(&nixieDisplay);
+    if((nixieDisplay.displayStatus != nixieDisplay.displayStatus_old) || (menu_position != menuTIME)) {
+      if(menu_position != menuTIME) {
+        nixieDisplay.displayStatus = 1;
+        ht_supply_state(&nixieDisplay);
+      } else {
+        ht_supply_state(&nixieDisplay);
+      }
       nixieDisplay.displayStatus_old = nixieDisplay.displayStatus;
     }
 
-    output_to_tubesNEW(&nixieDisplay);  //Updates the tube display
-
-    if(btn_pressed_flag) {
-      //resetBtnFlags();
+    if(menu_position != menuStartStop && menu_position != menuTimeEdit) {
+      output_to_tubesNEW(&nixieDisplay);  //Updates the tube display only when it should be automatically updated
     }
 
-    /*
-    switch(menu_pos) {
-      case 0: //Main time display menu, always is the fallback for timeouts!
-        output_blink_front_leds(solid);
-        
-        //IDEA: When pushing plus or minus button: show date! Realized with submenu condition.
-        if(btn_flag_minus || btn_flag_plus || menu_0_submenu_flag) {
-          if(!menu_0_submenu_flag) {
-            start_ms_counter_menuTimeout_DATE = HAL_GetTick();
-            menu_0_submenu_flag = 1;
-          }
-          
-          menu_mainDate();
+    //does something once a day
+    if((TD_data.hours == 0) && (TD_data.minutes == 0) & (TD_data.seconds == 0)) {
 
-          if(HAL_GetTick() > start_ms_counter_menuTimeout_DATE+5000) {
-            menu_0_submenu_flag = 0;
-          }
-          break;
-        }
-
-        if(!menu_0_submenu_flag) {
-          menu_mainTime();
-        }
-        
-        break;
-
-      case 1: //Display Temp and Hmd on nixie tubes. Left Temp, right hmd. TIMEOUT = 5s
-        if(!addon_dcf77) {
-          menu_pos++;
-          break;  //Skips this menu when no DCF77 addon board is connected
-        }
-        
-        menu_timeout(1);
-        menu_Sensor();
-        output_blink_front_leds(blinkBoth);
-
-        break; 
-
-      case 2: case 4: //Set start time of the clock. Can be set multiple times for a morning and evening routine TIMEOUT = 30s         
-        menu_timeout(2);
-
-        if(menu_pos == 2) menu_startStop(submenu_pos, &TD_data);
-        if(menu_pos == 4) menu_startStop(submenu_pos, &TD_data);
-
-        output_blink_front_leds(blinkTop);
-        
-        break;  
-
-      case 3: case 5: //Set stop time of the clock.
-        menu_timeout(2);
-
-        if(menu_pos == 3) menu_startStop(submenu_pos, &TD_data);
-        if(menu_pos == 5) menu_startStop(submenu_pos, &TD_data);
-
-        output_blink_front_leds(blinkBot);
-
-        break;
-
-      case 6: case 7: //Set the time manually. must be disabled when module '00' is used (DCF77) TIMEOUT = 30s   
-        menu_timeout(3);
-        menu_timeSet(submenu_pos);
-        output_blink_front_leds(blinkBoth);
-        break;
-
-      default: break;
     }
-    */
+    
     #if DEBUG_BOARD
     sprintf(miscData, "%01d", menu_pos);
     #endif
@@ -445,47 +466,7 @@ int main(void)
     #if DEBUG_DISPLAY
     ssd1306_writeMisc(miscData);    
     #endif
-    
-    /**
-     * Debug function for development of the buttons
-     */
-    /*
-    if((btn_flag_plus == isPressed) || (btn_flag_menu == isPressed) || (btn_flag_minus == isPressed)) {
 
-      if(btn_flag_menu) {
-        miscData[0] = 'M';
-        ssd1306_writeMisc(miscData);
-      }
-      if(btn_flag_plus) {
-        miscData[0] = '+';
-        ssd1306_writeMisc(miscData);
-      }
-      if(btn_flag_minus) {
-        miscData[0] = '-';
-        ssd1306_writeMisc(miscData);
-      }
-      */
-      
-      
-      /*Turns on the HT PSU
-      switch (btn_flag) {
-        case 2:
-
-          HAL_GPIO_TogglePin(ht_EN_GPIO_Port, ht_EN_Pin);
-          break;
-
-        default:
-          break;
-      } */
-
-      //start_ms_counter = HAL_GetTick();
-      //btn_pressed_flag = isPressed;
-      /*
-      btn_flag_menu =  reset;
-      btn_flag_minus = reset;
-      btn_flag_plus =  reset;
-    }
-    */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -906,6 +887,35 @@ HAL_StatusTypeDef getTimeDate(char* time, char* date, time_date_DataDigital* dTi
   return HAL_OK;
 }
 
+/**
+ * Function to get time and date from RTC module. IMPORTANT: Always get time and then date TOGETHER! otherwize the druids of the forest will hunt you
+ * Creates strings in predefined vhar arrays to directly print to an oled.
+ * TODO: put time and date in an integer struct to push to the nixies 
+ */
+HAL_StatusTypeDef getTimeDateNEW(time_date_DataDigital* dTimeDate) {
+  RTC_DateTypeDef gDate;
+  RTC_TimeTypeDef gTime;
+  uint8_t _error_count = 0;
+
+  //Get current time
+  if(HAL_RTC_GetTime(&hrtc, &gTime, RTC_FORMAT_BIN) != HAL_OK) _error_count++;
+
+  //Get current date
+  if(HAL_RTC_GetDate(&hrtc, &gDate, RTC_FORMAT_BIN) != HAL_OK) _error_count++;
+
+  dTimeDate->hours = gTime.Hours;
+  dTimeDate->minutes = gTime.Minutes;
+  dTimeDate->seconds = gTime.Seconds;
+
+  dTimeDate->day = gDate.Date;
+  dTimeDate->weekday = gDate.WeekDay;
+  dTimeDate->month = gDate.Month;
+  dTimeDate->year = gDate.Year;
+
+  if(_error_count != 0) return HAL_ERROR;
+  return HAL_OK;
+}
+
 #if DEBUG_DISPLAY
 /**
  * Combined oled writing function
@@ -994,66 +1004,16 @@ uint16_t set_tube_numbers_date(time_date_DataDigital* _time_date_data) {
   return(combine_4bit_numbers(day_tens, day_ones, month_tens, month_ones));
 }
 
-/**
- * Sorts the bits to the correct spot for the output register TODO: Update PCB next time to have a nicer output register format not needing this shit -_-
- */
-/*
-uint16_t combine_4bit_numbers(uint8_t num0, uint8_t num1, uint8_t num2, uint8_t num3) {
-
-  uint16_t result = 0;
-
-  // Bit 0: bit 3 von num1
-  result |= ((num1 >> 3) & 0x1) << 0;
-  // Bit 1: bit 2 von num1
-  result |= ((num1 >> 2) & 0x1) << 1;
-  // Bit 2: bit 1 von num1
-  result |= ((num1 >> 1) & 0x1) << 2;
-  // Bit 3: bit 1 von num2
-  result |= ((num2 >> 1) & 0x1) << 3;
-  // Bit 4: bit 2 von num2
-  result |= ((num2 >> 2) & 0x1) << 4;
-  // Bit 5: bit 3 von num2
-  result |= ((num2 >> 3) & 0x1) << 5;
-  // Bit 6: bit 0 von num3
-  result |= ((num3 >> 0) & 0x1) << 6;
-  // Bit 7: bit 1 von num3
-  result |= ((num3 >> 1) & 0x1) << 7;
-  // Bit 8: bit 2 von num3
-  result |= ((num3 >> 2) & 0x1) << 8;
-  // Bit 9: bit 3 von num3
-  result |= ((num3 >> 3) & 0x1) << 9;
-  // Bit 10: bit 0 von num1
-  result |= ((num1 >> 0) & 0x1) << 10;
-  // Bit 11: bit 3 von num0
-  result |= ((num0 >> 3) & 0x1) << 11;
-  // Bit 12: bit 2 von num0
-  result |= ((num0 >> 2) & 0x1) << 12;
-  // Bit 13: bit 1 von num0
-  result |= ((num0 >> 1) & 0x1) << 13;
-  // Bit 14: bit 0 von num0
-  result |= ((num0 >> 0) & 0x1) << 14;
-  // Bit 15: bit 0 von num2
-  result |= ((num2 >> 0) & 0x1) << 15;
-
-  return result;
-}
-*/
-
-/*
-void output_to_tubes(uint16_t _data) {
-  //Output on the whole PORTB via the ODR (Output Data Register)
-  GPIOB->ODR = _data;
-}
-*/
-
-// TODO: FIX BUG WITH MENU_POSITION AND MENU_POSITION_OLD!!!!!!!!!!!!! 
-
 void menu_mainTime() {
   output_blink_front_leds(solid);
 
   if(sys_update_flag) {
     getTimeDate(timeData, dateData, &TD_data);
     nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
+
+    startStop_check(&TD_data, &nixieDisplay);
+
+    set_for_DST(&hrtc, check_for_DST(&hrtc, &TD_data));
 
     sys_update_flag = 0;
   }
@@ -1065,7 +1025,10 @@ void menu_mainTime() {
     //Update display data, nixies dont have seconds!
     if(TD_data.seconds == 0) {
       nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
+      set_for_DST(&hrtc, check_for_DST(&hrtc, &TD_data));
     }
+
+    startStop_check(&TD_data, &nixieDisplay);
 
     tick_flag = reset; //reset update flag
   }
@@ -1119,24 +1082,213 @@ void menu_Sensor() {
   handle_btn(&menu_position);
 }
 
-void menu_startStop(uint8_t _submenu_pos, time_date_DataDigital* _Tdata_start) {
+void menu_startStop(uint8_t* _submenu_pos, time_date_DataDigital* _Tdata_startStop) {
 
   output_blink_front_leds(blinkTop);
 
-  sys_update_flag = 0;
+  static uint8_t temp_time;
 
-  handle_btn(&menu_position);
-  //uint8_t _hours_tens, _hours_ones, _minutes_tens, _minutes_ones;
-  
+  //if somethings need to happen only once getting into this menu
+  if(menu_position_old != menu_position) {
+    *_submenu_pos = 0;
+    temp_time = _Tdata_startStop->startHour1;
+    menu_position_old = menu_position;
+  }
+
+  //handle_btn(&menu_position);
+
+  if(btn_flag_plus) {
+    temp_time = (temp_time + 1) % 24;
+    btn_flag_plus = 0;
+  }
+
+  if(btn_flag_minus) {
+    temp_time = (temp_time + 23) % 24;
+    btn_flag_minus = 0;
+  }
+
+  if(btn_flag_menu) {
+    switch(*_submenu_pos) {
+      case 0:
+        _Tdata_startStop->startHour1 = temp_time;
+        temp_time = _Tdata_startStop->stopHour1;
+        (*_submenu_pos)++;
+        break;
+      case 1:
+        _Tdata_startStop->stopHour1 = temp_time;
+        temp_time = _Tdata_startStop->startHour2;
+        (*_submenu_pos)++;
+        break;
+      case 2:
+        _Tdata_startStop->startHour2 = temp_time;
+        temp_time = _Tdata_startStop->stopHour2;
+        (*_submenu_pos)++;
+        break;
+      case 3:
+        _Tdata_startStop->stopHour2 = temp_time;
+        *_submenu_pos = 0;
+        time_write_startStop_bkp(_Tdata_startStop);
+        menu_position++;
+        break;
+    }
+    btn_flag_menu = 0;
+  }
+
+  output_to_tubes(combine_4bit_numbers((temp_time/10), (temp_time%10), 0, 0));
 }
 
-void menu_timeSet(uint8_t _submenu_pos) {  
+void menu_timeSet(uint8_t* _submenu_pos, time_date_DataDigital* _Tdata) {  
 
   output_blink_front_leds(blinkBot);
 
-  sys_update_flag = 0;
+  static uint8_t temp_time;
+  static uint8_t temp_time_combine;
 
-  handle_btn(&menu_position);
+  //if somethings need to happen only once getting into this menu
+  if(menu_position_old != menu_position) {
+    *_submenu_pos = 0;
+    temp_time = (_Tdata->hours / 10);
+    menu_position_old = menu_position;
+  }
+
+  if(btn_flag_plus) {
+    switch (*_submenu_pos) {
+      case 0:
+        temp_time = (temp_time + 1) % 3;
+        break;
+      case 1: 
+        if (temp_time == 3 && _Tdata->hours / 10 == 2) temp_time = 0;  // 23 -> 20, to prevent non possible hour values like 25, 26 ect.
+        else temp_time = (temp_time + 1) % 10;
+        break;
+      case 2: 
+        temp_time = (temp_time + 1) % 6;
+        break;
+      case 3:
+        temp_time = (temp_time + 1) % 10;
+        break;
+    }
+    btn_flag_plus = 0;
+  }
+
+  if(btn_flag_minus) {
+    switch (*_submenu_pos) {
+      case 0:
+        temp_time = (temp_time + 2) % 3;
+        break;
+      case 1: 
+        temp_time = (temp_time + 9) % 10;
+        break;
+      case 2: 
+        temp_time = (temp_time + 5) % 6;
+        break;
+      case 3:
+        temp_time = (temp_time + 9) % 10;
+        break;
+    }
+    btn_flag_minus = 0;
+  }
+
+  switch(*_submenu_pos) {
+    case 0:
+      if(btn_flag_menu) {
+        temp_time_combine = temp_time * 10;
+        temp_time = _Tdata->hours % 10;
+        (*_submenu_pos)++;
+        btn_flag_menu = 0;
+      }
+
+      if(blinkState_custom(500)) output_to_tubes(combine_4bit_numbers(temp_time, _Tdata->hours % 10, _Tdata->minutes / 10, _Tdata->minutes % 10));
+      else output_to_tubes(combine_4bit_numbers(BLANK, _Tdata->hours % 10, _Tdata->minutes / 10, _Tdata->minutes % 10));
+
+      break;
+
+    case 1:
+      if(btn_flag_menu) {
+        temp_time_combine = temp_time_combine + temp_time;
+        _Tdata->hours = temp_time_combine;
+        temp_time_combine = 0;
+        temp_time = _Tdata->minutes / 10;
+        (*_submenu_pos)++;
+        btn_flag_menu = 0;
+      }
+
+      if(blinkState_custom(500)) output_to_tubes(combine_4bit_numbers(_Tdata->hours / 10, temp_time, _Tdata->minutes / 10, _Tdata->minutes % 10));
+      else output_to_tubes(combine_4bit_numbers(_Tdata->hours / 10, BLANK, _Tdata->minutes / 10, _Tdata->minutes % 10));
+
+      break;
+
+    case 2:
+      if(btn_flag_menu) {
+        temp_time_combine = temp_time * 10;
+        temp_time = _Tdata->minutes % 10;
+        (*_submenu_pos)++;
+        btn_flag_menu = 0;
+      }
+
+      if(blinkState_custom(500)) output_to_tubes(combine_4bit_numbers(_Tdata->hours / 10, _Tdata->hours % 10, temp_time, _Tdata->minutes % 10));
+      else output_to_tubes(combine_4bit_numbers(_Tdata->hours / 10, _Tdata->hours % 10, BLANK, _Tdata->minutes % 10));
+
+      break;
+
+    case 3:
+      if(btn_flag_menu) {
+        temp_time_combine = temp_time_combine + temp_time;
+        _Tdata->minutes = temp_time_combine;
+        temp_time_combine = 0;
+
+        setTime(_Tdata->hours, _Tdata->minutes, 0);
+
+        *_submenu_pos = 0;
+        menu_position++;
+        btn_flag_menu = 0;
+      }
+
+      if(blinkState_custom(500)) output_to_tubes(combine_4bit_numbers(_Tdata->hours / 10, _Tdata->hours % 10, _Tdata->minutes / 10, temp_time));
+      else output_to_tubes(combine_4bit_numbers(_Tdata->hours / 10, _Tdata->hours % 10, _Tdata->minutes / 10, BLANK));
+
+      break;
+  }
+}
+
+void menu_peekTime() {
+  output_blink_front_leds(solid);
+
+  if(sys_update_flag) {
+    getTimeDate(timeData, dateData, &TD_data);
+    nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
+
+    menu_position_old = menuPEEKTIME;
+
+    nixieDisplay.displayStatus = 1;
+    sys_update_flag = 0;
+  }
+
+  if(tick_flag == isSet) { //flag set by interrupt by RTC on 1Hz
+
+    getTimeDate(timeData, dateData, &TD_data);      //Get time from RTC registers
+
+    //Update display data, nixies dont have seconds!
+    if(TD_data.seconds == 0) {
+      nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
+    }
+
+    tick_flag = reset; //reset update flag
+  }
+
+  if(btn_flag_menu)  {
+    menu_position = menuStartStop;
+    sys_update_flag = 1;
+  }  
+  if(btn_flag_plus)  {
+    menu_position = menuDATE;
+    sys_update_flag = 1;
+  }  
+  if(btn_flag_minus) {
+    menu_position = menuSENSOR;
+    sys_update_flag = 1;
+  }  
+
+  resetBtnFlags();  
 }
 
 void handle_btn (menu* _pos) {
@@ -1200,7 +1352,13 @@ void handle_btnMinus (menu* _pos) {
 void handle_btnMenu (menu* _pos) {
   switch (*_pos) {
     case (menuTIME):
-      menu_position = menuStartStop;
+      if(TD_data.in_timeframe_startStop) {
+        menu_position = menuStartStop;
+      } else if (!TD_data.in_timeframe_startStop) {
+        menu_position = menuPEEKTIME;
+        sys_update_flag = 1;
+      }
+      menu_position_old = menuTIME;
       break;
     case (menuDATE):
 
@@ -1209,10 +1367,20 @@ void handle_btnMenu (menu* _pos) {
 
       break;
     case(menuStartStop):
-      menu_position++;
+      if(submenu_pos < 4) submenu_pos++; 
+      else {
+        submenu_pos = 0;
+        menu_position++;
+        menu_position_old = menuStartStop;
+      }
       break;
     case(menuTimeEdit):
-      menu_position++;
+      if(submenu_pos < 4) submenu_pos++;
+      else {
+        submenu_pos = 0;
+        menu_position++;
+        menu_position_old = menuTimeEdit;
+      }
       break;
     case(menuOVERFLOW):
       menu_position = menuTIME;
@@ -1269,48 +1437,49 @@ void menu_timeout(uint8_t _timeoutValue) {
   time_update_flag = 1;
 }
 
-/**
- * @brief: Function to blink the front leds.
- * @param mode: 0-> no blinking, 1-> both, 2-> top, 3-> bot
- */
-/*
-void output_blink_front_leds(blink_mode _mode) {
-  switch(_mode) {
-    case solid: 
-      output_front_led(1, 1);
-      break;
+uint8_t startStop_check(time_date_DataDigital* _TD_data, tubeDisplay* _nixieDisplay) {
 
-    case blinkBoth: 
-      output_front_led(tick_blink, tick_blink);
-      break;
+  //Overwrite to disable start stop automatics (if all times are set to 0)
+  if((_TD_data->startHour1 == 0) && (_TD_data->stopHour1 == 0) && (_TD_data->startHour2 == 0) && (_TD_data->stopHour2 == 0)) {
+    _nixieDisplay->displayStatus = 1;
+    return 1;
+  }
 
-    case blinkTop:
-      output_front_led(tick_blink, 1);
-      break;
+  uint8_t _tempHour = _TD_data->hours;
 
-    case blinkBot:
-      output_front_led(1, tick_blink);
-      break;
+  //Weekend routine (first start hour and second stop hour)
+  if((_TD_data->weekday == saturday) || (_TD_data->weekday == sunday)) {
+    uint8_t in_timeframe  = _TD_data->startHour1 < _TD_data->stopHour2
+                          ? (_tempHour >= _TD_data->startHour1 && _tempHour < _TD_data->stopHour2)
+                          : (_tempHour >= _TD_data->startHour1 || _tempHour < _TD_data->stopHour2);
+    if(in_timeframe) {
+      _nixieDisplay->displayStatus = 1;
+      _TD_data->in_timeframe_startStop = 1;
+      return 1;
+    } else {
+      _nixieDisplay->displayStatus = 0;
+      _TD_data->in_timeframe_startStop = 0;
+      return 0;
+    }
+  }
+
+  uint8_t in_timeframe1 = (_TD_data->startHour1 < _TD_data->stopHour1)
+                        ? (_tempHour >= _TD_data->startHour1 && _tempHour < _TD_data->stopHour1)    //If normal daytime hours
+                        : (_tempHour >= _TD_data->startHour1 || _tempHour < _TD_data->stopHour1);   //If wrap around over midnight
+  uint8_t in_timeframe2 = (_TD_data->startHour2 < _TD_data->stopHour2) 
+                        ? (_tempHour >= _TD_data->startHour2 && _tempHour < _TD_data->stopHour2)    //If normal daytime hours
+                        : (_tempHour >= _TD_data->startHour2 || _tempHour < _TD_data->stopHour2);   //If wrap around over midnight
+
+  if(in_timeframe1 || in_timeframe2) {
+    _nixieDisplay->displayStatus = 1;
+    _TD_data->in_timeframe_startStop = 1;
+    return 1;
+  } else {
+    _nixieDisplay->displayStatus = 0;
+    _TD_data->in_timeframe_startStop = 0;
+    return 0;
   }
 }
-*/
-
-/**
- * @brief: Function to manipulate the front leds.
- * @param led0: top led
- * @param led1: bottom led
- * @param led_status: 0->off; 1->on
- */
-/*
-void output_front_led(uint8_t led0, uint8_t led1) {
-
-  if(led0)  GPIOA->BSRR = GPIO_BSRR_BS11;
-  if(!led0) GPIOA->BSRR = GPIO_BSRR_BR11;
-
-  if(led1)  GPIOA->BSRR = GPIO_BSRR_BS12;
-  if(!led1) GPIOA->BSRR = GPIO_BSRR_BR12;
-}
-*/
 
 /**
  * @brief: Check for installed addons via ID pins D2 and D3
@@ -1332,31 +1501,56 @@ void check_for_addons(void) {
   }
 }
 
-/**
- * @brief Changes state when TICK_INTERVAL is reached. Works without timer and globally
- * @return 0 or 1 depending on TICK_INTERVAL
- */
-/*
-uint8_t blinkState(void) {
-  return ((HAL_GetTick() / TICK_INTERVAL) % 2);
-}
-*/
-
 void resetBtnFlags() {
-  if(btn_flag_menu || btn_flag_minus || btn_flag_plus) {
-    btn_flag_menu =  reset;
-    btn_flag_minus = reset;
-    btn_flag_plus =  reset; 
-  }
+
+  btn_flag_menu =  reset;
+  btn_flag_minus = reset;
+  btn_flag_plus =  reset; 
+
   btn_pressed_flag = reset;
 }
 
-/*
-//Blinking timer for front LEDs for example
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-  tick_blink = !tick_blink;
+void time_read_startStop_bkp (time_date_DataDigital* _TD_data) {
+
+    uint32_t temp_read = HAL_RTCEx_BKUPRead(&hrtc, RTC_START_STOP_BKP_REGISTER);
+
+    _TD_data->startHour1 = ((temp_read >> 24) & 0xFF);
+    _TD_data->stopHour1  = ((temp_read >> 16) & 0xFF);
+    _TD_data->startHour2 = ((temp_read >> 8)  & 0xFF);
+    _TD_data->stopHour2  = ((temp_read >> 0)  & 0xFF);
 }
-*/
+
+void time_write_startStop_bkp (time_date_DataDigital* _TD_data) {
+
+    uint32_t temp_write = ((uint32_t)_TD_data->startHour1 << 24)
+                        | ((uint32_t)_TD_data->stopHour1 << 16)
+                        | ((uint32_t)_TD_data->startHour2 <<  8)
+                        |  (uint32_t)_TD_data->stopHour2;
+
+    HAL_RTCEx_BKUPWrite(&hrtc, RTC_START_STOP_BKP_REGISTER, temp_write);
+}
+
+void set_for_DST(RTC_HandleTypeDef* hrtc, uint8_t _DST) {
+  if(!_DST) {
+    HAL_RTC_DST_ClearStoreOperation(hrtc);
+    HAL_RTC_DST_Add1Hour(hrtc);
+    return;
+
+  } else if (_DST == 1) {
+    HAL_RTC_DST_SetStoreOperation(hrtc);
+    HAL_RTC_DST_Sub1Hour(hrtc);
+    return;
+
+  } else if (_DST == 2) {
+    return;
+  }
+}
+
+uint8_t check_for_DST(RTC_HandleTypeDef* hrtc, time_date_DataDigital* _TD_data) {
+  if((_TD_data->month == 3) && (_TD_data->weekday == sunday) && ((_TD_data->day + 7) > 31) && (HAL_RTC_DST_ReadStoreOperation(hrtc)) && (_TD_data->hours >= 2)) return 0;         //summertime
+  else if((_TD_data->month == 10) && (_TD_data->weekday == sunday) && ((_TD_data->day + 7) > 31) && (!HAL_RTC_DST_ReadStoreOperation(hrtc)) && (_TD_data->hours >= 3)) return 1;  //wintertime
+  return 2;
+}
 
 //Interrupt for triggering an update event every second
 void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc) {
@@ -1376,58 +1570,18 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
       btn_flag_plus = 1;
 
       tick_count = 0;
-
-      /*
-      switch(menu_position) {
-        case menuTIME:
-          menu_position = menuDATE;
-          break;
-        case menuDATE:
-          menu_position = menuSENSOR;
-          break;
-        case menuSENSOR:
-          menu_position = menuTIME;
-          break;
-        default: break;
-      }
-        */
-
       break;
     
     case btn_minus_Pin:
       btn_flag_minus = 1;
 
       tick_count = 0;
-
-      /*
-      switch(menu_position) {
-        case menuTIME:
-          menu_position = menuSENSOR;
-          break;
-        case menuDATE:
-          menu_position = menuTIME;
-          break;
-        case menuSENSOR:
-          menu_position = menuDATE;
-          break;
-        default: break;
-      }
-        */
-
       break;
 
     case btn_menu_Pin:
       btn_flag_menu = 1;
 
       tick_count = 0;
-
-      /*
-      if(menu_position == menuTIME) {
-        
-      } else if(menu_position == menuStartStop || menu_position == menuTimeEdit) {
-        ;
-      }
-        */
       break;
 
     default:

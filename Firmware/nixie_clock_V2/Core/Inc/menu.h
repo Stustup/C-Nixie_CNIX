@@ -13,6 +13,7 @@ typedef enum {
   menuTIME = 0,
   menuDATE,
   menuSENSOR,
+  menuPEEKTIME,
   menuStartStop,
   menuTimeEdit,
   menuOVERFLOW

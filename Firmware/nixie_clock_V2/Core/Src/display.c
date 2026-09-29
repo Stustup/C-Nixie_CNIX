@@ -110,3 +110,7 @@ void ht_supply_state(tubeDisplay* _data) {
 uint8_t blinkState(void) {
   return ((HAL_GetTick() / BLINK_TIME) % 2);
 }
+
+uint8_t blinkState_custom(uint16_t _blink_time) {
+  return ((HAL_GetTick() / _blink_time) % 2);
+}

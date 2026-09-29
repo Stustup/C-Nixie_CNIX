@@ -11,13 +11,13 @@
 //typedefs
 
 typedef enum {
-  monday = 0,
-  tuesday,
-  wednesday,
-  thursday,
-  friday,
-  saturday,
-  sunday
+  monday    = 1,
+  tuesday   = 2,
+  wednesday = 3,
+  thursday  = 4,
+  friday    = 5,
+  saturday  = 6,
+  sunday    = 7
 } weekday;
 
 /**
@@ -32,7 +32,7 @@ typedef struct {
 
   uint8_t startHour1, stopHour1, startHour2, stopHour2;
 
-  uint8_t weekendMode;  //Weekend mode sets start Time to 6 and end time to 0. Only has one startStop time
+  uint8_t in_timeframe_startStop;
 } time_date_DataDigital;
 
 /**
@@ -47,5 +47,7 @@ typedef struct {
 HAL_StatusTypeDef setTime(uint8_t hour, uint8_t minute, uint8_t second);
 HAL_StatusTypeDef setDate(uint8_t year, uint8_t month, uint8_t weekday, uint8_t date);
 HAL_StatusTypeDef getTimeDate(char* time, char* date, time_date_DataDigital* dTimeDate);
+
+
 #endif
 
