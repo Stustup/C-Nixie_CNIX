@@ -87,11 +87,14 @@ TIM_HandleTypeDef htim2;
 /* USER CODE BEGIN PV */
 
 time_date_DataDigital TD_data = {0};
+time_date_DataDigital TD_data_TEST = {0};
 
 menu menu_position = menuTIME;
 menu menu_position_old = menuTIME;
 
 tubeDisplay nixieDisplay = {0};
+
+DCF77_TimeTypeDef dcf_time;
 
 volatile uint8_t tick_flag = isNotSet;
 volatile uint8_t counter_seconds = 0;
@@ -152,6 +155,8 @@ uint8_t menu_pos_old = 0;
 uint8_t menu_0_submenu_flag = 0;
 
 uint16_t menu_time_set[4] = {1010,110,101,11};
+
+void DCF77_MinuteCallback(DCF77_TimeTypeDef *time);
 
 /**
  * Menu subfunctions TODO: Button press illuminates the nixies for 10s if in stop mode.
@@ -347,6 +352,11 @@ int main(void)
   //Check the D2 and D3 bits for addon boards. No board -> 0b11
   check_for_addons();
 
+  if(addon_dcf77) {
+    DCF77_Init(&htim2);
+    DCF77_RegisterCallback(DCF77_MinuteCallback);
+  }
+
   //Set the Front LEDs On
   output_front_led(1, 1);
 
@@ -398,6 +408,27 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  //TEST THE DCF77 MODULE
+  while(1) {
+    if(!sys_update_flag) {
+      DCF77_Start();
+      sys_update_flag = 1;
+    }
+
+    if(DCF77_IsDataValid()) {
+      dcf_time = DCF77_GetTime();
+      TD_data_TEST.hours = dcf_time.hour;
+      TD_data_TEST.minutes = dcf_time.minute;
+      TD_data_TEST.seconds = dcf_time.second;
+      break;
+    }
+  }
+
+  while(1) {
+    NULL;
+  }
+
   while (1)
   {
     #if DEBUG_DISPLAY
@@ -640,7 +671,8 @@ static void MX_RTC_Init(void)
   {
     Error_Handler();
   }
-*/
+    */
+
   /** Enable the Alarm A
   */
   sAlarm.AlarmTime.Hours = 0x0;
@@ -745,9 +777,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 63;
+  htim2.Init.Prescaler = 6400-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 0xFFFFFFFF;
+  htim2.Init.Period = 65535;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -772,8 +804,8 @@ static void MX_TIM2_Init(void)
   sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_BOTHEDGE;
   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
-  sConfigIC.ICFilter = 0x0F;
-  if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
+  sConfigIC.ICFilter = 15;
+  if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
   }
@@ -805,13 +837,13 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, ht_EN_Pin|pwr_led_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, addon_en_Pin|led_sig_bot_Pin|led_sig_top_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, co1_3_Pin|co1_2_Pin|co1_1_Pin|co1_0_Pin
                           |co0_3_Pin|co0_2_Pin|co0_1_Pin|co0_0_Pin
                           |co2_0_Pin|co2_1_Pin|co2_2_Pin|co2_3_Pin
                           |co3_0_Pin|co3_1_Pin|co3_2_Pin|co3_3_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, led_sig_bot_Pin|led_sig_top_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : ht_EN_Pin */
   GPIO_InitStruct.Pin = ht_EN_Pin;
@@ -820,11 +852,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(ht_EN_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : addon_en_Pin */
-  GPIO_InitStruct.Pin = addon_en_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : addon_en_Pin led_sig_bot_Pin led_sig_top_Pin pwr_led_Pin */
+  GPIO_InitStruct.Pin = addon_en_Pin|led_sig_bot_Pin|led_sig_top_Pin|pwr_led_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(addon_en_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : btn_minus_Pin btn_menu_Pin btn_plus_Pin */
   GPIO_InitStruct.Pin = btn_minus_Pin|btn_menu_Pin|btn_plus_Pin;
@@ -844,13 +877,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : led_sig_bot_Pin led_sig_top_Pin pwr_led_Pin */
-  GPIO_InitStruct.Pin = led_sig_bot_Pin|led_sig_top_Pin|pwr_led_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : id_bit0_Pin id_bit1_Pin */
   GPIO_InitStruct.Pin = id_bit0_Pin|id_bit1_Pin;
@@ -1613,6 +1639,12 @@ uint8_t check_for_DST(RTC_HandleTypeDef* hrtc, time_date_DataDigital* _TD_data) 
   return 2;
 }
 
+void DCF77_MinuteCallback(DCF77_TimeTypeDef *time) {
+    // Erste gültige Minute empfangen -> übernehmen und Modul ausschalten
+    dcf_time = *time;
+    DCF77_Stop();   // Modul aus (EN low), spart Strom
+}
+
 //Interrupt for triggering an update event every second
 void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc) {
   tick_flag = set;
@@ -1649,10 +1681,6 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
       break;
   }
   btn_pressed_flag = 1;
-}
-
-void TIM2_IRQHandler(void) {
-    DCF77_TIMER_IRQHandler();
 }
 
 /* USER CODE END 4 */

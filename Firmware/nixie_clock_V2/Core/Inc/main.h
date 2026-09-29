@@ -106,7 +106,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define ht_EN_Pin GPIO_PIN_0
 #define ht_EN_GPIO_Port GPIOA
-#define addon_en_Pin GPIO_PIN_2
+#define addon_en_Pin GPIO_PIN_1
 #define addon_en_GPIO_Port GPIOA
 #define btn_minus_Pin GPIO_PIN_5
 #define btn_minus_GPIO_Port GPIOA
