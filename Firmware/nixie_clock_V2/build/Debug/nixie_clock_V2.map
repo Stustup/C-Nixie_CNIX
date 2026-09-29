@@ -2517,12 +2517,8 @@ Discarded input sections
                 0x00000000      0x400 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_PWM_Stop_DMA
                 0x00000000      0x1e0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.HAL_TIM_IC_Init
-                0x00000000       0xb0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_IC_DeInit
                 0x00000000       0xbc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.HAL_TIM_IC_MspInit
-                0x00000000       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_IC_MspDeInit
                 0x00000000       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_IC_Start
@@ -2577,8 +2573,6 @@ Discarded input sections
                 0x00000000       0xc0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .rodata.HAL_TIM_OC_ConfigChannel
                 0x00000000       0x54 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.HAL_TIM_IC_ConfigChannel
-                0x00000000      0x148 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_PWM_ConfigChannel
                 0x00000000      0x200 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .rodata.HAL_TIM_PWM_ConfigChannel
@@ -2609,9 +2603,9 @@ Discarded input sections
                 0x00000000       0x8c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_SlaveConfigSynchro_IT
                 0x00000000       0x8c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.HAL_TIM_ReadCapturedValue
-                0x00000000       0x68 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_PeriodElapsedHalfCpltCallback
+                0x00000000       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+ .text.HAL_TIM_IC_CaptureCallback
                 0x00000000       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.HAL_TIM_IC_CaptureHalfCpltCallback
                 0x00000000       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
@@ -2671,14 +2665,6 @@ Discarded input sections
                 0x00000000       0xc8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.TIM_SlaveTimer_SetConfig
                 0x00000000      0x12c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.TIM_TI1_SetConfig
-                0x00000000       0xf0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.TIM_TI2_SetConfig
-                0x00000000       0x9c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.TIM_TI3_SetConfig
-                0x00000000       0x9c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
- .text.TIM_TI4_SetConfig
-                0x00000000       0x8c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.TIM_CCxChannelCmd
                 0x00000000       0x46 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .debug_macro   0x00000000      0xaae cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
@@ -2979,6 +2965,7 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .text          0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
@@ -3108,6 +3095,8 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .rodata.CHANNEL_OFFSET_TAB
                 0x00000000        0x7 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .text.TIM2_IRQHandler
+                0x00000000       0x18 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_macro   0x00000000      0xaae CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_macro   0x00000000      0x123 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
@@ -3154,7 +3143,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xad0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_macro   0x00000000      0x1a1 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_macro   0x00000000      0x4ff CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_macro   0x00000000      0x21c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_macro   0x00000000      0x20e CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
@@ -3212,7 +3201,7 @@ Discarded input sections
  .text.HAL_RTC_MspDeInit
                 0x00000000       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .text.HAL_TIM_Base_MspDeInit
-                0x00000000       0x38 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x00000000       0x64 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_macro   0x00000000      0xaae CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_macro   0x00000000      0x123 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
@@ -3259,7 +3248,7 @@ Discarded input sections
  .debug_macro   0x00000000      0xad0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_macro   0x00000000      0x1a1 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_macro   0x00000000      0x4ff CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_macro   0x00000000      0x21c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_macro   0x00000000      0x20e CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/sysmem.c.obj
@@ -3835,16 +3824,26 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .text          0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .data          0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .bss           0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .rodata.CHANNEL_OFFSET_TAB
                 0x00000000        0x7 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .debug_info    0x00000000       0xb4 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .debug_abbrev  0x00000000       0x61 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .debug_aranges
+ .text.DCF77_Init
+                0x00000000       0x4c CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.DCF77_Start
                 0x00000000       0x18 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .debug_macro   0x00000000      0x207 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.DCF77_Stop
+                0x00000000       0x18 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.DCF77_GetTime
+                0x00000000       0x24 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.DCF77_IsDataValid
+                0x00000000       0x14 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.DCF77_RegisterCallback
+                0x00000000       0x1c CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.TIM2_IRQHandler
+                0x00000000       0x18 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .debug_macro   0x00000000      0xaae CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .debug_macro   0x00000000      0x123 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
@@ -3891,11 +3890,6 @@ Discarded input sections
  .debug_macro   0x00000000      0xad0 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .debug_macro   0x00000000      0x1a1 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .debug_macro   0x00000000      0x4ff CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .debug_line    0x00000000      0x839 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .debug_str     0x00000000    0x948c8 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .comment       0x00000000       0x44 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
- .ARM.attributes
-                0x00000000       0x2c CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .group         0x00000000        0xc CMakeFiles/nixie_clock_V2.dir/Drivers/HTU21D/htu21d.c.obj
  .text          0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/HTU21D/htu21d.c.obj
  .data          0x00000000        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/HTU21D/htu21d.c.obj
@@ -4695,7 +4689,7 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 0x08000000                g_pfnVectors
                 0x080000b8                        . = ALIGN (0x4)
 
-.text           0x080000b8     0x5080
+.text           0x080000b8     0x5a68
                 0x080000b8                        . = ALIGN (0x4)
  *(.text)
  .text          0x080000b8       0x48 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -4860,326 +4854,355 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
  .text.HAL_TIM_Base_Start_IT
                 0x080027f0       0xb8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
                 0x080027f0                HAL_TIM_Base_Start_IT
+ .text.HAL_TIM_IC_Init
+                0x080028a8       0xb0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x080028a8                HAL_TIM_IC_Init
+ .text.HAL_TIM_IC_MspInit
+                0x08002958       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002958                HAL_TIM_IC_MspInit
  .text.HAL_TIM_IRQHandler
-                0x080028a8      0x210 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x080028a8                HAL_TIM_IRQHandler
+                0x08002968      0x210 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002968                HAL_TIM_IRQHandler
+ .text.HAL_TIM_IC_ConfigChannel
+                0x08002b78      0x148 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002b78                HAL_TIM_IC_ConfigChannel
  .text.HAL_TIM_ConfigClockSource
-                0x08002ab8      0x1ac cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002ab8                HAL_TIM_ConfigClockSource
+                0x08002cc0      0x1ac cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002cc0                HAL_TIM_ConfigClockSource
+ .text.HAL_TIM_ReadCapturedValue
+                0x08002e6c       0x68 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002e6c                HAL_TIM_ReadCapturedValue
  .text.HAL_TIM_PeriodElapsedCallback
-                0x08002c64       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002c64                HAL_TIM_PeriodElapsedCallback
+                0x08002ed4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002ed4                HAL_TIM_PeriodElapsedCallback
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x08002c74       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002c74                HAL_TIM_OC_DelayElapsedCallback
- .text.HAL_TIM_IC_CaptureCallback
-                0x08002c84       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002c84                HAL_TIM_IC_CaptureCallback
+                0x08002ee4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002ee4                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x08002c94       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002c94                HAL_TIM_PWM_PulseFinishedCallback
+                0x08002ef4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002ef4                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x08002ca4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002ca4                HAL_TIM_TriggerCallback
+                0x08002f04       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002f04                HAL_TIM_TriggerCallback
  .text.TIM_Base_SetConfig
-                0x08002cb4      0x114 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002cb4                TIM_Base_SetConfig
+                0x08002f14      0x114 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08002f14                TIM_Base_SetConfig
+ .text.TIM_TI1_SetConfig
+                0x08003028       0xf0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08003028                TIM_TI1_SetConfig
  .text.TIM_TI1_ConfigInputStage
-                0x08002dc8       0x9c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08003118       0x9c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+ .text.TIM_TI2_SetConfig
+                0x080031b4       0x9c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.TIM_TI2_ConfigInputStage
-                0x08002e64       0x7c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x08003250       0x7c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+ .text.TIM_TI3_SetConfig
+                0x080032cc       0x9c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+ .text.TIM_TI4_SetConfig
+                0x08003368       0x8c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.TIM_ITRx_SetConfig
-                0x08002ee0       0x38 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x080033f4       0x38 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .text.TIM_ETR_SetConfig
-                0x08002f18       0x40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
-                0x08002f18                TIM_ETR_SetConfig
+                0x0800342c       0x40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+                0x0800342c                TIM_ETR_SetConfig
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x08002f58       0xdc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
-                0x08002f58                HAL_TIMEx_MasterConfigSynchronization
+                0x0800346c       0xdc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
+                0x0800346c                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_CommutCallback
-                0x08003034       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
-                0x08003034                HAL_TIMEx_CommutCallback
+                0x08003548       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
+                0x08003548                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x08003044       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
-                0x08003044                HAL_TIMEx_BreakCallback
+                0x08003558       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
+                0x08003558                HAL_TIMEx_BreakCallback
  .text.HAL_TIMEx_Break2Callback
-                0x08003054       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
-                0x08003054                HAL_TIMEx_Break2Callback
- .text.main     0x08003064      0x204 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003064                main
+                0x08003568       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
+                0x08003568                HAL_TIMEx_Break2Callback
+ .text.main     0x08003578      0x208 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003578                main
  .text.SystemClock_Config
-                0x08003268       0xd8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003268                SystemClock_Config
+                0x08003780       0xd8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003780                SystemClock_Config
  .text.MX_I2C1_Init
-                0x08003340       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003858       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .text.MX_RTC_Init
-                0x080033c0       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x080038d8       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .text.MX_TIM1_Init
-                0x080034b0       0xb8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x080039c8       0xb8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .text.MX_TIM2_Init
+                0x08003a80       0xf4 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .text.MX_GPIO_Init
-                0x08003568      0x1a4 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .text.setTime  0x0800370c       0x70 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x0800370c                setTime
- .text.setDate  0x0800377c       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x0800377c                setDate
+                0x08003b74      0x1a4 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .text.setTime  0x08003d18       0x70 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003d18                setTime
+ .text.setDate  0x08003d88       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003d88                setDate
  .text.getTimeDate
-                0x080037fc       0xa8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080037fc                getTimeDate
+                0x08003e08       0xa8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003e08                getTimeDate
  .text.set_tube_numbers_time
-                0x080038a4       0x7c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080038a4                set_tube_numbers_time
+                0x08003eb0       0x7c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003eb0                set_tube_numbers_time
  .text.set_tube_numbers_date
-                0x08003920       0x7c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003920                set_tube_numbers_date
+                0x08003f2c       0x7c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003f2c                set_tube_numbers_date
  .text.menu_mainTime
-                0x0800399c       0xe4 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x0800399c                menu_mainTime
+                0x08003fa8       0xe4 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08003fa8                menu_mainTime
  .text.menu_mainDate
-                0x08003a80       0x8c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003a80                menu_mainDate
+                0x0800408c       0x8c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800408c                menu_mainDate
  .text.menu_Sensor
-                0x08003b0c       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003b0c                menu_Sensor
+                0x08004118       0x80 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004118                menu_Sensor
  .text.menu_startStop
-                0x08003b8c      0x178 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003b8c                menu_startStop
+                0x08004198      0x178 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004198                menu_startStop
  .text.menu_timeSet
-                0x08003d04      0x54c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08003d04                menu_timeSet
+                0x08004310      0x54c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004310                menu_timeSet
  .text.menu_peekTime
-                0x08004250       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004250                menu_peekTime
+                0x0800485c       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800485c                menu_peekTime
  .text.handle_btn
-                0x08004340       0x54 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004340                handle_btn
+                0x0800494c       0x54 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x0800494c                handle_btn
  .text.handle_btnPlus
-                0x08004394       0x64 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004394                handle_btnPlus
+                0x080049a0       0x64 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x080049a0                handle_btnPlus
  .text.handle_btnMinus
-                0x080043f8       0x64 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080043f8                handle_btnMinus
+                0x08004a04       0x64 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004a04                handle_btnMinus
  .text.handle_btnMenu
-                0x0800445c       0xdc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x0800445c                handle_btnMenu
+                0x08004a68       0xdc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004a68                handle_btnMenu
  .text.menu_timeout
-                0x08004538       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004538                menu_timeout
+                0x08004b44       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004b44                menu_timeout
  .text.startStop_check
-                0x08004580      0x1b6 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004580                startStop_check
- *fill*         0x08004736        0x2 
+                0x08004b8c      0x1b6 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004b8c                startStop_check
+ *fill*         0x08004d42        0x2 
  .text.check_for_addons
-                0x08004738       0x50 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004738                check_for_addons
+                0x08004d44       0x50 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004d44                check_for_addons
  .text.resetBtnFlags
-                0x08004788       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004788                resetBtnFlags
+                0x08004d94       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004d94                resetBtnFlags
  .text.time_read_startStop_bkp
-                0x080047bc       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080047bc                time_read_startStop_bkp
+                0x08004dc8       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004dc8                time_read_startStop_bkp
  .text.time_write_startStop_bkp
-                0x08004804       0x40 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004804                time_write_startStop_bkp
+                0x08004e10       0x40 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004e10                time_write_startStop_bkp
  .text.set_for_DST
-                0x08004844       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004844                set_for_DST
+                0x08004e50       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004e50                set_for_DST
  .text.check_for_DST
-                0x0800488c       0x74 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x0800488c                check_for_DST
+                0x08004e98       0x74 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004e98                check_for_DST
  .text.HAL_RTCEx_WakeUpTimerEventCallback
-                0x08004900       0x38 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004900                HAL_RTCEx_WakeUpTimerEventCallback
+                0x08004f0c       0x38 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004f0c                HAL_RTCEx_WakeUpTimerEventCallback
  .text.HAL_GPIO_EXTI_Falling_Callback
-                0x08004938       0x70 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x08004938                HAL_GPIO_EXTI_Falling_Callback
+                0x08004f44       0x70 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004f44                HAL_GPIO_EXTI_Falling_Callback
+ .text.TIM2_IRQHandler
+                0x08004fb4        0xe CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004fb4                TIM2_IRQHandler
  .text.Error_Handler
-                0x080049a8        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x080049a8                Error_Handler
+                0x08004fc2        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08004fc2                Error_Handler
  .text.NMI_Handler
-                0x080049b4        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080049b4                NMI_Handler
+                0x08004fce        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08004fce                NMI_Handler
  .text.HardFault_Handler
-                0x080049bc        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080049bc                HardFault_Handler
+                0x08004fd6        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08004fd6                HardFault_Handler
  .text.SVC_Handler
-                0x080049c4        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080049c4                SVC_Handler
+                0x08004fde        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08004fde                SVC_Handler
  .text.PendSV_Handler
-                0x080049ce        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080049ce                PendSV_Handler
+                0x08004fe8        0xa CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08004fe8                PendSV_Handler
  .text.SysTick_Handler
-                0x080049d8        0xe CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080049d8                SysTick_Handler
- *fill*         0x080049e6        0x2 
+                0x08004ff2        0xe CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08004ff2                SysTick_Handler
  .text.RTC_TAMP_IRQHandler
-                0x080049e8       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x080049e8                RTC_TAMP_IRQHandler
+                0x08005000       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08005000                RTC_TAMP_IRQHandler
  .text.EXTI4_15_IRQHandler
-                0x08004a08       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x08004a08                EXTI4_15_IRQHandler
+                0x08005020       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x08005020                EXTI4_15_IRQHandler
  .text.TIM1_BRK_UP_TRG_COM_IRQHandler
-                0x08004a24       0x18 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                0x08004a24                TIM1_BRK_UP_TRG_COM_IRQHandler
+                0x0800503c       0x18 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x0800503c                TIM1_BRK_UP_TRG_COM_IRQHandler
  .text.HAL_MspInit
-                0x08004a3c       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                0x08004a3c                HAL_MspInit
+                0x08005054       0x48 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x08005054                HAL_MspInit
  .text.HAL_I2C_MspInit
-                0x08004a84       0xc4 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                0x08004a84                HAL_I2C_MspInit
+                0x0800509c       0xc4 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x0800509c                HAL_I2C_MspInit
  .text.HAL_RTC_MspInit
-                0x08004b48       0x8c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                0x08004b48                HAL_RTC_MspInit
+                0x08005160       0x8c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x08005160                HAL_RTC_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x08004bd4       0x7c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                0x08004bd4                HAL_TIM_Base_MspInit
+                0x080051ec      0x108 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x080051ec                HAL_TIM_Base_MspInit
  .text.Reset_Handler
-                0x08004c50       0x50 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
-                0x08004c50                Reset_Handler
+                0x080052f4       0x50 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+                0x080052f4                Reset_Handler
  .text.Default_Handler
-                0x08004ca0        0x2 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
-                0x08004ca0                TIM1_CC_IRQHandler
-                0x08004ca0                ADC1_COMP_IRQHandler
-                0x08004ca0                PVD_IRQHandler
-                0x08004ca0                I2C1_IRQHandler
-                0x08004ca0                TIM7_LPTIM2_IRQHandler
-                0x08004ca0                SPI1_IRQHandler
-                0x08004ca0                EXTI2_3_IRQHandler
-                0x08004ca0                I2C2_IRQHandler
-                0x08004ca0                TIM17_IRQHandler
-                0x08004ca0                TIM16_IRQHandler
-                0x08004ca0                TIM3_IRQHandler
-                0x08004ca0                RCC_IRQHandler
-                0x08004ca0                DMA1_Channel1_IRQHandler
-                0x08004ca0                Default_Handler
-                0x08004ca0                TIM14_IRQHandler
-                0x08004ca0                TIM15_IRQHandler
-                0x08004ca0                EXTI0_1_IRQHandler
-                0x08004ca0                SPI2_IRQHandler
-                0x08004ca0                TIM6_DAC_LPTIM1_IRQHandler
-                0x08004ca0                WWDG_IRQHandler
-                0x08004ca0                LPUART1_IRQHandler
-                0x08004ca0                TIM2_IRQHandler
-                0x08004ca0                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
-                0x08004ca0                DMA1_Channel2_3_IRQHandler
-                0x08004ca0                USART2_IRQHandler
-                0x08004ca0                FLASH_IRQHandler
-                0x08004ca0                USART1_IRQHandler
+                0x08005344        0x2 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+                0x08005344                TIM1_CC_IRQHandler
+                0x08005344                ADC1_COMP_IRQHandler
+                0x08005344                PVD_IRQHandler
+                0x08005344                I2C1_IRQHandler
+                0x08005344                TIM7_LPTIM2_IRQHandler
+                0x08005344                SPI1_IRQHandler
+                0x08005344                EXTI2_3_IRQHandler
+                0x08005344                I2C2_IRQHandler
+                0x08005344                TIM17_IRQHandler
+                0x08005344                TIM16_IRQHandler
+                0x08005344                TIM3_IRQHandler
+                0x08005344                RCC_IRQHandler
+                0x08005344                DMA1_Channel1_IRQHandler
+                0x08005344                Default_Handler
+                0x08005344                TIM14_IRQHandler
+                0x08005344                TIM15_IRQHandler
+                0x08005344                EXTI0_1_IRQHandler
+                0x08005344                SPI2_IRQHandler
+                0x08005344                TIM6_DAC_LPTIM1_IRQHandler
+                0x08005344                WWDG_IRQHandler
+                0x08005344                LPUART1_IRQHandler
+                0x08005344                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
+                0x08005344                DMA1_Channel2_3_IRQHandler
+                0x08005344                USART2_IRQHandler
+                0x08005344                FLASH_IRQHandler
+                0x08005344                USART1_IRQHandler
+ .text.bcd_to_decimal
+                0x08005346       0x34 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.calculate_parity
+                0x0800537a       0x6a CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .text.HAL_TIM_IC_CaptureCallback
+                0x080053e4      0x2a4 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+                0x080053e4                HAL_TIM_IC_CaptureCallback
  .text.combine_4bit_numbers
-                0x08004ca2      0x24e CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08004ca2                combine_4bit_numbers
+                0x08005688      0x24e CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x08005688                combine_4bit_numbers
+ *fill*         0x080058d6        0x2 
  .text.output_to_tubes
-                0x08004ef0       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08004ef0                output_to_tubes
+                0x080058d8       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x080058d8                output_to_tubes
  .text.output_to_tubesNEW
-                0x08004f10       0x1a CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08004f10                output_to_tubesNEW
+                0x080058f8       0x1a CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x080058f8                output_to_tubesNEW
  .text.output_front_led
-                0x08004f2a       0x62 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08004f2a                output_front_led
+                0x08005912       0x62 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x08005912                output_front_led
  .text.output_blink_front_leds
-                0x08004f8c       0xac CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08004f8c                output_blink_front_leds
+                0x08005974       0xac CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x08005974                output_blink_front_leds
  .text.ht_supply_state
-                0x08005038       0x3a CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08005038                ht_supply_state
+                0x08005a20       0x3a CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x08005a20                ht_supply_state
  .text.blinkState
-                0x08005072       0x24 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08005072                blinkState
+                0x08005a5a       0x24 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x08005a5a                blinkState
  .text.blinkState_custom
-                0x08005096       0x30 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08005096                blinkState_custom
- .text.memset   0x080050c6       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
-                0x080050c6                memset
- *fill*         0x080050d6        0x2 
+                0x08005a7e       0x30 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x08005a7e                blinkState_custom
+ .text.memset   0x08005aae       0x10 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x08005aae                memset
+ *fill*         0x08005abe        0x2 
  .text.__libc_init_array
-                0x080050d8       0x48 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
-                0x080050d8                __libc_init_array
+                0x08005ac0       0x48 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+                0x08005ac0                __libc_init_array
  *(.glue_7)
- .glue_7        0x08005120        0x0 linker stubs
+ .glue_7        0x08005b08        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08005120        0x0 linker stubs
+ .glue_7t       0x08005b08        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08005120        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x08005b08        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x08005120        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x08005120                _init
- .init          0x08005124        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x08005b08        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x08005b08                _init
+ .init          0x08005b0c        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0800512c        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x0800512c                _fini
- .fini          0x08005130        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
-                0x08005138                        . = ALIGN (0x4)
-                0x08005138                        _etext = .
+ .fini          0x08005b14        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x08005b14                _fini
+ .fini          0x08005b18        0x8 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+                0x08005b20                        . = ALIGN (0x4)
+                0x08005b20                        _etext = .
 
-.vfp11_veneer   0x08005138        0x0
- .vfp11_veneer  0x08005138        0x0 linker stubs
+.vfp11_veneer   0x08005b20        0x0
+ .vfp11_veneer  0x08005b20        0x0 linker stubs
 
-.v4_bx          0x08005138        0x0
- .v4_bx         0x08005138        0x0 linker stubs
+.v4_bx          0x08005b20        0x0
+ .v4_bx         0x08005b20        0x0 linker stubs
 
-.iplt           0x08005138        0x0
- .iplt          0x08005138        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x08005b20        0x0
+ .iplt          0x08005b20        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x08005138       0xc8
-                0x08005138                        . = ALIGN (0x4)
+.rodata         0x08005b20       0xc8
+                0x08005b20                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x08005138       0x40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
-                0x08005138                AHBPrescTable
- .rodata.main   0x08005178       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08005b20       0x40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
+                0x08005b20                AHBPrescTable
+ .rodata.main   0x08005b60       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .rodata.handle_btnPlus
-                0x08005194       0x18 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08005b7c       0x18 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .rodata.handle_btnMinus
-                0x080051ac       0x18 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08005b94       0x18 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .rodata.handle_btnMenu
-                0x080051c4       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x08005bac       0x1c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .rodata.output_blink_front_leds
-                0x080051e0       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                0x08005200                        . = ALIGN (0x4)
+                0x08005bc8       0x20 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x08005be8                        . = ALIGN (0x4)
 
-.ARM.extab      0x08005200        0x0
-                0x08005200                        . = ALIGN (0x4)
+.ARM.extab      0x08005be8        0x0
+                0x08005be8                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08005200                        . = ALIGN (0x4)
+                0x08005be8                        . = ALIGN (0x4)
 
-.ARM            0x08005200        0x0
-                0x08005200                        . = ALIGN (0x4)
-                0x08005200                        __exidx_start = .
+.ARM            0x08005be8        0x0
+                0x08005be8                        . = ALIGN (0x4)
+                0x08005be8                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08005200                        __exidx_end = .
-                0x08005200                        . = ALIGN (0x4)
+                0x08005be8                        __exidx_end = .
+                0x08005be8                        . = ALIGN (0x4)
 
-.preinit_array  0x08005200        0x0
-                0x08005200                        . = ALIGN (0x4)
-                0x08005200                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08005be8        0x0
+                0x08005be8                        . = ALIGN (0x4)
+                0x08005be8                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08005200                        PROVIDE (__preinit_array_end = .)
-                0x08005200                        . = ALIGN (0x4)
+                0x08005be8                        PROVIDE (__preinit_array_end = .)
+                0x08005be8                        . = ALIGN (0x4)
 
-.init_array     0x08005200        0x4
-                0x08005200                        . = ALIGN (0x4)
-                0x08005200                        PROVIDE (__init_array_start = .)
+.init_array     0x08005be8        0x4
+                0x08005be8                        . = ALIGN (0x4)
+                0x08005be8                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08005200        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x08005204                        PROVIDE (__init_array_end = .)
-                0x08005204                        . = ALIGN (0x4)
+ .init_array    0x08005be8        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x08005bec                        PROVIDE (__init_array_end = .)
+                0x08005bec                        . = ALIGN (0x4)
 
-.fini_array     0x08005204        0x4
-                0x08005204                        . = ALIGN (0x4)
+.fini_array     0x08005bec        0x4
+                0x08005bec                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08005204        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ .fini_array    0x08005bec        0x4 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08005208                        . = ALIGN (0x4)
-                0x08005208                        _sidata = LOADADDR (.data)
+                0x08005bf0                        . = ALIGN (0x4)
+                0x08005bf0                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08005208        0x0
- .rel.iplt      0x08005208        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x08005bf0        0x0
+ .rel.iplt      0x08005bf0        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.data           0x20000000        0xc load address 0x08005208
+.data           0x20000000        0xc load address 0x08005bf0
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -5193,15 +5216,17 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
  .data.uwTickFreq
                 0x20000008        0x1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj
                 0x20000008                uwTickFreq
+ .data.is_rising_edge
+                0x20000009        0x1 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  *(.RamFunc)
  *(.RamFunc*)
                 0x2000000c                        . = ALIGN (0x4)
- *fill*         0x20000009        0x3 
+ *fill*         0x2000000a        0x2 
 
-.igot.plt       0x2000000c        0x0 load address 0x08005214
+.igot.plt       0x2000000c        0x0 load address 0x08005bfc
  .igot.plt      0x2000000c        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.tdata          0x2000000c        0x0 load address 0x08005214
+.tdata          0x2000000c        0x0 load address 0x08005bfc
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
@@ -5218,7 +5243,7 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000000c        0x0 load address 0x08005214
+.tbss           0x2000000c        0x0 load address 0x08005bfc
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -5235,7 +5260,7 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000000c      0x138 load address 0x08005214
+.bss            0x2000000c      0x1d8 load address 0x08005bfc
  *(.bss)
  .bss           0x2000000c       0x1c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.bss*)
@@ -5247,84 +5272,102 @@ LOAD /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+s
                 0x20000080                hrtc
  .bss.htim1     0x200000ac       0x4c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
                 0x200000ac                htim1
- .bss.TD_data   0x200000f8        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x200000f8                TD_data
+ .bss.htim2     0x200000f8       0x4c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x200000f8                htim2
+ .bss.TD_data   0x20000144        0xc CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000144                TD_data
  .bss.menu_position
-                0x20000104        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000104                menu_position
+                0x20000150        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000150                menu_position
  .bss.menu_position_old
-                0x20000105        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000105                menu_position_old
- *fill*         0x20000106        0x2 
+                0x20000151        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000151                menu_position_old
+ *fill*         0x20000152        0x2 
  .bss.nixieDisplay
-                0x20000108        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000108                nixieDisplay
+                0x20000154        0x8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000154                nixieDisplay
  .bss.tick_flag
-                0x20000110        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000110                tick_flag
- *fill*         0x20000111        0x1 
+                0x2000015c        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x2000015c                tick_flag
+ *fill*         0x2000015d        0x1 
  .bss.tick_count
-                0x20000112        0x2 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000112                tick_count
+                0x2000015e        0x2 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x2000015e                tick_count
  .bss.btn_flag_menu
-                0x20000114        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000114                btn_flag_menu
+                0x20000160        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000160                btn_flag_menu
  .bss.btn_flag_plus
-                0x20000115        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000115                btn_flag_plus
+                0x20000161        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000161                btn_flag_plus
  .bss.btn_flag_minus
-                0x20000116        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000116                btn_flag_minus
+                0x20000162        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000162                btn_flag_minus
  .bss.time_update_flag
-                0x20000117        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000117                time_update_flag
+                0x20000163        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000163                time_update_flag
  .bss.sys_update_flag
-                0x20000118        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000118                sys_update_flag
+                0x20000164        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000164                sys_update_flag
  .bss.btn_pressed_flag
-                0x20000119        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x20000119                btn_pressed_flag
+                0x20000165        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000165                btn_pressed_flag
  .bss.addon_dcf77
-                0x2000011a        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x2000011a                addon_dcf77
- *fill*         0x2000011b        0x1 
- .bss.timeData  0x2000011c        0xf CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x2000011c                timeData
- *fill*         0x2000012b        0x1 
- .bss.dateData  0x2000012c        0xf CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x2000012c                dateData
- *fill*         0x2000013b        0x1 
- .bss.miscData  0x2000013c        0x2 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                0x2000013c                miscData
+                0x20000166        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000166                addon_dcf77
+ *fill*         0x20000167        0x1 
+ .bss.timeData  0x20000168        0xf CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000168                timeData
+ *fill*         0x20000177        0x1 
+ .bss.dateData  0x20000178        0xf CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000178                dateData
+ *fill*         0x20000187        0x1 
+ .bss.miscData  0x20000188        0x2 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x20000188                miscData
  .bss.submenu_pos
-                0x2000013e        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x2000018a        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .bss.temp_time.2
-                0x2000013f        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x2000018b        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .bss.temp_time.1
-                0x20000140        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x2000018c        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .bss.temp_time_combine.0
-                0x20000141        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x2000018d        0x1 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ *fill*         0x2000018e        0x2 
+ .bss.dcf77_time
+                0x20000190        0x5 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ *fill*         0x20000195        0x3 
+ .bss.dcf77_callback
+                0x20000198        0x4 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .bss.dcf77_bits
+                0x2000019c       0x3b CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .bss.bit_index
+                0x200001d7        0x1 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .bss.second_marker_detected
+                0x200001d8        0x1 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ *fill*         0x200001d9        0x3 
+ .bss.previous_capture
+                0x200001dc        0x4 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .bss.current_capture
+                0x200001e0        0x4 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  *(COMMON)
-                0x20000144                        . = ALIGN (0x4)
- *fill*         0x20000142        0x2 
-                0x20000144                        _ebss = .
-                0x20000144                        __bss_end__ = _ebss
+                0x200001e4                        . = ALIGN (0x4)
+                0x200001e4                        _ebss = .
+                0x200001e4                        __bss_end__ = _ebss
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
                 [!provide]                        PROVIDE (__bss_start = __tbss_start)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x20000144      0x604 load address 0x08005214
-                0x20000148                        . = ALIGN (0x8)
- *fill*         0x20000144        0x4 
+                0x200001e4      0x604 load address 0x08005bfc
+                0x200001e8                        . = ALIGN (0x8)
+ *fill*         0x200001e4        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x20000148                        PROVIDE (_end = .)
-                0x20000348                        . = (. + _Min_Heap_Size)
- *fill*         0x20000148      0x200 
-                0x20000748                        . = (. + _Min_Stack_Size)
- *fill*         0x20000348      0x400 
-                0x20000748                        . = ALIGN (0x8)
+                0x200001e8                        PROVIDE (_end = .)
+                0x200003e8                        . = (. + _Min_Heap_Size)
+ *fill*         0x200001e8      0x200 
+                0x200007e8                        . = (. + _Min_Stack_Size)
+ *fill*         0x200003e8      0x400 
+                0x200007e8                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a:*(*)
@@ -5376,19 +5419,21 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000336       0x22 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
  .ARM.attributes
-                0x00000358       0x2c CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x00000358       0x2c CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .ARM.attributes
-                0x00000384       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x00000384       0x2c CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
  .ARM.attributes
-                0x000003a2       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+                0x000003b0       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x000003c0       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x000003ce       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
  .ARM.attributes
-                0x000003de       0x2c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x000003ec       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x0000040a       0x2c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+                0x0000040a       0x2c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
  .ARM.attributes
-                0x00000436       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+                0x00000436       0x2c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .ARM.attributes
+                0x00000462       0x1e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
@@ -5425,6 +5470,8 @@ LOAD linker stubs
                                  0x44 (size before relaxing)
  .comment       0x00000043        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
                                  0x44 (size before relaxing)
+ .comment       0x00000043        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+                                 0x44 (size before relaxing)
  .comment       0x00000043        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
                                  0x44 (size before relaxing)
  .comment       0x00000043        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
@@ -5432,7 +5479,7 @@ LOAD linker stubs
  .comment       0x00000043        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
                                  0x44 (size before relaxing)
 
-.debug_info     0x00000000    0x1130c
+.debug_info     0x00000000    0x11f1d
  .debug_info    0x00000000      0x316 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_info    0x00000316     0x21cf cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
  .debug_info    0x000024e5      0x9ff cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
@@ -5447,15 +5494,16 @@ LOAD linker stubs
  .debug_info    0x000073c7     0x122a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
  .debug_info    0x000085f1     0x2bd1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .debug_info    0x0000b1c2     0x18c5 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
- .debug_info    0x0000ca87     0x23ef CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_info    0x0000ee76      0xad4 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_info    0x0000f94a     0x1366 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_info    0x00010cb0       0x30 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
- .debug_info    0x00010ce0      0x441 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
- .debug_info    0x00011121       0xe0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_info    0x00011201      0x10b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_info    0x0000ca87     0x24df CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_info    0x0000ef66      0xaee CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_info    0x0000fa54     0x13b1 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_info    0x00010e05       0x30 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+ .debug_info    0x00010e35      0xabc CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .debug_info    0x000118f1      0x441 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+ .debug_info    0x00011d32       0xe0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_info    0x00011e12      0x10b /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
 
-.debug_abbrev   0x00000000     0x2980
+.debug_abbrev   0x00000000     0x2c2f
  .debug_abbrev  0x00000000      0x119 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_abbrev  0x00000119      0x293 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
  .debug_abbrev  0x000003ac      0x1e8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
@@ -5470,15 +5518,16 @@ LOAD linker stubs
  .debug_abbrev  0x0000173e      0x24b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
  .debug_abbrev  0x00001989      0x2a1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .debug_abbrev  0x00001c2a      0x2aa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
- .debug_abbrev  0x00001ed4      0x34b CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_abbrev  0x0000221f      0x1bd CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_abbrev  0x000023dc      0x23d CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_abbrev  0x00002619       0x24 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
- .debug_abbrev  0x0000263d      0x1dc CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
- .debug_abbrev  0x00002819       0x9e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_abbrev  0x000028b7       0xc9 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_abbrev  0x00001ed4      0x364 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x00002238      0x1bd CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_abbrev  0x000023f5      0x250 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_abbrev  0x00002645       0x24 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+ .debug_abbrev  0x00002669      0x283 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .debug_abbrev  0x000028ec      0x1dc CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+ .debug_abbrev  0x00002ac8       0x9e /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x00002b66       0xc9 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
 
-.debug_aranges  0x00000000     0x1230
+.debug_aranges  0x00000000     0x12b0
  .debug_aranges
                 0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_aranges
@@ -5508,22 +5557,24 @@ LOAD linker stubs
  .debug_aranges
                 0x00000e00      0x198 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
  .debug_aranges
-                0x00000f98      0x128 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x00000f98      0x138 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .debug_aranges
-                0x000010c0       0x58 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x000010d0       0x60 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_aranges
-                0x00001118       0x50 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x00001130       0x50 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_aranges
-                0x00001168       0x28 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+                0x00001180       0x28 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
  .debug_aranges
-                0x00001190       0x60 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x000011a8       0x68 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .debug_aranges
-                0x000011f0       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x00001210       0x60 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
  .debug_aranges
-                0x00001210       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+                0x00001270       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_aranges
+                0x00001290       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
 
 .debug_rnglists
-                0x00000000      0xe27
+                0x00000000      0xe85
  .debug_rnglists
                 0x00000000       0x1a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_rnglists
@@ -5553,21 +5604,23 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000af4      0x14e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
  .debug_rnglists
-                0x00000c42       0xeb CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                0x00000c42       0xf8 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
  .debug_rnglists
-                0x00000d2d       0x3d CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                0x00000d3a       0x43 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
  .debug_rnglists
-                0x00000d6a       0x39 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                0x00000d7d       0x3a CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
  .debug_rnglists
-                0x00000da3       0x19 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+                0x00000db7       0x19 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
  .debug_rnglists
-                0x00000dbc       0x45 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                0x00000dd0       0x4a CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
  .debug_rnglists
-                0x00000e01       0x13 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+                0x00000e1a       0x45 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
  .debug_rnglists
-                0x00000e14       0x13 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+                0x00000e5f       0x13 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_rnglists
+                0x00000e72       0x13 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
 
-.debug_macro    0x00000000    0x18aa6
+.debug_macro    0x00000000    0x18d3d
  .debug_macro   0x00000000      0x1fd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_macro   0x000001fd      0xaae cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_macro   0x00000cab       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
@@ -5628,34 +5681,37 @@ LOAD linker stubs
  .debug_macro   0x00016bfe      0x1fd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
  .debug_macro   0x00016dfb      0x205 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .debug_macro   0x00017000      0x203 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
- .debug_macro   0x00017203      0x35e CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017561      0x21c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x0001777d       0x74 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000177f1       0x24 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017815       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017851       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017885       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x0001789b       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000178d7      0x370 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017c47       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017c57       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017c6d       0x4a CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017cb7       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017ceb       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017cfb       0x58 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017d53      0x1e5 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017f38       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017f4e       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00017f64      0x170 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x000180d4       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00018108       0x46 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x0001814e       0xfa CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_macro   0x00018248      0x216 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_macro   0x0001845e      0x20c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_macro   0x0001866a      0x21a CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
- .debug_macro   0x00018884      0x222 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+ .debug_macro   0x00017203      0x367 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001756a      0x20e CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017778       0x74 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x000177ec       0x24 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017810       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001784c       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017880       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017896       0x3c CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x000178d2      0x370 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017c42       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017c52       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017c68       0x4a CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017cb2       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017ce6       0x10 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017cf6       0x58 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017d4e      0x1e5 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017f33       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017f49       0x16 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00017f5f      0x170 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x000180cf       0x34 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00018103       0x46 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00018149       0xfa CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00018243       0x52 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_macro   0x00018295      0x216 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_macro   0x000184ab      0x20c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_macro   0x000186b7      0x20c CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .debug_macro   0x000188c3       0x4c CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .debug_macro   0x0001890f      0x21a CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+ .debug_macro   0x00018b29      0x214 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
 
-.debug_line     0x00000000    0x15f37
+.debug_line     0x00000000    0x16b24
  .debug_line    0x00000000      0x8ca cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_line    0x000008ca     0x383c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
  .debug_line    0x00004106      0x9bd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
@@ -5670,59 +5726,62 @@ LOAD linker stubs
  .debug_line    0x0000b715     0x14c6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
  .debug_line    0x0000cbdb     0x3e58 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .debug_line    0x00010a33     0x1cda cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
- .debug_line    0x0001270d     0x1839 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_line    0x00013f46      0x8ff CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_line    0x00014845      0x965 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_line    0x000151aa       0x7b CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
- .debug_line    0x00015225      0xa2e CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
- .debug_line    0x00015c53      0x178 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_line    0x00015dcb      0x16c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_line    0x0001270d     0x193f CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_line    0x0001404c      0x917 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_line    0x00014963      0x99d CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_line    0x00015300       0x7b CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+ .debug_line    0x0001537b      0xa97 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .debug_line    0x00015e12      0xa2e CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+ .debug_line    0x00016840      0x178 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_line    0x000169b8      0x16c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
 
-.debug_str      0x00000000    0x9e51f
- .debug_str     0x00000000    0x9e51f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
+.debug_str      0x00000000    0x9e81a
+ .debug_str     0x00000000    0x9e81a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
                               0x94a04 (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
                               0x95dd0 (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
                               0x95043 (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c.obj
                               0x9515a (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c.obj
                               0x94da7 (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c.obj
                               0x94b39 (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c.obj
                               0x94bf9 (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c.obj
                               0x94e7d (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c.obj
                               0x94eac (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c.obj
                               0x951ff (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc.c.obj
                               0x94ece (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
                               0x9531b (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
                               0x95f4c (size before relaxing)
- .debug_str     0x0009e51f        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
+ .debug_str     0x0009e81a        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
                               0x958d4 (size before relaxing)
- .debug_str     0x0009e51f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
-                              0x9a244 (size before relaxing)
- .debug_str     0x0009e51f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
-                              0x958a2 (size before relaxing)
- .debug_str     0x0009e51f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
-                              0x95f46 (size before relaxing)
- .debug_str     0x0009e51f        0x0 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
+ .debug_str     0x0009e81a        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+                              0x9a3f2 (size before relaxing)
+ .debug_str     0x0009e81a        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+                              0x95883 (size before relaxing)
+ .debug_str     0x0009e81a        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+                              0x95f11 (size before relaxing)
+ .debug_str     0x0009e81a        0x0 CMakeFiles/nixie_clock_V2.dir/startup_stm32g051xx.s.obj
                                  0xde (size before relaxing)
- .debug_str     0x0009e51f        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
-                              0x95222 (size before relaxing)
- .debug_str     0x0009e51f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_str     0x0009e81a        0x0 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+                              0x95258 (size before relaxing)
+ .debug_str     0x0009e81a        0x0 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+                              0x951ed (size before relaxing)
+ .debug_str     0x0009e81a        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
                                 0x20a (size before relaxing)
- .debug_str     0x0009e51f        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_str     0x0009e81a        0x0 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
                                 0x26b (size before relaxing)
 
-.debug_frame    0x00000000     0x416c
+.debug_frame    0x00000000     0x4304
  .debug_frame   0x00000000       0x4c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g0xx.c.obj
  .debug_frame   0x0000004c      0xa68 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c.c.obj
  .debug_frame   0x00000ab4       0xd0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_i2c_ex.c.obj
@@ -5737,14 +5796,15 @@ LOAD linker stubs
  .debug_frame   0x00001eb0      0x578 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c.obj
  .debug_frame   0x00002428      0xf40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c.obj
  .debug_frame   0x00003368      0x620 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c.obj
- .debug_frame   0x00003988      0x444 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
- .debug_frame   0x00003dcc       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
- .debug_frame   0x00003ebc       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
- .debug_frame   0x00003fac      0x134 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
- .debug_frame   0x000040e0       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
- .debug_frame   0x00004100       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
- .debug_frame   0x00004120       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
- .debug_frame   0x00004140       0x2c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
+ .debug_frame   0x00003988      0x480 CMakeFiles/nixie_clock_V2.dir/Core/Src/main.c.obj
+ .debug_frame   0x00003e08      0x10c CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_it.c.obj
+ .debug_frame   0x00003f14       0xf0 CMakeFiles/nixie_clock_V2.dir/Core/Src/stm32g0xx_hal_msp.c.obj
+ .debug_frame   0x00004004      0x140 CMakeFiles/nixie_clock_V2.dir/Drivers/dcf77/dcf77.c.obj
+ .debug_frame   0x00004144      0x134 CMakeFiles/nixie_clock_V2.dir/Core/Src/display.c.obj
+ .debug_frame   0x00004278       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00004298       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+ .debug_frame   0x000042b8       0x20 /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-memset.o)
+ .debug_frame   0x000042d8       0x2c /home/nielscron/.local/share/stm32cube/bundles/gnu-tools-for-stm32/13.3.1+st.9/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg_nano.a(libc_a-init.o)
 
 .debug_line_str
                 0x00000000       0xc2
