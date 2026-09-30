@@ -355,6 +355,11 @@ int main(void)
   if(addon_dcf77) {
     DCF77_Init(&htim2);
     DCF77_RegisterCallback(DCF77_MinuteCallback);
+    DCF77_Start();
+
+    while(1) {
+      if(dcf_time.parity_ok) break;
+    }
   }
 
   //Set the Front LEDs On
@@ -408,26 +413,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-  //TEST THE DCF77 MODULE
-  while(1) {
-    if(!sys_update_flag) {
-      DCF77_Start();
-      sys_update_flag = 1;
-    }
-
-    if(DCF77_IsDataValid()) {
-      dcf_time = DCF77_GetTime();
-      TD_data_TEST.hours = dcf_time.hour;
-      TD_data_TEST.minutes = dcf_time.minute;
-      TD_data_TEST.seconds = dcf_time.second;
-      break;
-    }
-  }
-
-  while(1) {
-    NULL;
-  }
 
   while (1)
   {
@@ -1640,8 +1625,17 @@ uint8_t check_for_DST(RTC_HandleTypeDef* hrtc, time_date_DataDigital* _TD_data) 
 
 void DCF77_MinuteCallback(DCF77_TimeTypeDef *time) {
     // Erste gültige Minute empfangen -> übernehmen und Modul ausschalten
-    dcf_time = *time;
-    DCF77_Stop();   // Modul aus (EN low), spart Strom
+    dcf_time.hour = time->hour;
+    dcf_time.minute = time->minute;
+    dcf_time.second = time->second;
+    dcf_time.data_valid = time->data_valid;
+    dcf_time.day = time->day;
+    dcf_time.weekday = time->weekday;
+    dcf_time.month = time->month;
+    dcf_time.year = time->year;
+    dcf_time.parity_ok = time->parity_ok;
+
+    DCF77_Stop();   // Modul aus (EN HIGH), spart Strom
 }
 
 //Interrupt for triggering an update event every second

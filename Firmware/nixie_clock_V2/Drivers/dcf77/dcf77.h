@@ -14,7 +14,7 @@
 #define DCF77_EN_ACTIVE     0               // EN High = Modul aus. 
 
 // Signal-Pin (nur zum Einlesen des Pin-Levels im Capture-Callback benoetigt).
-// TIM2_CH2 liegt auf dem STM32G051 z.B. auf PA1 -> anpassen, falls anders belegt.
+// TIM2_CH2 liegt auf dem STM32G051 z.B. auf PA2 -> anpassen, falls anders belegt.
 #define DCF77_SIGNAL_PORT   GPIOA
 #define DCF77_SIGNAL_PIN    GPIO_PIN_2
 
@@ -28,6 +28,10 @@ typedef struct {
     uint8_t second;      // 0-59
     uint8_t minute;      // 0-59
     uint8_t hour;        // 0-23 (lokale Zeit, Sommerzeit bereits beruecksichtigt)
+    uint8_t day;
+    uint8_t month;
+    uint8_t year;
+    uint8_t weekday;
     uint8_t is_dst;      // 1 = Sommerzeit (MESZ)
     uint8_t parity_ok;   // 1 = Parity von Minute/Stunde ok
     uint8_t data_valid;  // 1 = mindestens eine gueltige Minute dekodiert
@@ -42,13 +46,13 @@ typedef struct {
 void DCF77_Init(TIM_HandleTypeDef *htim);
 
 // Modul-Power/Enable separat steuern (z.B. fuer Tages-Sync um 0 Uhr)
-void DCF77_Enable(void);     // EN-Pin setzen
-void DCF77_Disable(void);   // EN-Pin loeschen
+void DCF77_Enable(void);     // EN-Pin reset
+void DCF77_Disable(void);    // EN-Pin set
 
 // Capture starten/stoppen (inkl. EN-Pin)
-// Start: EN auf High + Input-Capture-Interrupt starten (Modul braucht
+// Start: EN auf Low + Input-Capture-Interrupt starten (Modul braucht
 //        nach Power-On einige Minuten zum Synchronisieren!)
-// Stop:  Interrupt stoppen + EN auf Low (Modul aus)
+// Stop:  Interrupt stoppen + EN auf High (Modul aus)
 void DCF77_Start(void);
 void DCF77_Stop(void);
 
