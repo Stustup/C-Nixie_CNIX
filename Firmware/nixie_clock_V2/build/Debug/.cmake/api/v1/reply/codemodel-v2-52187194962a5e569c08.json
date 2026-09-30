@@ -60,14 +60,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "STM32_Drivers::@768a070a0fe75716b479",
-					"jsonFile" : "target-STM32_Drivers-Debug-75808a1c50e3f84c2350.json",
+					"jsonFile" : "target-STM32_Drivers-Debug-85c61f60a37845d6b8f9.json",
 					"name" : "STM32_Drivers",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "nixie_clock_V2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-nixie_clock_V2-Debug-f3ecb47d887856327b57.json",
+					"jsonFile" : "target-nixie_clock_V2-Debug-f00341a300905b72dda1.json",
 					"name" : "nixie_clock_V2",
 					"projectIndex" : 0
 				}
