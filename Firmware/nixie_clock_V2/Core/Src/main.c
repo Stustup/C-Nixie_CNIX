@@ -671,8 +671,7 @@ static void MX_RTC_Init(void)
   {
     Error_Handler();
   }
-    */
-
+ */
   /** Enable the Alarm A
   */
   sAlarm.AlarmTime.Hours = 0x0;
@@ -777,9 +776,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 6400-1;
+  htim2.Init.Prescaler = 64000-1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 65535;
+  htim2.Init.Period = 0xFFFF;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -834,16 +833,16 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, ht_EN_Pin|pwr_led_Pin, GPIO_PIN_SET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, addon_en_Pin|led_sig_bot_Pin|led_sig_top_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, ht_EN_Pin|addon_en_Pin|pwr_led_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, co1_3_Pin|co1_2_Pin|co1_1_Pin|co1_0_Pin
                           |co0_3_Pin|co0_2_Pin|co0_1_Pin|co0_0_Pin
                           |co2_0_Pin|co2_1_Pin|co2_2_Pin|co2_3_Pin
                           |co3_0_Pin|co3_1_Pin|co3_2_Pin|co3_3_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, led_sig_bot_Pin|led_sig_top_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : ht_EN_Pin */
   GPIO_InitStruct.Pin = ht_EN_Pin;

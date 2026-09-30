@@ -2,15 +2,16 @@
 #define DCF77_H_
 
 #include "stm32g0xx_hal.h"
+#include "main.h"
 
 // ------------------------------------------------------------------
 // Konfiguration
 // ------------------------------------------------------------------
 
 // EN-Pin des DCF77-Moduls (Enable/Power)
-#define DCF77_EN_PORT       GPIOA
-#define DCF77_EN_PIN        GPIO_PIN_1
-#define DCF77_EN_ACTIVE     GPIO_PIN_RESET    // EN High = Modul ein
+#define DCF77_EN_PORT       addon_en_GPIO_Port
+#define DCF77_EN_PIN        addon_en_Pin
+#define DCF77_EN_ACTIVE     0               // EN High = Modul aus. 
 
 // Signal-Pin (nur zum Einlesen des Pin-Levels im Capture-Callback benoetigt).
 // TIM2_CH2 liegt auf dem STM32G051 z.B. auf PA1 -> anpassen, falls anders belegt.

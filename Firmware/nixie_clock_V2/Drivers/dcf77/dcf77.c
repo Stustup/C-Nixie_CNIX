@@ -53,11 +53,11 @@ static volatile uint8_t  s_bit_index = 0;     // naechste Bitposition (0-58)
 static volatile uint8_t  s_in_pulse = 0;      // 1 = Signal aktuell LOW
 static volatile uint32_t s_last_event = 0;    // letzter Capture-Zeitpunkt (Ticks)
 
-// Schwellwerte in Ticks (1 Tick = 100 us)
-#define TICKS_100MS     1000u   // Pulslaenge Bit 0
-#define TICKS_200MS     2000u   // Pulslaenge Bit 1
-#define TICKS_BIT_TH    1500u   // Schwelle 0/1
-#define TICKS_GAP_TH    15000u  // >1,5 s zwischen Pulsen -> Minutenmarke
+// Schwellwerte in Ticks (1 Tick = 1ms)
+#define TICKS_100MS     100u   // Pulslaenge Bit 0
+#define TICKS_200MS     200u   // Pulslaenge Bit 1
+#define TICKS_BIT_TH    150u   // Schwelle 0/1
+#define TICKS_GAP_TH    1500u  // >1,5 s zwischen Pulsen -> Minutenmarke
 
 // ------------------------------------------------------------------
 // Hilfsfunktionen

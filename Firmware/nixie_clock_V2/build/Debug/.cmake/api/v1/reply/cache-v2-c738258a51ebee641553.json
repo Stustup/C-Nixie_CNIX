@@ -1195,10 +1195,10 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "The CMake toolchain file"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "UNINITIALIZED",
 			"value" : "/home/nielscron/Dokumente/DIY/Projects New/C-Nixie_CNIX/Firmware/nixie_clock_V2/cmake/gcc-arm-none-eabi.cmake"
 		},
 		{
