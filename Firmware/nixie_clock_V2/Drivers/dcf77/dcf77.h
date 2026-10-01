@@ -4,66 +4,60 @@
 #include "stm32g0xx_hal.h"
 #include "main.h"
 
-// ------------------------------------------------------------------
-// Konfiguration
-// ------------------------------------------------------------------
-
-// EN-Pin des DCF77-Moduls (Enable/Power)
+// EN-Pin of DCF77-Module (Enable/Power) ACTIVE LOW
 #define DCF77_EN_PORT       addon_en_GPIO_Port
 #define DCF77_EN_PIN        addon_en_Pin
-#define DCF77_EN_ACTIVE     0               // EN High = Modul aus. 
+#define DCF77_EN_ACTIVE     0               // EN High = Modul off. 
 
-// Signal-Pin (nur zum Einlesen des Pin-Levels im Capture-Callback benoetigt).
-// TIM2_CH2 liegt auf dem STM32G051 z.B. auf PA2 -> anpassen, falls anders belegt.
 #define DCF77_SIGNAL_PORT   GPIOA
 #define DCF77_SIGNAL_PIN    GPIO_PIN_2
 
-// Capture-Kanal (Timer kommt aus CubeMX: extern TIM_HandleTypeDef htim2)
+// Capture-channel
 #define DCF77_TIM_CHANNEL  TIM_CHANNEL_3
 
-// ------------------------------------------------------------------
-// Zeitstruktur
-// ------------------------------------------------------------------
 typedef struct {
-    uint8_t second;      // 0-59
-    uint8_t minute;      // 0-59
-    uint8_t hour;        // 0-23 (lokale Zeit, Sommerzeit bereits beruecksichtigt)
-    uint8_t day;
-    uint8_t month;
-    uint8_t year;
-    uint8_t weekday;
-    uint8_t is_dst;      // 1 = Sommerzeit (MESZ)
-    uint8_t parity_ok;   // 1 = Parity von Minute/Stunde ok
-    uint8_t data_valid;  // 1 = mindestens eine gueltige Minute dekodiert
+    uint8_t second;     // 0-59
+    uint8_t minute;     // 0-59
+    uint8_t hour;       // 0-23
+    uint8_t day;        // 1-31
+    uint8_t month;      // 1-12
+    uint8_t year;       //0-99
+    uint8_t weekday;    //1-7
+    uint8_t is_dst;     // 1 = summertime (MESZ)
+    uint8_t parity_ok;  // 1 = Parity ok
+    uint8_t data_valid; // 1 = at least one good decoded minute
 } DCF77_TimeTypeDef;
 
-// ------------------------------------------------------------------
-// API
-// ------------------------------------------------------------------
-
-// Einmalig aufrufen. htim: Handle des von CubeMX initialisierten Timers
-// (z.B. &htim2). Initialisiert EN-Pin (PA2) und interne Zustandsvariablen.
+/**
+ * @brief Initiates the DCF module
+ * @param *htim -> Timer handle of configured capture compare timer 
+ */
 void DCF77_Init(TIM_HandleTypeDef *htim);
 
-// Modul-Power/Enable separat steuern (z.B. fuer Tages-Sync um 0 Uhr)
 void DCF77_Enable(void);     // EN-Pin reset
 void DCF77_Disable(void);    // EN-Pin set
 
-// Capture starten/stoppen (inkl. EN-Pin)
-// Start: EN auf Low + Input-Capture-Interrupt starten (Modul braucht
-//        nach Power-On einige Minuten zum Synchronisieren!)
-// Stop:  Interrupt stoppen + EN auf High (Modul aus)
+/**
+ * @brief Start recieving and decoding dcf77 signals.
+ */
 void DCF77_Start(void);
+
+/**
+ * @brief Stops timer and module
+ */
 void DCF77_Stop(void);
 
-// Aktuell dekodierte Zeit (Sekunden laufen live mit, gesteuert von den
-// Sekundenpulsen des DCF77-Signals)
+/**
+ * @brief Returns decoded time as DCF77_TimeTypeDef
+ */
 DCF77_TimeTypeDef DCF77_GetTime(void);
 
-// 1, sobald eine vollstaendige, parity-guetige Minute empfangen wurde
+/**
+ * @brief returns 1 if a valid time got decoded, 0 if not.
+ */
 uint8_t DCF77_IsDataValid(void);
 
-// Optionaler Callback nach jeder erfolgreich dekodierten Minute
+//Callback after successfully decoding a minute. Gets implemented in main file
 typedef void (*DCF77_CallbackTypeDef)(DCF77_TimeTypeDef *time);
 void DCF77_RegisterCallback(DCF77_CallbackTypeDef callback);
 
