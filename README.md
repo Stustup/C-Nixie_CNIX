@@ -108,3 +108,4 @@ Ideas for future addon Boards:
 - Improve the case to simplify assembly
 - More tube boards to fit more types of nixies (IN-14 e.G.)
 - BOM optimization to reduce number of unique parts
+- galvanic isolation between high voltage areas and µC GPIOs
