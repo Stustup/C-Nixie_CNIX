@@ -52,6 +52,7 @@
 #include "menu.h"
 #include "display.h"
 #include "timeStuff.h"
+#include "dcf77.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -81,19 +82,25 @@ I2C_HandleTypeDef hi2c1;
 RTC_HandleTypeDef hrtc;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 
 time_date_DataDigital TD_data = {0};
+time_date_DataDigital TD_data_TEST = {0};
 
 menu menu_position = menuTIME;
 menu menu_position_old = menuTIME;
 
 tubeDisplay nixieDisplay = {0};
 
+DCF77_TimeTypeDef dcf_time;
+
 volatile uint8_t tick_flag = isNotSet;
 volatile uint8_t counter_seconds = 0;
 volatile uint16_t tick_count = 0;
+
+uint8_t recal_failed_cnt = 0;
 
 /**
  * Value of the button being pressed.
@@ -106,6 +113,8 @@ volatile int8_t btn_flag_plus  = 0;
 volatile int8_t btn_flag_minus = 0;
 
 uint8_t time_update_flag = 0;
+volatile uint8_t timeDate_recal_flag = 0;
+uint8_t out_of_calibration_flag = 0;
 
 /**
  * @brief Flag to signal a change in the system via I/O or Timeout
@@ -150,6 +159,8 @@ uint8_t menu_pos_old = 0;
 uint8_t menu_0_submenu_flag = 0;
 
 uint16_t menu_time_set[4] = {1010,110,101,11};
+
+void DCF77_MinuteCallback(DCF77_TimeTypeDef *time);
 
 /**
  * Menu subfunctions TODO: Button press illuminates the nixies for 10s if in stop mode.
@@ -230,6 +241,51 @@ void set_for_DST(RTC_HandleTypeDef* hrtc, uint8_t _DST);
  */
 uint8_t check_for_DST(RTC_HandleTypeDef* hrtc, time_date_DataDigital* _TD_data);
 
+/**
+ * @brief Check for the number of failed recalibration attempts in the RTC_BKUP_REG DR0 
+ * @param _hrtc -> RTC handle
+ * @retval Number of previous recalibration attempts (if 0, then rtc battery is dead)
+ */
+uint16_t check_for_reCalAttempts(RTC_HandleTypeDef* _hrtc);
+
+/**
+ * @brief ncrements the number of recalibration attempts by one in the bkp register DR0
+ * @param _hrtc -> RTC handle
+ * @retval Error status (0 = OK, 1 = ERROR)
+ */
+HAL_StatusTypeDef increment_reCalAttempts(RTC_HandleTypeDef* _hrtc);
+
+/**
+ * @brief sets the bkp register DR0 to 1. If it is 0 -> RTC battery is dead
+ * @param _hrtc -> RTC handle
+ * @retval Error status (0 = OK, 1 = ERROR)
+ */
+HAL_StatusTypeDef clear_reCalAttempts(RTC_HandleTypeDef* _hrtc);
+
+/**
+ * @brief Recalibrates the time and date from DCF77 module
+ * @param _TD_data main time and date struct 
+ * @param _timeout_ms timeout value in seconds after which an error is returned
+ * @retval HAL_StatusTypeDef 0 = HAL_OK, 1 = HAL_ERROR
+ */
+HAL_StatusTypeDef time_recalibration(time_date_DataDigital* _TD_data, const uint16_t _timeout_s);
+
+/**
+ * @brief checks if recal attempt value is in acceptable borders
+ * @param _hrtc -> RTC handle
+ * @retval 0 -> in calibration, 1 -> out of calibration
+ */
+uint8_t check_for_calibration(RTC_HandleTypeDef* _hrtc);
+
+/**
+ * @brief: combines multiple dcf77 reclatibration functions in one. Recalibrates time and sets the bkp register dr0 correspondingly
+ * @param: _TD_data main time and date struct 
+ * @param: _timeout_ms timeout value in seconds after which an error is returned
+ * @param: _hrtc -> RTC handle
+ * 
+ */
+HAL_StatusTypeDef DCF77_TimeRecalibration(time_date_DataDigital* _TD_data, const uint16_t _timeout_s, RTC_HandleTypeDef* _hrtc);
+
 void resetBtnFlags();
 
 void handle_btn (menu* _pos);
@@ -258,6 +314,7 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_RTC_Init(void);
 static void MX_TIM1_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 
 #if DEBUG_DISPLAY
@@ -306,6 +363,7 @@ int main(void)
   MX_I2C1_Init();
   MX_RTC_Init();
   MX_TIM1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   HAL_TIM_Base_Start_IT(&htim1);
@@ -321,8 +379,21 @@ int main(void)
     setTime(CURRENT_TIME_HOURS, CURRENT_TIME_MINUTES, CURRENT_TIME_SECONDS);
     setDate(CURRENT_DATE_YEAR, CURRENT_DATE_MONTH, CURRENT_DATE_WEEKDAY, CURRENT_DATE_DAY);
   }
+
+  //If cal wasn't successful for 3 days or rtc battery is dead -> out of calibration
+  if(check_for_calibration(&hrtc)) out_of_calibration_flag = 1;
   
-  
+  //Check the D2 and D3 bits for addon boards. No board -> 0b11
+  check_for_addons();
+
+  //If module is found -> initiate it. When out of calibration -> calibrate it
+  if(addon_dcf77) {
+    DCF77_Init(&htim2);
+    DCF77_RegisterCallback(DCF77_MinuteCallback);
+
+    if(out_of_calibration_flag) DCF77_TimeRecalibration(&TD_data, 5*60, &hrtc);
+  }
+
   /**
    * Retrieve time and date data from the running RTC
    * Try 10 times or till a HAL_OK is retrieved
@@ -339,9 +410,6 @@ int main(void)
     }
   }
   __enable_irq();
-
-  //Check the D2 and D3 bits for addon boards. No board -> 0b11
-  check_for_addons();
 
   //Set the Front LEDs On
   output_front_led(1, 1);
@@ -394,8 +462,19 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
+
+    if(addon_dcf77) {
+      //does something once a day at 2 (set by Alarm A interrupt handler)
+      if(timeDate_recal_flag) {
+        DCF77_TimeRecalibration(&TD_data, 20*60, &hrtc);
+        timeDate_recal_flag = 0;
+      }
+    }
+    
+    
     #if DEBUG_DISPLAY
     /**
      * Reset button number after some time (defined in DISPLAY_MENU_RESET_TIME)
@@ -429,8 +508,12 @@ int main(void)
         menu_timeout(DISPLAY_MENU_X_TIMEOUT);
         break;
       case menuTimeEdit:
-        menu_timeSet(&submenu_pos, &TD_data);
-        menu_timeout(DISPLAY_MENU_X_TIMEOUT);
+        if(out_of_calibration_flag || !addon_dcf77) {     //If clock is out of calibration OR dcf77 addon is not pluged in -> enable timeSet menu
+          menu_timeSet(&submenu_pos, &TD_data);
+          menu_timeout(DISPLAY_MENU_X_TIMEOUT);
+          break;
+        }
+        menu_position++;
         break;
       case menuOVERFLOW:
         menu_position = menuTIME;
@@ -454,11 +537,6 @@ int main(void)
       output_to_tubesNEW(&nixieDisplay);  //Updates the tube display only when it should be automatically updated
     }
 
-    //does something once a day
-    if((TD_data.hours == 0) && (TD_data.minutes == 0) & (TD_data.seconds == 0)) {
-
-    }
-    
     #if DEBUG_BOARD
     sprintf(miscData, "%01d", menu_pos);
     #endif
@@ -636,17 +714,17 @@ static void MX_RTC_Init(void)
   {
     Error_Handler();
   }
-*/
+    */
 
   /** Enable the Alarm A
   */
-  sAlarm.AlarmTime.Hours = 0x0;
+  sAlarm.AlarmTime.Hours = 0x2;
   sAlarm.AlarmTime.Minutes = 0x0;
   sAlarm.AlarmTime.Seconds = 0x0;
   sAlarm.AlarmTime.SubSeconds = 0x0;
   sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
   sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
-  sAlarm.AlarmMask = RTC_ALARMMASK_NONE;
+  sAlarm.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY;
   sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
   sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
   sAlarm.AlarmDateWeekDay = 0x1;
@@ -723,6 +801,64 @@ static void MX_TIM1_Init(void)
 }
 
 /**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_IC_InitTypeDef sConfigIC = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 64000-1;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 0xFFFF;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_IC_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_BOTHEDGE;
+  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+  sConfigIC.ICFilter = 15;
+  if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -741,7 +877,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, ht_EN_Pin|pwr_led_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, ht_EN_Pin|addon_en_Pin|pwr_led_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, co1_3_Pin|co1_2_Pin|co1_1_Pin|co1_0_Pin
@@ -759,10 +895,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(ht_EN_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : addon_data_Pin addon_en_Pin */
-  GPIO_InitStruct.Pin = addon_data_Pin|addon_en_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : addon_en_Pin led_sig_bot_Pin led_sig_top_Pin pwr_led_Pin */
+  GPIO_InitStruct.Pin = addon_en_Pin|led_sig_bot_Pin|led_sig_top_Pin|pwr_led_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : btn_minus_Pin btn_menu_Pin btn_plus_Pin */
@@ -783,13 +920,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : led_sig_bot_Pin led_sig_top_Pin pwr_led_Pin */
-  GPIO_InitStruct.Pin = led_sig_bot_Pin|led_sig_top_Pin|pwr_led_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : id_bit0_Pin id_bit1_Pin */
   GPIO_InitStruct.Pin = id_bit0_Pin|id_bit1_Pin;
@@ -1239,6 +1369,7 @@ void menu_timeSet(uint8_t* _submenu_pos, time_date_DataDigital* _Tdata) {
         setTime(_Tdata->hours, _Tdata->minutes, 0);
 
         *_submenu_pos = 0;
+        out_of_calibration_flag = 0;
         menu_position++;
         btn_flag_menu = 0;
       }
@@ -1391,42 +1522,6 @@ void handle_btnMenu (menu* _pos) {
   btn_flag_menu = 0;
 }
 
-/**
- * @brief: Cycles through a number in one of 3 modes
- * @param _number -> variable to cycle through
- * @param _modes -> 
- * 
- *  0: possible numbers: 0,1,2
- * 
- *  1: possible numbers: 0-9
- * 
- *  2: possible numbers: 0-5
- */
-uint8_t circleNumbers(uint8_t _number, uint8_t _mode) {
-
-  switch(_mode) {
-    case 0:
-    if(btn_flag_plus) {
-      if(_number < 3) {
-        _number ++;
-      } else _number = 0;
-      break;
-    }
-    if(btn_flag_minus) {
-      if(_number < 3) {
-        _number --;
-      } else _number = 2;
-      break;
-    } 
-    case 1: 
-      
-  }
-
-  if(btn_flag_plus) _number++;
-  else if (btn_flag_minus) _number--;
-  return _number;
-}
-
 void menu_timeout(uint8_t _timeoutValue) {
 
   if(tick_count >= _timeoutValue) {
@@ -1488,7 +1583,7 @@ uint8_t startStop_check(time_date_DataDigital* _TD_data, tubeDisplay* _nixieDisp
  */
 void check_for_addons(void) {
     
-  uint8_t addon_id = ((GPIOD->IDR & GPIO_IDR_ID3) << 1) | (GPIOD->IDR & GPIO_IDR_ID2);
+  uint8_t addon_id = ((HAL_GPIO_ReadPin(id_bit0_GPIO_Port, id_bit0_Pin) << 1) | (HAL_GPIO_ReadPin(id_bit1_GPIO_Port, id_bit1_Pin)));
 
   switch(addon_id) {
   case 0b0000: 
@@ -1530,6 +1625,33 @@ void time_write_startStop_bkp (time_date_DataDigital* _TD_data) {
     HAL_RTCEx_BKUPWrite(&hrtc, RTC_START_STOP_BKP_REGISTER, temp_write);
 }
 
+uint8_t check_for_calibration(RTC_HandleTypeDef* _hrtc) {
+  if(HAL_RTCEx_BKUPRead(_hrtc, RTC_RECAL_BKP_REGISTER) == 0 || HAL_RTCEx_BKUPRead(_hrtc, RTC_RECAL_BKP_REGISTER) >3) return 1;
+  return 0;
+}
+
+uint16_t check_for_reCalAttempts(RTC_HandleTypeDef* _hrtc) {
+
+  return (HAL_RTCEx_BKUPRead(_hrtc, RTC_RECAL_BKP_REGISTER));
+}
+
+HAL_StatusTypeDef increment_reCalAttempts(RTC_HandleTypeDef* _hrtc) {
+
+  uint32_t _prevRecalAttempts = HAL_RTCEx_BKUPRead(_hrtc, RTC_RECAL_BKP_REGISTER);
+  _prevRecalAttempts++;
+  HAL_RTCEx_BKUPWrite(_hrtc, RTC_RECAL_BKP_REGISTER, _prevRecalAttempts);
+  
+  return 0;
+}
+
+HAL_StatusTypeDef clear_reCalAttempts(RTC_HandleTypeDef* _hrtc) {
+
+  //Set to one to differentiate between battery charge loss and restart from RTC battery
+  HAL_RTCEx_BKUPWrite(_hrtc, RTC_RECAL_BKP_REGISTER, 1);
+
+  return 0;
+}
+
 void set_for_DST(RTC_HandleTypeDef* hrtc, uint8_t _DST) {
   if(!_DST) {
     HAL_RTC_DST_ClearStoreOperation(hrtc);
@@ -1550,6 +1672,79 @@ uint8_t check_for_DST(RTC_HandleTypeDef* hrtc, time_date_DataDigital* _TD_data) 
   if((_TD_data->month == 3) && (_TD_data->weekday == sunday) && ((_TD_data->day + 7) > 31) && (HAL_RTC_DST_ReadStoreOperation(hrtc)) && (_TD_data->hours >= 2)) return 0;         //summertime
   else if((_TD_data->month == 10) && (_TD_data->weekday == sunday) && ((_TD_data->day + 7) > 31) && (!HAL_RTC_DST_ReadStoreOperation(hrtc)) && (_TD_data->hours >= 3)) return 1;  //wintertime
   return 2;
+}
+
+HAL_StatusTypeDef time_recalibration(time_date_DataDigital* _TD_data, const uint16_t _timeout_s) {
+  
+  //If the supply is on -> Error (EMF reasons)
+  if(HAL_GPIO_ReadPin(ht_EN_GPIO_Port, ht_EN_Pin) == GPIO_PIN_RESET) return 1;
+
+  DCF77_Start();
+
+  uint32_t _start = HAL_GetTick();
+
+  while(!DCF77_IsDataValid()) {
+    if((HAL_GetTick() - _start) >= (_timeout_s * 1000)) {
+      DCF77_Stop();   // Can't be that bad, but should already be stopped in the callback funtion DCF77_MinuteCallback
+      return 1;
+    } 
+    HAL_Delay(100);
+  }
+
+  //getting time from dcf77 successful -> set clock time
+
+  DCF77_TimeTypeDef _dcf_time = DCF77_GetTime();
+
+  _TD_data->hours     = _dcf_time.hour;
+  _TD_data->minutes   = _dcf_time.minute;
+  _TD_data->seconds   = 0;
+  _TD_data->day       = _dcf_time.day;
+  _TD_data->month     = _dcf_time.month;
+  _TD_data->year      = _dcf_time.year;
+  _TD_data->weekday   = _dcf_time.weekday;
+
+  if(setTime(_TD_data->hours, _TD_data->minutes, 0)) return 1;
+
+  if(setDate(_TD_data->year, _TD_data->month, _TD_data->weekday, _TD_data->day)) return 1;
+
+
+
+  return 0;
+}
+
+HAL_StatusTypeDef DCF77_TimeRecalibration(time_date_DataDigital* _TD_data, const uint16_t _timeout_s, RTC_HandleTypeDef* _hrtc) {
+  if(!time_recalibration(_TD_data, _timeout_s)) {
+    clear_reCalAttempts(_hrtc);
+    out_of_calibration_flag = 0;
+    return 0;
+
+  } else {
+    if(!(check_for_reCalAttempts(_hrtc) == 0 || check_for_reCalAttempts(_hrtc) > 3)) {
+      increment_reCalAttempts(_hrtc);
+      out_of_calibration_flag = 0;
+      return 1;
+    }
+
+    out_of_calibration_flag = 1;
+    return 1;
+  }
+}
+
+void DCF77_MinuteCallback(DCF77_TimeTypeDef *time) {
+
+  //Recieved valid signal
+  dcf_time.parity_ok = time->parity_ok;
+
+  DCF77_Stop();   // Modul aus (EN HIGH), spart Strom
+}
+
+void RTC_Alarm_IRQHandler(void) {
+    HAL_RTC_AlarmIRQHandler(&hrtc);
+}
+
+//Every Night at 2 set the recal flag
+void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc) {
+  if(addon_dcf77) timeDate_recal_flag = 1;
 }
 
 //Interrupt for triggering an update event every second

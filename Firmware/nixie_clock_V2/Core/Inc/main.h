@@ -52,6 +52,8 @@ extern "C" {
 //32 bit data to store 8 bit start and stop hours. 0-7start1, 8-15stop1, 16-23start2, 24-31stop2
 #define RTC_START_STOP_BKP_REGISTER RTC_BKP_DR2
 
+#define RTC_RECAL_BKP_REGISTER RTC_BKP_DR0
+
 
 /**
  * These should only be used one time at the first programming of the mcu. When you do have to manually set the time, just 
@@ -73,6 +75,9 @@ extern "C" {
 
 //blink interval for leds and other
 #define TICK_INTERVAL 500
+
+//Timeout for dcf77 synchronisation (20 minute)
+#define TIMEOUT_DCF77 (20 * 60 * 1000)
 
 //Timeouts for the menus. 10s for temp and hmd, 60s for everything else
 #define DISPLAY_MENU_TimeDateSensor_TIMEOUT 10
@@ -106,9 +111,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define ht_EN_Pin GPIO_PIN_0
 #define ht_EN_GPIO_Port GPIOA
-#define addon_data_Pin GPIO_PIN_1
-#define addon_data_GPIO_Port GPIOA
-#define addon_en_Pin GPIO_PIN_2
+#define addon_en_Pin GPIO_PIN_1
 #define addon_en_GPIO_Port GPIOA
 #define btn_minus_Pin GPIO_PIN_5
 #define btn_minus_GPIO_Port GPIOA
