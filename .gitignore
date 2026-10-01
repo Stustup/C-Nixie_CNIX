@@ -31,9 +31,9 @@ fp-lib-table
 !/Production/*.zip
 
 #Firmware
-/Firmware/build
-/Firmware/.vscode/
-/Firmware/.settings/
+/Firmware/nixie_clock_V2/build
+/Firmware/nixie_clock_V2/.vscode/
+/Firmware/nixie_clock_V2/.settings/
 *.o
 *.elf
 *.map
