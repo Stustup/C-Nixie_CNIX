@@ -15,3 +15,9 @@
 ### V2.2.0
 - Added detection for addon modules via pins D2 and D3 (2 bit). DCF77 board has the id 0x0
 - Added pin header with jumper for the HT-PSU for safe debugging and prototyping
+
+## V2.3.0
+- Cleanup of all directories
+- Touchups on PCBs (LED placement ect.)
+- HT PSU optimization
+- Debounce filter optimization

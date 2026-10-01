@@ -40,5 +40,8 @@ fp-lib-table
 *.hex
 CMakePresets.json
 
+#Example pictures
+/pictures_notUsed
+
 # Backup and old Version folders in Projects
 Backup
