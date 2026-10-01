@@ -30,7 +30,17 @@ fp-lib-table
 !/Production/**/*.zip
 !/Production/*.zip
 
-
+#Firmware
+/build/
+/Debug/
+/Release/
+/.vscode/
+/.settings/
+*.o
+*.elf
+*.map
+*.hex
+CMakePresets.json
 
 # Backup and old Version folders in Projects
 Backup
