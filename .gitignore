@@ -31,11 +31,9 @@ fp-lib-table
 !/Production/*.zip
 
 #Firmware
-/build/
-/Debug/
-/Release/
-/.vscode/
-/.settings/
+/Firmware/build
+/Firmware/.vscode/
+/Firmware/.settings/
 *.o
 *.elf
 *.map
