@@ -79,13 +79,13 @@ void output_blink_front_leds(blink_mode _mode);
 void ht_supply_state(tubeDisplay* _data);
 
 /**
- * @brief Changes state when makro BLINK_TIME is reached. Works without timer and globally
+ * @brief Changes state when makro BLINK_TIME in ms is reached. Works without timer and globally
  * @return 0 or 1 depending on makro BLINK_TIME
  */
 uint8_t blinkState(void);
 
 /**
- * @brief Changes state when custom blink_time is reached. Works without timer and globally
+ * @brief Changes state when custom blink_time in ms is reached. Works without timer and globally
  * @return 0 or 1 depending on custom blink_time
  */
 uint8_t blinkState_custom(uint16_t _blink_time);
