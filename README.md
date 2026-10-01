@@ -1,6 +1,6 @@
 # CNIX - Nixie Tube Clock
 
-CNIX is a nixie tube clock which accepts many diffrent nixie tubes with only slight modifications to the tube carrier board. 
+CNIX is a nixie tube clock that can accept many diffrent nixie tubes with only slight modifications to the tube carrier board. 
 
 ![Nixie Clock finished real picture](/Docs/Nixie%20Clock%20in%20real.JPG)
 
@@ -106,4 +106,6 @@ Ideas for future addon Boards:
 - Change to new MCU. STM32H5 for USBC pd -> more efficient boost converter because higher input voltage
 - Sleep modes during off times paired with wakeup alarms at start times -> reduce power consumption even more
 - Improve the case to simplify assembly
-- More tube boards to fit more types of nixies (IN-14 e.G.) 
+- More tube boards to fit more types of nixies (IN-14 e.G.)
+- BOM optimization to reduce number of unique parts
+- galvanic isolation between high voltage areas and µC GPIOs
