@@ -255,7 +255,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -673,7 +673,7 @@
       {
         "filename": "DCF77-Addon.kicad_sch",
         "name": "DCF77-Addon",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "321d9f17-8adc-48be-9092-3c26c387c105"
       }
     ],
     "used_designators": "",
@@ -682,7 +682,7 @@
   "sheets": [
     [
       "321d9f17-8adc-48be-9092-3c26c387c105",
-      "Root"
+      "DCF77-Addon"
     ]
   ],
   "text_variables": {},

@@ -3,16 +3,34 @@
 \#*
 .\#*
 
-# KiCad backup files
+# Ignore list for KiCAD Projects# Temporary files
+*.000
 *.bak
 *.bck
 *.kicad_pcb-bak
-
-# KiCad generated files
+*.sch-bak
+*~_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache # Netlist files (exported from Eeschema)
+*.net# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+*.kicad_prl
+*.txt
+fp-lib-table
 *.erc
 *.net
 *-cache.lib
 *-rescue.lib
+
+# All zip files, except in production directory
+*.zip
+!/Production/**/*.zip
+!/Production/*.zip
+
+
 
 # Backup and old Version folders in Projects
 Backup
