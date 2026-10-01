@@ -77,7 +77,7 @@ extern "C" {
 #define TICK_INTERVAL 500
 
 //Timeout for dcf77 synchronisation (20 minute)
-#define TIMEOUT_DCF77 (20 * 60 * 1000)
+#define TIMEOUT_DCF77 (20 * 60)
 
 //Timeouts for the menus. 10s for temp and hmd, 60s for everything else
 #define DISPLAY_MENU_TimeDateSensor_TIMEOUT 10
@@ -93,11 +93,7 @@ extern "C" {
 #define isNotSet 0
 #define isNotPressed 0
 
-#define BLANK 0b1010
-
-//--------------------------------------------------------- Menu stuff makros and variables
-
-#define menu_size 8
+#define BLANK 0b1010  //Out of bounds for the CD4028 chip, to display a blank
 
 /* USER CODE END EM */
 
@@ -166,8 +162,7 @@ void Error_Handler(void);
 #define co3_3_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-#define DEBUG_DISPLAY 0
-#define DEBUG_BOARD 0
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
