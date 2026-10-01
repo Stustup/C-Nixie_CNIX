@@ -33,6 +33,12 @@ The ht power supply is a DCM boost converter powered by the UCC3803. An active l
 
 ![Control board 3d view](./Docs//CNIX%20V2%20control%20board%20front.png)
 
+The driver consists of 4 CD4028 BCD to Decimal converters and 6 SN75468 high voltage drivers. The SN75468 only work up top 100V, but when using two 48V zener diodes as clamps, the voltage on the torned off digits never reach above 100V and above the startup voltage of the nixies. So win win.
+
+![Tube board schematic](/Docs/CNIX%20Tube%20Board%20Schematic.png)
+I didn't use the old high voltage nixie driving shift registers as they are more and more hard to find for a reasonable price. Also i did not use shift registers at all, to simplify programming and wiring. Instead the whole Port B of the STM32 is used as a big 16 bit control register where the numbers are encoded in BCD. This ensures that there can not be 2 turned on digits at the same time in one tube to prevent bugs and damaging the beautiful nixies. 
+Except the decoupling capacitors, diopdes and LEDS, everything is a simple to reflow solder IC, The tube pins have to be assembled manually (by putting them on a tube an inserting it into the holes before soldering it to ensure perfect alignment).  
+
 The case is designed in FreeCAD and printed in PLA or PETG. Assembly is a bit of a hassle, but the fit is perfect. You can print a front plate, but i think the clock is vastly more beautiful when paired with a wooden front plate. Drill files for this are within the CAD folder. The holes for the LED front indicators can be filled with a 3mm lightpipe cut to length, to get a beautiful finish. 
 Case, PCB and front plate are screwed together with 15mm M3 wood screws.
 
