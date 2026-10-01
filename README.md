@@ -1,6 +1,6 @@
 # CNIX - Nixie Tube Clock
 
-CNIX is a nixie tube clock which accepts many diffrent nixie tubes with only slight modifications to the tube carrier board. 
+CNIX is a nixie tube clock that can accept many diffrent nixie tubes with only slight modifications to the tube carrier board. 
 
 ![Nixie Clock finished real picture](/Docs/Nixie%20Clock%20in%20real.JPG)
 
