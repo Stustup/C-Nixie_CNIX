@@ -1522,42 +1522,6 @@ void handle_btnMenu (menu* _pos) {
   btn_flag_menu = 0;
 }
 
-/**
- * @brief: Cycles through a number in one of 3 modes
- * @param _number -> variable to cycle through
- * @param _modes -> 
- * 
- *  0: possible numbers: 0,1,2
- * 
- *  1: possible numbers: 0-9
- * 
- *  2: possible numbers: 0-5
- */
-uint8_t circleNumbers(uint8_t _number, uint8_t _mode) {
-
-  switch(_mode) {
-    case 0:
-    if(btn_flag_plus) {
-      if(_number < 3) {
-        _number ++;
-      } else _number = 0;
-      break;
-    }
-    if(btn_flag_minus) {
-      if(_number < 3) {
-        _number --;
-      } else _number = 2;
-      break;
-    } 
-    case 1: 
-      
-  }
-
-  if(btn_flag_plus) _number++;
-  else if (btn_flag_minus) _number--;
-  return _number;
-}
-
 void menu_timeout(uint8_t _timeoutValue) {
 
   if(tick_count >= _timeoutValue) {
