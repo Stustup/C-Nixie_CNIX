@@ -44,9 +44,26 @@ typedef struct {
 
 //functions prototypes
 
+/**
+ * @brief: Sets the Time of the RTC. IMPORTANT: When regenerating the code through CubeMX comment out the time setting in the predefined function.
+ * This is to only update the time when needed and not every time you program the MCU. The check is made through the Backup register DR1, to which a 
+ * random number is written. Only update the time when this number is not the same on startup!
+ */
 HAL_StatusTypeDef setTime(uint8_t hour, uint8_t minute, uint8_t second);
+
+/**
+ * @brief: Sets the Date of the RTC. IMPORTANT: When regenerating the code through CubeMX comment out the date setting in the predefined function.
+ * This is to only update the date when needed and not every time you program the MCU. The check is made through the Backup register DR1, to which a 
+ * random number is written. Only update the Date when this number is not the same on startup!
+ */
 HAL_StatusTypeDef setDate(uint8_t year, uint8_t month, uint8_t weekday, uint8_t date);
-HAL_StatusTypeDef getTimeDate(char* time, char* date, time_date_DataDigital* dTimeDate);
+
+/**
+ * @brief: Function to get time and date from RTC module. IMPORTANT: Always get time and then date TOGETHER! otherwize the druids of the forest will hunt you
+ * Creates strings in predefined vhar arrays to directly print to an oled.
+ * TODO: put time and date in an integer struct to push to the nixies 
+ */
+HAL_StatusTypeDef getTimeDate(time_date_DataDigital* dTimeDate);
 
 
 #endif

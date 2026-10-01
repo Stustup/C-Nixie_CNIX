@@ -46,8 +46,6 @@
 #include <stdint.h>
 
 #include "stdio.h"
-#include "ssd1306.h"
-#include "ssd1306_fonts.h"
 #include "output_tube.h"
 #include "menu.h"
 #include "display.h"
@@ -68,12 +66,6 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
-#define DISPLAY_TIME_DATE_X_OFFSET 42
-#define DISPLAY_TIME_Y_OFFSET       0
-#define DISPLAY_DATE_Y_OFFSET      11
-#define DISPLAY_MISC_Y_OFFSET      22
-#define DISPLAY_MISC_X_OFFSET     112
-
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -91,6 +83,8 @@ time_date_DataDigital TD_data_TEST = {0};
 
 menu menu_position = menuTIME;
 menu menu_position_old = menuTIME;
+
+uint8_t submenu_pos = 0;
 
 tubeDisplay nixieDisplay = {0};
 
@@ -131,40 +125,45 @@ uint8_t id_read = 0b0011;
 //IDs for all available driver boards
 uint8_t addon_dcf77 = 0;
 
-char timeData[15];
-char dateData[15];
-char miscData[2];
+/* USER CODE END PV */
 
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_I2C1_Init(void);
+static void MX_RTC_Init(void);
+static void MX_TIM1_Init(void);
+static void MX_TIM2_Init(void);
+/* USER CODE BEGIN PFP */
 
+/**
+ * @brief Callback for when the dcf77 driver completes a valid minute readout
+ * @param time -> the time struct from dcf77 driver which contains the current time.
+ */
+void DCF77_MinuteCallback(DCF77_TimeTypeDef* time);
+
+/**
+ * @brief: Check for installed addons via ID pins D2 and D3 and sets corresponding flag
+ * Addons:
+ * 0 -> DCF77
+ */
 void check_for_addons(void);
 
+/**
+ * @brief Uses the time data from main time and date structure to give a 16 bit representation of the current time
+ * @param: _time_date_data -> pointer to main time and date containing struct.
+ * @retval Return 16 bit time data fit for direct outputting onto PORTB of the micro
+ */
 uint16_t set_tube_numbers_time(time_date_DataDigital* _time_date_data);
+
+/**
+ * @brief Uses the time data from main time and date structure to give a 16 bit representation of the current date
+ * @param: _time_date_data -> pointer to main time and date containing struct.
+ * @retval Return 16 bit date data fit for direct outputting onto PORTB of the micro
+ */
 uint16_t set_tube_numbers_date(time_date_DataDigital* _time_date_data);
-//uint16_t combine_4bit_numbers(uint8_t num0, uint8_t num1, uint8_t num2, uint8_t num3);
-//void output_to_tubes(uint16_t _data);
 
-//void output_front_led(uint8_t led0, uint8_t led1);
-//void output_blink_front_leds(blink_mode _mode);
-
-/**
- * @brief: Main menu structure for the whole clock
- * @param 0 -> normal time display
- * @param 1 -> Temperature and humidity sensor (Timeout 5s)
- * @param 2 -> Start/stop Time (time setting like above, but for start AND stop time) (Maybe multiple ones for morning and evening times?) (Timeout 30s) (Override with long press till next shutoff?)
- * @param 3 -> Time set (GETS DISABLED WHEN DCF77 PLUGIN BOARD IS USED) (1. hours tens; 2. hours ones; 3. minutes tens; 4. minutes ones) (Timeout 30s)
- */
-uint8_t menu_pos = 0;
-static uint8_t submenu_pos = 0;
-uint8_t menu_pos_old = 0;
-uint8_t menu_0_submenu_flag = 0;
-
-uint16_t menu_time_set[4] = {1010,110,101,11};
-
-void DCF77_MinuteCallback(DCF77_TimeTypeDef *time);
-
-/**
- * Menu subfunctions TODO: Button press illuminates the nixies for 10s if in stop mode.
- */
+//-----------------------------------------------------------Menu Stuff
 
 /**
  * @brief: Dispalys the current time on the nixies. Nixie illumination is based upon start and stop times. 
@@ -226,6 +225,9 @@ uint8_t blinkState_custom(uint16_t _blink_time);
  */
 uint8_t startStop_check(time_date_DataDigital* _TD_data, tubeDisplay* _nixieDisplay);
 
+
+//-----------------------------------------------------------Time Stuff
+
 /**
  * @brief Checks for triggers of daylight saving time (last sunday in march or october ect.) and sets the RTC flags correspondingly
  * @param _DST      -> value from check_for_DST or 0 for summertime and 1 for wintertime. 2 for Error (does nothing)
@@ -240,6 +242,22 @@ void set_for_DST(RTC_HandleTypeDef* hrtc, uint8_t _DST);
  * @retval 0 if sumemrtime trigger, 1 if wintertime trigger
  */
 uint8_t check_for_DST(RTC_HandleTypeDef* hrtc, time_date_DataDigital* _TD_data);
+
+//RTC related functions
+/**
+ * @brief reads the BKP Register DR2, which contains a 32bit combination of all start and stop times.
+ * Puts them into TD_data main data structure in order
+ * @param _TD_data main time structure containing all start and stop times
+ */
+void time_read_startStop_bkp  (time_date_DataDigital* _TD_data);
+
+/**
+ * @brief writes to the BKP Register DR2 from main time structure, which contains a 32bit combination of all start and stop times.
+ * @param _TD_data main time structure containing all start and stop times
+ */
+void time_write_startStop_bkp (time_date_DataDigital* _TD_data);
+
+//-----------------------------------------------------------DCF77 time calibration stuff
 
 /**
  * @brief Check for the number of failed recalibration attempts in the RTC_BKUP_REG DR0 
@@ -282,47 +300,20 @@ uint8_t check_for_calibration(RTC_HandleTypeDef* _hrtc);
  * @param: _TD_data main time and date struct 
  * @param: _timeout_ms timeout value in seconds after which an error is returned
  * @param: _hrtc -> RTC handle
- * 
  */
 HAL_StatusTypeDef DCF77_TimeRecalibration(time_date_DataDigital* _TD_data, const uint16_t _timeout_s, RTC_HandleTypeDef* _hrtc);
 
+//-----------------------------------------------------------Button Stuff
+
+/**
+ * @brief Resets all button flags at once
+ */
 void resetBtnFlags();
 
 void handle_btn (menu* _pos);
 void handle_btnPlus (menu* _pos);
 void handle_btnMinus (menu* _pos);
 void handle_btnMenu (menu* _pos);
-
-//RTC related functions
-void time_read_startStop_bkp  (time_date_DataDigital* _TD_data);
-void time_write_startStop_bkp (time_date_DataDigital* _TD_data);
-
-/**
- * main counter for getTick function
- */
-uint32_t start_ms_counter = 0;
-uint32_t start_ms_counter_blink = 0;
-uint32_t start_ms_counter_menuTimeout = 0;
-uint32_t start_ms_counter_menuTimeout_DATE = 0;
-uint8_t  error_count = 0;
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
-void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
-static void MX_I2C1_Init(void);
-static void MX_RTC_Init(void);
-static void MX_TIM1_Init(void);
-static void MX_TIM2_Init(void);
-/* USER CODE BEGIN PFP */
-
-#if DEBUG_DISPLAY
-void ssd1306_writeTime(char* time);
-void ssd1306_writeDate(char* date);
-void ssd1306_writeTimeDate(char* time, char* date);
-void ssd1306_writeMisc(char* _data);
-#endif
 
 /* USER CODE END PFP */
 
@@ -401,11 +392,11 @@ int main(void)
    */
   __disable_irq();
   
-  if(getTimeDate(timeData, dateData, &TD_data) != HAL_OK) {
+  if(getTimeDate(&TD_data) != HAL_OK) {
     HAL_StatusTypeDef _Status = HAL_ERROR;
 
     for(uint8_t tries = 0; tries < 10; tries++) {
-      _Status = getTimeDate(timeData, dateData, &TD_data);
+      _Status = getTimeDate(&TD_data);
       if(_Status == HAL_OK) break;
     }
   }
@@ -431,32 +422,6 @@ int main(void)
 
   //Set the HT supply state to the corresponding state in display struct
   ht_supply_state(&nixieDisplay);
-  
-  miscData[0] = '0';
-
-  #if DEBUG_DISPLAY
-  /**
-   * Constructor for the basic oled menu with predeceeding welcome message
-   * // TODO LATER create a module check and modules (e.g. WIFI time sync, smart home features, etc.)
-   */
-  
-  ssd1306_Init();
-  ssd1306_SetCursor(10, 10);
-  ssd1306_WriteString("Nixie Clock V2", Font_7x10, White);
-  ssd1306_UpdateScreen();
-  HAL_Delay(500);
-  ssd1306_Fill(Black);
-  ssd1306_SetCursor(0, 0);
-  ssd1306_WriteString("Time: ", Font_7x10, White);
-  ssd1306_writeTime(timeData);
-  ssd1306_SetCursor(0, 11);
-  ssd1306_WriteString("Date: ", Font_7x10, White);
-  ssd1306_writeDate(dateData);
-  ssd1306_SetCursor(0, 22);
-  ssd1306_WriteString("Menu Position: ", Font_7x10, White);
-  ssd1306_writeMisc(miscData);
-  ssd1306_UpdateScreen();
-  #endif
 
   /* USER CODE END 2 */
 
@@ -473,19 +438,6 @@ int main(void)
         timeDate_recal_flag = 0;
       }
     }
-    
-    
-    #if DEBUG_DISPLAY
-    /**
-     * Reset button number after some time (defined in DISPLAY_MENU_RESET_TIME)
-     */
-    if(btn_pressed_flag && ((HAL_GetTick()-start_ms_counter) > DISPLAY_MENU_RESET_TIME)) {
-
-      miscData[0] = '0';
-      ssd1306_writeMisc(miscData);
-      btn_pressed_flag = isNotPressed;
-    }
-    #endif
 
     switch(menu_position) {
       case menuTIME:
@@ -536,14 +488,6 @@ int main(void)
     if(menu_position != menuStartStop && menu_position != menuTimeEdit) {
       output_to_tubesNEW(&nixieDisplay);  //Updates the tube display only when it should be automatically updated
     }
-
-    #if DEBUG_BOARD
-    sprintf(miscData, "%01d", menu_pos);
-    #endif
-
-    #if DEBUG_DISPLAY
-    ssd1306_writeMisc(miscData);    
-    #endif
 
     /* USER CODE END WHILE */
 
@@ -664,8 +608,8 @@ static void MX_RTC_Init(void)
 
   /* USER CODE END RTC_Init 0 */
 
-  RTC_TimeTypeDef sTime = {0};
-  RTC_DateTypeDef sDate = {0};
+  //RTC_TimeTypeDef sTime = {0};
+  //RTC_DateTypeDef sDate = {0};
   RTC_AlarmTypeDef sAlarm = {0};
 
   /* USER CODE BEGIN RTC_Init 1 */
@@ -938,11 +882,6 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
-/**
- * Sets the Time of the RTC. IMPORTANT: When regenerating the code through CubeMX comment out the time setting in the predefined function.
- * This is to only update the time when needed and not every time you program the MCU. The check is made through the Backup register DR1, to which a 
- * random number is written. Only update the time when this number is not the same on startup!
- */
 HAL_StatusTypeDef setTime(uint8_t hour, uint8_t minute, uint8_t second) {
   RTC_TimeTypeDef sTime = {0};
   sTime.Hours = hour;
@@ -958,11 +897,6 @@ HAL_StatusTypeDef setTime(uint8_t hour, uint8_t minute, uint8_t second) {
   return HAL_OK;
 }
 
-/**
- * Sets the Date of the RTC. IMPORTANT: When regenerating the code through CubeMX comment out the date setting in the predefined function.
- * This is to only update the date when needed and not every time you program the MCU. The check is made through the Backup register DR1, to which a 
- * random number is written. Only update the Date when this number is not the same on startup!
- */
 HAL_StatusTypeDef setDate(uint8_t year, uint8_t month, uint8_t weekday, uint8_t date) { //weekday->Monday = 1, date->which day in month (0-31) 
   RTC_DateTypeDef sDate = {0};
   sDate.WeekDay = weekday;
@@ -980,49 +914,7 @@ HAL_StatusTypeDef setDate(uint8_t year, uint8_t month, uint8_t weekday, uint8_t 
   return HAL_OK;
 }
 
-/**
- * Function to get time and date from RTC module. IMPORTANT: Always get time and then date TOGETHER! otherwize the druids of the forest will hunt you
- * Creates strings in predefined vhar arrays to directly print to an oled.
- * TODO: put time and date in an integer struct to push to the nixies 
- */
-HAL_StatusTypeDef getTimeDate(char* time, char* date, time_date_DataDigital* dTimeDate) {
-  RTC_DateTypeDef gDate;
-  RTC_TimeTypeDef gTime;
-  uint8_t _error_count = 0;
-
-  //Get current time
-  if(HAL_RTC_GetTime(&hrtc, &gTime, RTC_FORMAT_BIN) != HAL_OK) _error_count++;
-
-  //Get current date
-  if(HAL_RTC_GetDate(&hrtc, &gDate, RTC_FORMAT_BIN) != HAL_OK) _error_count++;
-
-  dTimeDate->hours = gTime.Hours;
-  dTimeDate->minutes = gTime.Minutes;
-  dTimeDate->seconds = gTime.Seconds;
-
-  dTimeDate->day = gDate.Date;
-  dTimeDate->weekday = gDate.WeekDay;
-  dTimeDate->month = gDate.Month;
-  dTimeDate->year = gDate.Year;
-
-  #if DEBUG_DISPLAY
-  /* Display time Format: hh:mm:ss */
-  sprintf(time,"%02d:%02d:%02d",gTime.Hours, gTime.Minutes, gTime.Seconds);
-
-  /* Display date Format: dd-mm-yyyy */
-  sprintf(date,"%02d-%02d-%2d",gDate.Date, gDate.Month, 2000 + gDate.Year);
-  #endif
-
-  if(_error_count != 0) return HAL_ERROR;
-  return HAL_OK;
-}
-
-/**
- * Function to get time and date from RTC module. IMPORTANT: Always get time and then date TOGETHER! otherwize the druids of the forest will hunt you
- * Creates strings in predefined vhar arrays to directly print to an oled.
- * TODO: put time and date in an integer struct to push to the nixies 
- */
-HAL_StatusTypeDef getTimeDateNEW(time_date_DataDigital* dTimeDate) {
+HAL_StatusTypeDef getTimeDate(time_date_DataDigital* dTimeDate) {
   RTC_DateTypeDef gDate;
   RTC_TimeTypeDef gTime;
   uint8_t _error_count = 0;
@@ -1046,49 +938,6 @@ HAL_StatusTypeDef getTimeDateNEW(time_date_DataDigital* dTimeDate) {
   return HAL_OK;
 }
 
-#if DEBUG_DISPLAY
-/**
- * Combined oled writing function
- */
-void ssd1306_writeTimeDate(char* time, char* date) {
-  ssd1306_SetCursor(DISPLAY_TIME_DATE_X_OFFSET, DISPLAY_TIME_Y_OFFSET);
-  ssd1306_WriteString(time, Font_7x10, White);
-  ssd1306_UpdateScreen();
-
-  ssd1306_SetCursor(DISPLAY_TIME_DATE_X_OFFSET, DISPLAY_DATE_Y_OFFSET);
-  ssd1306_WriteString(date, Font_7x10, White);
-  ssd1306_UpdateScreen();
-}
-
-/**
- * Simplified function to display the date on an oled screen.
- * Cursor offsets are stored in makros 
- */
-void ssd1306_writeTime(char* time) {
-  ssd1306_SetCursor(DISPLAY_TIME_DATE_X_OFFSET, DISPLAY_TIME_Y_OFFSET);
-  ssd1306_WriteString(time, Font_7x10, White);
-  ssd1306_UpdateScreen();
-}
-
-/**
- * Simplified function to display the time on an oled screen.
- * Cursor offsets are stored in makros 
- */
-void ssd1306_writeDate(char* date) {
-  ssd1306_SetCursor(DISPLAY_TIME_DATE_X_OFFSET, DISPLAY_DATE_Y_OFFSET);
-  ssd1306_WriteString(date, Font_7x10, White);
-  ssd1306_UpdateScreen();
-}
-
-void ssd1306_writeMisc(char* _data) {
-  ssd1306_SetCursor(DISPLAY_MISC_X_OFFSET, DISPLAY_MISC_Y_OFFSET);
-  ssd1306_WriteString(_data, Font_7x10, White);
-  ssd1306_UpdateScreen();
-}
-#endif
-
-/** Function for changing the tubes to the corresponding time values
- */
 uint16_t set_tube_numbers_time(time_date_DataDigital* _time_date_data) {
 
   //Start by extracting the single numbers out of the time struct to fuse them to a 16-Bit number later
@@ -1108,8 +957,6 @@ uint16_t set_tube_numbers_time(time_date_DataDigital* _time_date_data) {
   return(combine_4bit_numbers(hours_tens, hours_ones, minutes_tens, minutes_ones));
 }
 
-/** Function for changing the tubes to the corresponding date values
- */
 uint16_t set_tube_numbers_date(time_date_DataDigital* _time_date_data) {
 
   //Start by extracting the single numbers out of the time struct to fuse them to a 16-Bit number later
@@ -1138,7 +985,7 @@ void menu_mainTime() {
   output_blink_front_leds(solid);
 
   if(sys_update_flag) {
-    getTimeDate(timeData, dateData, &TD_data);
+    getTimeDate(&TD_data);
     nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
 
     startStop_check(&TD_data, &nixieDisplay);
@@ -1150,7 +997,7 @@ void menu_mainTime() {
 
   if(tick_flag == isSet) { //flag set by interrupt by RTC on 1Hz
 
-    getTimeDate(timeData, dateData, &TD_data);      //Get time from RTC registers
+    getTimeDate(&TD_data);      //Get time from RTC registers
 
     //Update display data, nixies dont have seconds!
     if(TD_data.seconds == 0) {
@@ -1170,7 +1017,7 @@ void menu_mainDate() {
   output_blink_front_leds(solidBot);
 
   if(sys_update_flag) {
-    getTimeDate(timeData, dateData, &TD_data);
+    getTimeDate(&TD_data);
     nixieDisplay.displayDigitOutput = set_tube_numbers_date(&TD_data);
 
     sys_update_flag = 0;
@@ -1178,7 +1025,7 @@ void menu_mainDate() {
 
   if(tick_flag == isSet) {
     
-    getTimeDate(timeData, dateData, &TD_data);
+    getTimeDate(&TD_data);
 
     nixieDisplay.displayDigitOutput = set_tube_numbers_date(&TD_data);
 
@@ -1385,7 +1232,7 @@ void menu_peekTime() {
   output_blink_front_leds(solid);
 
   if(sys_update_flag) {
-    getTimeDate(timeData, dateData, &TD_data);
+    getTimeDate(&TD_data);
     nixieDisplay.displayDigitOutput = set_tube_numbers_time(&TD_data);
 
     menu_position_old = menuPEEKTIME;
@@ -1396,7 +1243,7 @@ void menu_peekTime() {
 
   if(tick_flag == isSet) { //flag set by interrupt by RTC on 1Hz
 
-    getTimeDate(timeData, dateData, &TD_data);      //Get time from RTC registers
+    getTimeDate(&TD_data);      //Get time from RTC registers
 
     //Update display data, nixies dont have seconds!
     if(TD_data.seconds == 0) {
@@ -1576,11 +1423,6 @@ uint8_t startStop_check(time_date_DataDigital* _TD_data, tubeDisplay* _nixieDisp
   }
 }
 
-/**
- * @brief: Check for installed addons via ID pins D2 and D3
- * Addons:
- * 0 -> DCF77
- */
 void check_for_addons(void) {
     
   uint8_t addon_id = ((HAL_GPIO_ReadPin(id_bit0_GPIO_Port, id_bit0_Pin) << 1) | (HAL_GPIO_ReadPin(id_bit1_GPIO_Port, id_bit1_Pin)));
