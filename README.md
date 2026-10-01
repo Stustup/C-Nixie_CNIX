@@ -106,4 +106,5 @@ Ideas for future addon Boards:
 - Change to new MCU. STM32H5 for USBC pd -> more efficient boost converter because higher input voltage
 - Sleep modes during off times paired with wakeup alarms at start times -> reduce power consumption even more
 - Improve the case to simplify assembly
-- More tube boards to fit more types of nixies (IN-14 e.G.) 
+- More tube boards to fit more types of nixies (IN-14 e.G.)
+- BOM optimization to reduce number of unique parts
