@@ -43,5 +43,8 @@ CMakePresets.json
 #Example pictures
 /pictures_notUsed
 
+#misc
+/.vscode
+
 # Backup and old Version folders in Projects
 Backup
